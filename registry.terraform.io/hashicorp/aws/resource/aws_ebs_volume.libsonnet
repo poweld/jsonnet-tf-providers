@@ -1,0 +1,160 @@
+{
+  local block = self,
+  new(availability_zone):: (
+    {}
+    + block.with_availability_zone(availability_zone)
+  ),
+  with_arn(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"arn" expected to be of type "string"';
+    {
+      arn: converted,
+    }
+  ),
+  with_availability_zone(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"availability_zone" expected to be of type "string"';
+    {
+      availability_zone: converted,
+    }
+  ),
+  with_create_time(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"create_time" expected to be of type "string"';
+    {
+      create_time: converted,
+    }
+  ),
+  with_encrypted(value):: (
+    local converted = value;
+    assert std.isBoolean(converted) : '"encrypted" expected to be of type "bool"';
+    {
+      encrypted: converted,
+    }
+  ),
+  with_final_snapshot(value):: (
+    local converted = value;
+    assert std.isBoolean(converted) : '"final_snapshot" expected to be of type "bool"';
+    {
+      final_snapshot: converted,
+    }
+  ),
+  with_id(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"id" expected to be of type "string"';
+    {
+      id: converted,
+    }
+  ),
+  with_iops(value):: (
+    local converted = value;
+    assert std.isNumber(converted) : '"iops" expected to be of type "number"';
+    {
+      iops: converted,
+    }
+  ),
+  with_kms_key_id(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"kms_key_id" expected to be of type "string"';
+    {
+      kms_key_id: converted,
+    }
+  ),
+  with_multi_attach_enabled(value):: (
+    local converted = value;
+    assert std.isBoolean(converted) : '"multi_attach_enabled" expected to be of type "bool"';
+    {
+      multi_attach_enabled: converted,
+    }
+  ),
+  with_outpost_arn(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"outpost_arn" expected to be of type "string"';
+    {
+      outpost_arn: converted,
+    }
+  ),
+  '#with_region':: 'Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).',
+  with_region(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"region" expected to be of type "string"';
+    {
+      region: converted,
+    }
+  ),
+  with_size(value):: (
+    local converted = value;
+    assert std.isNumber(converted) : '"size" expected to be of type "number"';
+    {
+      size: converted,
+    }
+  ),
+  with_snapshot_id(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"snapshot_id" expected to be of type "string"';
+    {
+      snapshot_id: converted,
+    }
+  ),
+  with_tags(value):: (
+    local converted = value;
+    assert std.isObject(converted) : '"tags" expected to be of type "map"';
+    {
+      tags: converted,
+    }
+  ),
+  with_tags_all(value):: (
+    local converted = value;
+    assert std.isObject(converted) : '"tags_all" expected to be of type "map"';
+    {
+      tags_all: converted,
+    }
+  ),
+  with_throughput(value):: (
+    local converted = value;
+    assert std.isNumber(converted) : '"throughput" expected to be of type "number"';
+    {
+      throughput: converted,
+    }
+  ),
+  with_type(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"type" expected to be of type "string"';
+    {
+      type: converted,
+    }
+  ),
+  timeouts:: {
+    local block = self,
+    new():: (
+      {}
+    ),
+    with_create(value):: (
+      local converted = value;
+      assert std.isString(converted) : '"create" expected to be of type "string"';
+      {
+        create: converted,
+      }
+    ),
+    with_delete(value):: (
+      local converted = value;
+      assert std.isString(converted) : '"delete" expected to be of type "string"';
+      {
+        delete: converted,
+      }
+    ),
+    with_update(value):: (
+      local converted = value;
+      assert std.isString(converted) : '"update" expected to be of type "string"';
+      {
+        update: converted,
+      }
+    ),
+  },
+  with_timeouts(value):: (
+    local converted = value;
+    {
+      timeouts: value,
+    }
+  ),
+}

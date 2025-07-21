@@ -1,0 +1,91 @@
+{
+  local block = self,
+  new():: (
+    {}
+  ),
+  with_arn(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"arn" expected to be of type "string"';
+    {
+      arn: converted,
+    }
+  ),
+  with_domain_name(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"domain_name" expected to be of type "string"';
+    {
+      domain_name: converted,
+    }
+  ),
+  with_domain_name_servers(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"domain_name_servers" expected to be of type "string"';
+    {
+      domain_name_servers: converted,
+    }
+  ),
+  with_id(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"id" expected to be of type "string"';
+    {
+      id: converted,
+    }
+  ),
+  with_ipv6_address_preferred_lease_time(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"ipv6_address_preferred_lease_time" expected to be of type "string"';
+    {
+      ipv6_address_preferred_lease_time: converted,
+    }
+  ),
+  with_netbios_name_servers(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"netbios_name_servers" expected to be of type "string"';
+    {
+      netbios_name_servers: converted,
+    }
+  ),
+  with_netbios_node_type(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"netbios_node_type" expected to be of type "string"';
+    {
+      netbios_node_type: converted,
+    }
+  ),
+  with_ntp_servers(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"ntp_servers" expected to be of type "string"';
+    {
+      ntp_servers: converted,
+    }
+  ),
+  with_owner_id(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"owner_id" expected to be of type "string"';
+    {
+      owner_id: converted,
+    }
+  ),
+  '#with_region':: 'Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).',
+  with_region(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"region" expected to be of type "string"';
+    {
+      region: converted,
+    }
+  ),
+  with_tags(value):: (
+    local converted = value;
+    assert std.isObject(converted) : '"tags" expected to be of type "map"';
+    {
+      tags: converted,
+    }
+  ),
+  with_tags_all(value):: (
+    local converted = value;
+    assert std.isObject(converted) : '"tags_all" expected to be of type "map"';
+    {
+      tags_all: converted,
+    }
+  ),
+}

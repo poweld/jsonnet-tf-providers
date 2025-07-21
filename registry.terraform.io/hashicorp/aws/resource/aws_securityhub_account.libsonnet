@@ -1,0 +1,49 @@
+{
+  local block = self,
+  new():: (
+    {}
+  ),
+  with_arn(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"arn" expected to be of type "string"';
+    {
+      arn: converted,
+    }
+  ),
+  with_auto_enable_controls(value):: (
+    local converted = value;
+    assert std.isBoolean(converted) : '"auto_enable_controls" expected to be of type "bool"';
+    {
+      auto_enable_controls: converted,
+    }
+  ),
+  with_control_finding_generator(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"control_finding_generator" expected to be of type "string"';
+    {
+      control_finding_generator: converted,
+    }
+  ),
+  with_enable_default_standards(value):: (
+    local converted = value;
+    assert std.isBoolean(converted) : '"enable_default_standards" expected to be of type "bool"';
+    {
+      enable_default_standards: converted,
+    }
+  ),
+  with_id(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"id" expected to be of type "string"';
+    {
+      id: converted,
+    }
+  ),
+  '#with_region':: 'Region where this resource will be [managed](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints). Defaults to the Region set in the [provider configuration](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#aws-configuration-reference).',
+  with_region(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"region" expected to be of type "string"';
+    {
+      region: converted,
+    }
+  ),
+}
