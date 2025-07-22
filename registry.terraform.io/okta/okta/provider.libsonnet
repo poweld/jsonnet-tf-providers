@@ -1,4 +1,5 @@
 {
+  version:: '~> 5.2.0',
   local block = self,
   new():: (
     {}
