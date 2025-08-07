@@ -1,5 +1,6 @@
 {
   version:: '~> 5.2.0',
+  source:: 'okta/okta',
   local block = self,
   new():: (
     {}
