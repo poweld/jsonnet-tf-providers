@@ -2,17 +2,17 @@
   local block = self,
   new(sender_id):: (
     {}
-    + block.with_sender_id(sender_id)
+    + block.withSenderId(sender_id)
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_sender_id':: 'Email sender ID',
-  with_sender_id(value):: (
+  "#withSenderId":: "Email sender ID",
+  withSenderId(value):: (
     local converted = value;
     assert std.isString(converted) : '"sender_id" expected to be of type "string"';
     {

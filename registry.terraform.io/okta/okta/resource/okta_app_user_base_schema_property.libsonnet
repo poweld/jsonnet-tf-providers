@@ -2,84 +2,84 @@
   local block = self,
   new(app_id, index, title, type):: (
     {}
-    + block.with_app_id(app_id)
-    + block.with_index(index)
-    + block.with_title(title)
-    + block.with_type(type)
+    + block.withAppId(app_id)
+    + block.withIndex(index)
+    + block.withTitle(title)
+    + block.withType(type)
   ),
-  '#with_app_id':: "The Application's ID the user schema property should be assigned to.",
-  with_app_id(value):: (
+  "#withAppId":: "The Application's ID the user schema property should be assigned to.",
+  withAppId(value):: (
     local converted = value;
     assert std.isString(converted) : '"app_id" expected to be of type "string"';
     {
       app_id: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_index':: 'Subschema unique string identifier',
-  with_index(value):: (
+  "#withIndex":: "Subschema unique string identifier",
+  withIndex(value):: (
     local converted = value;
     assert std.isString(converted) : '"index" expected to be of type "string"';
     {
       index: converted,
     }
   ),
-  '#with_master':: 'Master priority for the user schema property. It can be set to `PROFILE_MASTER` or `OKTA`. Default: `PROFILE_MASTER`',
-  with_master(value):: (
+  "#withMaster":: "Master priority for the user schema property. It can be set to `PROFILE_MASTER` or `OKTA`. Default: `PROFILE_MASTER`",
+  withMaster(value):: (
     local converted = value;
     assert std.isString(converted) : '"master" expected to be of type "string"';
     {
       master: converted,
     }
   ),
-  '#with_pattern':: "The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'",
-  with_pattern(value):: (
+  "#withPattern":: "The validation pattern to use for the subschema. Must be in form of '.+', or '[<pattern>]+' if present.'",
+  withPattern(value):: (
     local converted = value;
     assert std.isString(converted) : '"pattern" expected to be of type "string"';
     {
       pattern: converted,
     }
   ),
-  '#with_permissions':: 'Access control permissions for the property. It can be set to `READ_WRITE`, `READ_ONLY`, `HIDE`. Default: `READ_ONLY`',
-  with_permissions(value):: (
+  "#withPermissions":: "Access control permissions for the property. It can be set to `READ_WRITE`, `READ_ONLY`, `HIDE`. Default: `READ_ONLY`",
+  withPermissions(value):: (
     local converted = value;
     assert std.isString(converted) : '"permissions" expected to be of type "string"';
     {
       permissions: converted,
     }
   ),
-  '#with_required':: 'Whether the subschema is required',
-  with_required(value):: (
+  "#withRequired":: "Whether the subschema is required",
+  withRequired(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"required" expected to be of type "bool"';
     {
       required: converted,
     }
   ),
-  '#with_title':: 'Subschema title (display name)',
-  with_title(value):: (
+  "#withTitle":: "Subschema title (display name)",
+  withTitle(value):: (
     local converted = value;
     assert std.isString(converted) : '"title" expected to be of type "string"';
     {
       title: converted,
     }
   ),
-  '#with_type':: 'The type of the schema property. It can be `string`, `boolean`, `number`, `integer`, `array`, or `object`',
-  with_type(value):: (
+  "#withType":: "The type of the schema property. It can be `string`, `boolean`, `number`, `integer`, `array`, or `object`",
+  withType(value):: (
     local converted = value;
     assert std.isString(converted) : '"type" expected to be of type "string"';
     {
       type: converted,
     }
   ),
-  '#with_user_type':: 'User type ID. By default, it is `default`',
-  with_user_type(value):: (
+  "#withUserType":: "User type ID. By default, it is `default`",
+  withUserType(value):: (
     local converted = value;
     assert std.isString(converted) : '"user_type" expected to be of type "string"';
     {

@@ -2,61 +2,61 @@
   local block = self,
   new(alias, host, password, port, username):: (
     {}
-    + block.with_alias(alias)
-    + block.with_host(host)
-    + block.with_password(password)
-    + block.with_port(port)
-    + block.with_username(username)
+    + block.withAlias(alias)
+    + block.withHost(host)
+    + block.withPassword(password)
+    + block.withPort(port)
+    + block.withUsername(username)
   ),
-  '#with_alias':: 'Human-readable name for your SMTP server.',
-  with_alias(value):: (
+  "#withAlias":: "Human-readable name for your SMTP server.",
+  withAlias(value):: (
     local converted = value;
     assert std.isString(converted) : '"alias" expected to be of type "string"';
     {
       alias: converted,
     }
   ),
-  '#with_enabled':: 'If true, routes all email traffic through your SMTP server.',
-  with_enabled(value):: (
+  "#withEnabled":: "If true, routes all email traffic through your SMTP server.",
+  withEnabled(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"enabled" expected to be of type "bool"';
     {
       enabled: converted,
     }
   ),
-  '#with_host':: 'Hostname or IP address of your SMTP server.',
-  with_host(value):: (
+  "#withHost":: "Hostname or IP address of your SMTP server.",
+  withHost(value):: (
     local converted = value;
     assert std.isString(converted) : '"host" expected to be of type "string"';
     {
       host: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_password':: 'User name of the email domain.',
-  with_password(value):: (
+  "#withPassword":: "User name of the email domain.",
+  withPassword(value):: (
     local converted = value;
     assert std.isString(converted) : '"password" expected to be of type "string"';
     {
       password: converted,
     }
   ),
-  '#with_port':: 'Port number of your SMTP server.',
-  with_port(value):: (
+  "#withPort":: "Port number of your SMTP server.",
+  withPort(value):: (
     local converted = value;
     assert std.isNumber(converted) : '"port" expected to be of type "number"';
     {
       port: converted,
     }
   ),
-  '#with_username':: 'Display name of the email domain.',
-  with_username(value):: (
+  "#withUsername":: "Display name of the email domain.",
+  withUsername(value):: (
     local converted = value;
     assert std.isString(converted) : '"username" expected to be of type "string"';
     {

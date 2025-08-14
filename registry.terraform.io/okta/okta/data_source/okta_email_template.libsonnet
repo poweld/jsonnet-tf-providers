@@ -2,34 +2,34 @@
   local block = self,
   new(brand_id, name):: (
     {}
-    + block.with_brand_id(brand_id)
-    + block.with_name(name)
+    + block.withBrandId(brand_id)
+    + block.withName(name)
   ),
-  '#with_brand_id':: 'Brand ID',
-  with_brand_id(value):: (
+  "#withBrandId":: "Brand ID",
+  withBrandId(value):: (
     local converted = value;
     assert std.isString(converted) : '"brand_id" expected to be of type "string"';
     {
       brand_id: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_links':: 'Link relations for this object - JSON HAL - Discoverable resources related to the email template',
-  with_links(value):: (
+  "#withLinks":: "Link relations for this object - JSON HAL - Discoverable resources related to the email template",
+  withLinks(value):: (
     local converted = value;
     assert std.isString(converted) : '"links" expected to be of type "string"';
     {
       links: converted,
     }
   ),
-  '#with_name':: 'The name of the email template',
-  with_name(value):: (
+  "#withName":: "The name of the email template",
+  withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {

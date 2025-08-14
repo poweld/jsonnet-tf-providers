@@ -2,59 +2,59 @@
   local block = self,
   new(from_address, from_name, subdomain):: (
     {}
-    + block.with_from_address(from_address)
-    + block.with_from_name(from_name)
-    + block.with_subdomain(subdomain)
+    + block.withFromAddress(from_address)
+    + block.withFromName(from_name)
+    + block.withSubdomain(subdomain)
   ),
-  '#with_dns_records':: 'TXT and CNAME records to be registered for the Domain',
-  with_dns_records(value):: (
+  "#withDnsRecords":: "TXT and CNAME records to be registered for the Domain",
+  withDnsRecords(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert std.isArray(converted) : '"dns_records" expected to be of type "list"';
     {
       dns_records: converted,
     }
   ),
-  '#with_dns_records_mixin':: 'TXT and CNAME records to be registered for the Domain',
-  with_dns_records_mixin(value):: (
+  "#withDnsRecordsMixin":: "TXT and CNAME records to be registered for the Domain",
+  withDnsRecordsMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert std.isArray(converted) : '"dns_records" expected to be of type "list"';
     {
       dns_records+: converted,
     }
   ),
-  '#with_from_address':: 'Email address to send from ',
-  with_from_address(value):: (
+  "#withFromAddress":: "Email address to send from ",
+  withFromAddress(value):: (
     local converted = value;
     assert std.isString(converted) : '"from_address" expected to be of type "string"';
     {
       from_address: converted,
     }
   ),
-  '#with_from_name':: 'Name of sender',
-  with_from_name(value):: (
+  "#withFromName":: "Name of sender",
+  withFromName(value):: (
     local converted = value;
     assert std.isString(converted) : '"from_name" expected to be of type "string"';
     {
       from_name: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_status':: 'Verification status',
-  with_status(value):: (
+  "#withStatus":: "Verification status",
+  withStatus(value):: (
     local converted = value;
     assert std.isString(converted) : '"status" expected to be of type "string"';
     {
       status: converted,
     }
   ),
-  '#with_subdomain':: 'Mail domain to send from',
-  with_subdomain(value):: (
+  "#withSubdomain":: "Mail domain to send from",
+  withSubdomain(value):: (
     local converted = value;
     assert std.isString(converted) : '"subdomain" expected to be of type "string"';
     {

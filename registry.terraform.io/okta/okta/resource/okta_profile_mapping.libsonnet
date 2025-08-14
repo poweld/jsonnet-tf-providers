@@ -2,74 +2,74 @@
   local block = self,
   new(source_id, target_id):: (
     {}
-    + block.with_source_id(source_id)
-    + block.with_target_id(target_id)
+    + block.withSourceId(source_id)
+    + block.withTargetId(target_id)
   ),
-  '#with_always_apply':: "Whether apply the changes to all users with this profile after updating or creating the these mappings.  \t~> **WARNING:**: 'always_apply' is incompatible with OAuth 2.0 authentication and will be ignored when using that type of authentication. \t~> **WARNING:** 'always_apply' makes use of an internal/private Okta API endpoint that could change without notice rendering this resource inoperable.",
-  with_always_apply(value):: (
+  "#withAlwaysApply":: "Whether apply the changes to all users with this profile after updating or creating the these mappings.  \t~> **WARNING:**: 'always_apply' is incompatible with OAuth 2.0 authentication and will be ignored when using that type of authentication. \t~> **WARNING:** 'always_apply' makes use of an internal/private Okta API endpoint that could change without notice rendering this resource inoperable.",
+  withAlwaysApply(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"always_apply" expected to be of type "bool"';
     {
       always_apply: converted,
     }
   ),
-  '#with_delete_when_absent':: 'When turned on this flag will trigger the provider to delete mapping properties that are not defined in config. By default, we do not delete missing properties.',
-  with_delete_when_absent(value):: (
+  "#withDeleteWhenAbsent":: "When turned on this flag will trigger the provider to delete mapping properties that are not defined in config. By default, we do not delete missing properties.",
+  withDeleteWhenAbsent(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"delete_when_absent" expected to be of type "bool"';
     {
       delete_when_absent: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_source_id':: 'The source id of the mapping to manage.',
-  with_source_id(value):: (
+  "#withSourceId":: "The source id of the mapping to manage.",
+  withSourceId(value):: (
     local converted = value;
     assert std.isString(converted) : '"source_id" expected to be of type "string"';
     {
       source_id: converted,
     }
   ),
-  '#with_source_name':: 'Name of the mapping source.',
-  with_source_name(value):: (
+  "#withSourceName":: "Name of the mapping source.",
+  withSourceName(value):: (
     local converted = value;
     assert std.isString(converted) : '"source_name" expected to be of type "string"';
     {
       source_name: converted,
     }
   ),
-  '#with_source_type':: 'ID of the mapping source.',
-  with_source_type(value):: (
+  "#withSourceType":: "ID of the mapping source.",
+  withSourceType(value):: (
     local converted = value;
     assert std.isString(converted) : '"source_type" expected to be of type "string"';
     {
       source_type: converted,
     }
   ),
-  '#with_target_id':: 'The target id of the mapping to manage.',
-  with_target_id(value):: (
+  "#withTargetId":: "The target id of the mapping to manage.",
+  withTargetId(value):: (
     local converted = value;
     assert std.isString(converted) : '"target_id" expected to be of type "string"';
     {
       target_id: converted,
     }
   ),
-  '#with_target_name':: 'Name of the mapping target.',
-  with_target_name(value):: (
+  "#withTargetName":: "Name of the mapping target.",
+  withTargetName(value):: (
     local converted = value;
     assert std.isString(converted) : '"target_name" expected to be of type "string"';
     {
       target_name: converted,
     }
   ),
-  '#with_target_type':: 'ID of the mapping target.',
-  with_target_type(value):: (
+  "#withTargetType":: "ID of the mapping target.",
+  withTargetType(value):: (
     local converted = value;
     assert std.isString(converted) : '"target_type" expected to be of type "string"';
     {
@@ -80,25 +80,25 @@
     local block = self,
     new(expression, id):: (
       {}
-      + block.with_expression(expression)
-      + block.with_id(id)
+      + block.withExpression(expression)
+      + block.withId(id)
     ),
-    with_expression(value):: (
+    withExpression(value):: (
       local converted = value;
       assert std.isString(converted) : '"expression" expected to be of type "string"';
       {
         expression: converted,
       }
     ),
-    '#with_id':: 'The mapping property key.',
-    with_id(value):: (
+    "#withId":: "The mapping property key.",
+    withId(value):: (
       local converted = value;
       assert std.isString(converted) : '"id" expected to be of type "string"';
       {
         id: converted,
       }
     ),
-    with_push_status(value):: (
+    withPushStatus(value):: (
       local converted = value;
       assert std.isString(converted) : '"push_status" expected to be of type "string"';
       {
@@ -106,13 +106,13 @@
       }
     ),
   },
-  with_mappings(value):: (
+  withMappings(value):: (
     local converted = if std.isArray(value) then value else [value];
     {
       mappings: value,
     }
   ),
-  with_mappings_mixin(value):: (
+  withMappingsMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     {
       mappings+: converted,

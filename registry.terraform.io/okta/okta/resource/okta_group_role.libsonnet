@@ -2,82 +2,82 @@
   local block = self,
   new(group_id, role_type):: (
     {}
-    + block.with_group_id(group_id)
-    + block.with_role_type(role_type)
+    + block.withGroupId(group_id)
+    + block.withRoleType(role_type)
   ),
-  '#with_disable_notifications':: "When this setting is enabled, the admins won't receive any of the default Okta administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.",
-  with_disable_notifications(value):: (
+  "#withDisableNotifications":: "When this setting is enabled, the admins won't receive any of the default Okta administrator emails. These admins also won't have access to contact Okta Support and open support cases on behalf of your org.",
+  withDisableNotifications(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"disable_notifications" expected to be of type "bool"';
     {
       disable_notifications: converted,
     }
   ),
-  '#with_group_id':: 'ID of group to attach admin roles to',
-  with_group_id(value):: (
+  "#withGroupId":: "ID of group to attach admin roles to",
+  withGroupId(value):: (
     local converted = value;
     assert std.isString(converted) : '"group_id" expected to be of type "string"';
     {
       group_id: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_resource_set_id':: 'Resource Set ID. Required for role_type = `CUSTOM`',
-  with_resource_set_id(value):: (
+  "#withResourceSetId":: "Resource Set ID. Required for role_type = `CUSTOM`",
+  withResourceSetId(value):: (
     local converted = value;
     assert std.isString(converted) : '"resource_set_id" expected to be of type "string"';
     {
       resource_set_id: converted,
     }
   ),
-  '#with_role_id':: 'Role ID. Required for role_type = `CUSTOM`',
-  with_role_id(value):: (
+  "#withRoleId":: "Role ID. Required for role_type = `CUSTOM`",
+  withRoleId(value):: (
     local converted = value;
     assert std.isString(converted) : '"role_id" expected to be of type "string"';
     {
       role_id: converted,
     }
   ),
-  '#with_role_type':: "Admin role assigned to the group. It can be any one of the following values: \t'API_ADMIN', \t'APP_ADMIN', \t'CUSTOM', \t'GROUP_MEMBERSHIP_ADMIN', \t'HELP_DESK_ADMIN', \t'MOBILE_ADMIN', \t'ORG_ADMIN', \t'READ_ONLY_ADMIN', \t'REPORT_ADMIN', \t'SUPER_ADMIN', \t'USER_ADMIN' \t. See [API Docs](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#standard-roles). \t- 'USER_ADMIN' is the Group Administrator.",
-  with_role_type(value):: (
+  "#withRoleType":: "Admin role assigned to the group. It can be any one of the following values: \t'API_ADMIN', \t'APP_ADMIN', \t'CUSTOM', \t'GROUP_MEMBERSHIP_ADMIN', \t'HELP_DESK_ADMIN', \t'MOBILE_ADMIN', \t'ORG_ADMIN', \t'READ_ONLY_ADMIN', \t'REPORT_ADMIN', \t'SUPER_ADMIN', \t'USER_ADMIN' \t. See [API Docs](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#standard-roles). \t- 'USER_ADMIN' is the Group Administrator.",
+  withRoleType(value):: (
     local converted = value;
     assert std.isString(converted) : '"role_type" expected to be of type "string"';
     {
       role_type: converted,
     }
   ),
-  '#with_target_app_list':: "A list of app names (name represents set of app instances, like 'salesforce' or 'facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as the targets of the admin role. - Only supported when used with the role type `APP_ADMIN`.",
-  with_target_app_list(value):: (
+  "#withTargetAppList":: "A list of app names (name represents set of app instances, like 'salesforce' or 'facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as the targets of the admin role. - Only supported when used with the role type `APP_ADMIN`.",
+  withTargetAppList(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"target_app_list" expected to be of type "set"';
     {
       target_app_list: converted,
     }
   ),
-  '#with_target_app_list_mixin':: "A list of app names (name represents set of app instances, like 'salesforce' or 'facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as the targets of the admin role. - Only supported when used with the role type `APP_ADMIN`.",
-  with_target_app_list_mixin(value):: (
+  "#withTargetAppListMixin":: "A list of app names (name represents set of app instances, like 'salesforce' or 'facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as the targets of the admin role. - Only supported when used with the role type `APP_ADMIN`.",
+  withTargetAppListMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"target_app_list" expected to be of type "set"';
     {
       target_app_list+: converted,
     }
   ),
-  '#with_target_group_list':: 'A list of group IDs you would like as the targets of the admin role. - Only supported when used with the role types: `GROUP_MEMBERSHIP_ADMIN`, `HELP_DESK_ADMIN`, or `USER_ADMIN`.',
-  with_target_group_list(value):: (
+  "#withTargetGroupList":: "A list of group IDs you would like as the targets of the admin role. - Only supported when used with the role types: `GROUP_MEMBERSHIP_ADMIN`, `HELP_DESK_ADMIN`, or `USER_ADMIN`.",
+  withTargetGroupList(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"target_group_list" expected to be of type "set"';
     {
       target_group_list: converted,
     }
   ),
-  '#with_target_group_list_mixin':: 'A list of group IDs you would like as the targets of the admin role. - Only supported when used with the role types: `GROUP_MEMBERSHIP_ADMIN`, `HELP_DESK_ADMIN`, or `USER_ADMIN`.',
-  with_target_group_list_mixin(value):: (
+  "#withTargetGroupListMixin":: "A list of group IDs you would like as the targets of the admin role. - Only supported when used with the role types: `GROUP_MEMBERSHIP_ADMIN`, `HELP_DESK_ADMIN`, or `USER_ADMIN`.",
+  withTargetGroupListMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"target_group_list" expected to be of type "set"';
     {

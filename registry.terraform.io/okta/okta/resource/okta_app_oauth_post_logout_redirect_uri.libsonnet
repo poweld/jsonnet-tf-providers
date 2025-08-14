@@ -2,26 +2,26 @@
   local block = self,
   new(app_id, uri):: (
     {}
-    + block.with_app_id(app_id)
-    + block.with_uri(uri)
+    + block.withAppId(app_id)
+    + block.withUri(uri)
   ),
-  '#with_app_id':: 'OAuth application ID.',
-  with_app_id(value):: (
+  "#withAppId":: "OAuth application ID.",
+  withAppId(value):: (
     local converted = value;
     assert std.isString(converted) : '"app_id" expected to be of type "string"';
     {
       app_id: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_uri':: 'Post Logout Redirect URI to append to Okta OIDC application.',
-  with_uri(value):: (
+  "#withUri":: "Post Logout Redirect URI to append to Okta OIDC application.",
+  withUri(value):: (
     local converted = value;
     assert std.isString(converted) : '"uri" expected to be of type "string"';
     {

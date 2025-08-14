@@ -3,79 +3,79 @@
   new():: (
     {}
   ),
-  '#with_assertions_signed':: 'Whether assertions are signed.',
-  with_assertions_signed(value):: (
+  "#withAssertionsSigned":: "Whether assertions are signed.",
+  withAssertionsSigned(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"assertions_signed" expected to be of type "bool"';
     {
       assertions_signed: converted,
     }
   ),
-  '#with_authn_request_signed':: 'Whether authn requests are signed.',
-  with_authn_request_signed(value):: (
+  "#withAuthnRequestSigned":: "Whether authn requests are signed.",
+  withAuthnRequestSigned(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"authn_request_signed" expected to be of type "bool"';
     {
       authn_request_signed: converted,
     }
   ),
-  '#with_encryption_certificate':: 'SAML request encryption certificate.',
-  with_encryption_certificate(value):: (
+  "#withEncryptionCertificate":: "SAML request encryption certificate.",
+  withEncryptionCertificate(value):: (
     local converted = value;
     assert std.isString(converted) : '"encryption_certificate" expected to be of type "string"';
     {
       encryption_certificate: converted,
     }
   ),
-  '#with_entity_id':: 'Entity URL for instance https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf',
-  with_entity_id(value):: (
+  "#withEntityId":: "Entity URL for instance https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf",
+  withEntityId(value):: (
     local converted = value;
     assert std.isString(converted) : '"entity_id" expected to be of type "string"';
     {
       entity_id: converted,
     }
   ),
-  '#with_http_post_binding':: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.',
-  with_http_post_binding(value):: (
+  "#withHttpPostBinding":: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.",
+  withHttpPostBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"http_post_binding" expected to be of type "string"';
     {
       http_post_binding: converted,
     }
   ),
-  '#with_http_redirect_binding':: 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.',
-  with_http_redirect_binding(value):: (
+  "#withHttpRedirectBinding":: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.",
+  withHttpRedirectBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"http_redirect_binding" expected to be of type "string"';
     {
       http_redirect_binding: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_idp_id':: 'The id of the IdP to retrieve metadata for.',
-  with_idp_id(value):: (
+  "#withIdpId":: "The id of the IdP to retrieve metadata for.",
+  withIdpId(value):: (
     local converted = value;
     assert std.isString(converted) : '"idp_id" expected to be of type "string"';
     {
       idp_id: converted,
     }
   ),
-  '#with_metadata':: 'Raw IdP metadata.',
-  with_metadata(value):: (
+  "#withMetadata":: "Raw IdP metadata.",
+  withMetadata(value):: (
     local converted = value;
     assert std.isString(converted) : '"metadata" expected to be of type "string"';
     {
       metadata: converted,
     }
   ),
-  '#with_signing_certificate':: 'SAML request signing certificate.',
-  with_signing_certificate(value):: (
+  "#withSigningCertificate":: "SAML request signing certificate.",
+  withSigningCertificate(value):: (
     local converted = value;
     assert std.isString(converted) : '"signing_certificate" expected to be of type "string"';
     {

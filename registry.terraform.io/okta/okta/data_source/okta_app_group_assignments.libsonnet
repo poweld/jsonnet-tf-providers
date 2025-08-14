@@ -2,26 +2,26 @@
   local block = self,
   new(id):: (
     {}
-    + block.with_id(id)
+    + block.withId(id)
   ),
-  '#with_groups':: 'List of groups IDs assigned to the app',
-  with_groups(value):: (
+  "#withGroups":: "List of groups IDs assigned to the app",
+  withGroups(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"groups" expected to be of type "set"';
     {
       groups: converted,
     }
   ),
-  '#with_groups_mixin':: 'List of groups IDs assigned to the app',
-  with_groups_mixin(value):: (
+  "#withGroupsMixin":: "List of groups IDs assigned to the app",
+  withGroupsMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"groups" expected to be of type "set"';
     {
       groups+: converted,
     }
   ),
-  '#with_id':: 'ID of the Okta App being queried for groups',
-  with_id(value):: (
+  "#withId":: "ID of the Okta App being queried for groups",
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {

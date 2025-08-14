@@ -2,65 +2,65 @@
   local block = self,
   new(app_id, user_id):: (
     {}
-    + block.with_app_id(app_id)
-    + block.with_user_id(user_id)
+    + block.withAppId(app_id)
+    + block.withUserId(user_id)
   ),
-  '#with_app_id':: 'App to associate user with',
-  with_app_id(value):: (
+  "#withAppId":: "App to associate user with",
+  withAppId(value):: (
     local converted = value;
     assert std.isString(converted) : '"app_id" expected to be of type "string"';
     {
       app_id: converted,
     }
   ),
-  with_has_shared_username(value):: (
+  withHasSharedUsername(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"has_shared_username" expected to be of type "bool"';
     {
       has_shared_username: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_password':: 'The password to use.',
-  with_password(value):: (
+  "#withPassword":: "The password to use.",
+  withPassword(value):: (
     local converted = value;
     assert std.isString(converted) : '"password" expected to be of type "string"';
     {
       password: converted,
     }
   ),
-  '#with_profile':: 'The JSON profile of the App User.',
-  with_profile(value):: (
+  "#withProfile":: "The JSON profile of the App User.",
+  withProfile(value):: (
     local converted = value;
     assert std.isString(converted) : '"profile" expected to be of type "string"';
     {
       profile: converted,
     }
   ),
-  '#with_retain_assignment':: 'Retain the user assignment on destroy. If set to true, the resource will be removed from state but not from the Okta app.',
-  with_retain_assignment(value):: (
+  "#withRetainAssignment":: "Retain the user assignment on destroy. If set to true, the resource will be removed from state but not from the Okta app.",
+  withRetainAssignment(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"retain_assignment" expected to be of type "bool"';
     {
       retain_assignment: converted,
     }
   ),
-  '#with_user_id':: 'User associated with the application',
-  with_user_id(value):: (
+  "#withUserId":: "User associated with the application",
+  withUserId(value):: (
     local converted = value;
     assert std.isString(converted) : '"user_id" expected to be of type "string"';
     {
       user_id: converted,
     }
   ),
-  '#with_username':: 'The username to use for the app user. In case the user is assigned to the app with `SHARED_USERNAME_AND_PASSWORD` credentials scheme, this field will be computed and should not be set.',
-  with_username(value):: (
+  "#withUsername":: "The username to use for the app user. In case the user is assigned to the app with `SHARED_USERNAME_AND_PASSWORD` credentials scheme, this field will be computed and should not be set.",
+  withUsername(value):: (
     local converted = value;
     assert std.isString(converted) : '"username" expected to be of type "string"';
     {

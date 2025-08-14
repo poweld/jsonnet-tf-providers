@@ -3,72 +3,72 @@
   new():: (
     {}
   ),
-  '#with_expression_type':: 'The expression type to use to invoke the rule.',
-  with_expression_type(value):: (
+  "#withExpressionType":: "The expression type to use to invoke the rule.",
+  withExpressionType(value):: (
     local converted = value;
     assert std.isString(converted) : '"expression_type" expected to be of type "string"';
     {
       expression_type: converted,
     }
   ),
-  '#with_expression_value':: 'The expression value.',
-  with_expression_value(value):: (
+  "#withExpressionValue":: "The expression value.",
+  withExpressionValue(value):: (
     local converted = value;
     assert std.isString(converted) : '"expression_value" expected to be of type "string"';
     {
       expression_value: converted,
     }
   ),
-  '#with_group_assignments':: 'The list of group ids to assign the users to.',
-  with_group_assignments(value):: (
+  "#withGroupAssignments":: "The list of group ids to assign the users to.",
+  withGroupAssignments(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"group_assignments" expected to be of type "set"';
     {
       group_assignments: converted,
     }
   ),
-  '#with_group_assignments_mixin':: 'The list of group ids to assign the users to.',
-  with_group_assignments_mixin(value):: (
+  "#withGroupAssignmentsMixin":: "The list of group ids to assign the users to.",
+  withGroupAssignmentsMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"group_assignments" expected to be of type "set"';
     {
       group_assignments+: converted,
     }
   ),
-  '#with_id':: 'The ID of the Group Rule.',
-  with_id(value):: (
+  "#withId":: "The ID of the Group Rule.",
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_name':: 'The name of the Group Rule.',
-  with_name(value):: (
+  "#withName":: "The name of the Group Rule.",
+  withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
     }
   ),
-  '#with_status':: 'Default to `ACTIVE`',
-  with_status(value):: (
+  "#withStatus":: "Default to `ACTIVE`",
+  withStatus(value):: (
     local converted = value;
     assert std.isString(converted) : '"status" expected to be of type "string"';
     {
       status: converted,
     }
   ),
-  '#with_users_excluded':: 'The list of user IDs that would be excluded when rules are processed.',
-  with_users_excluded(value):: (
+  "#withUsersExcluded":: "The list of user IDs that would be excluded when rules are processed.",
+  withUsersExcluded(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"users_excluded" expected to be of type "set"';
     {
       users_excluded: converted,
     }
   ),
-  '#with_users_excluded_mixin':: 'The list of user IDs that would be excluded when rules are processed.',
-  with_users_excluded_mixin(value):: (
+  "#withUsersExcludedMixin":: "The list of user IDs that would be excluded when rules are processed.",
+  withUsersExcludedMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"users_excluded" expected to be of type "set"';
     {

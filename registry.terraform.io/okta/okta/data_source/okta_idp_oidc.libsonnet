@@ -3,152 +3,152 @@
   new():: (
     {}
   ),
-  '#with_authorization_binding':: 'The method of making an authorization request.',
-  with_authorization_binding(value):: (
+  "#withAuthorizationBinding":: "The method of making an authorization request.",
+  withAuthorizationBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"authorization_binding" expected to be of type "string"';
     {
       authorization_binding: converted,
     }
   ),
-  '#with_authorization_url':: 'IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.',
-  with_authorization_url(value):: (
+  "#withAuthorizationUrl":: "IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.",
+  withAuthorizationUrl(value):: (
     local converted = value;
     assert std.isString(converted) : '"authorization_url" expected to be of type "string"';
     {
       authorization_url: converted,
     }
   ),
-  '#with_client_id':: 'Unique identifier issued by AS for the Okta IdP instance.',
-  with_client_id(value):: (
+  "#withClientId":: "Unique identifier issued by AS for the Okta IdP instance.",
+  withClientId(value):: (
     local converted = value;
     assert std.isString(converted) : '"client_id" expected to be of type "string"';
     {
       client_id: converted,
     }
   ),
-  '#with_client_secret':: 'Client secret issued by AS for the Okta IdP instance.',
-  with_client_secret(value):: (
+  "#withClientSecret":: "Client secret issued by AS for the Okta IdP instance.",
+  withClientSecret(value):: (
     local converted = value;
     assert std.isString(converted) : '"client_secret" expected to be of type "string"';
     {
       client_secret: converted,
     }
   ),
-  '#with_id':: 'Id of idp.',
-  with_id(value):: (
+  "#withId":: "Id of idp.",
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_issuer_mode':: 'Indicates whether Okta uses the original Okta org domain URL, a custom domain URL, or dynamic.',
-  with_issuer_mode(value):: (
+  "#withIssuerMode":: "Indicates whether Okta uses the original Okta org domain URL, a custom domain URL, or dynamic.",
+  withIssuerMode(value):: (
     local converted = value;
     assert std.isString(converted) : '"issuer_mode" expected to be of type "string"';
     {
       issuer_mode: converted,
     }
   ),
-  '#with_issuer_url':: 'URI that identifies the issuer.',
-  with_issuer_url(value):: (
+  "#withIssuerUrl":: "URI that identifies the issuer.",
+  withIssuerUrl(value):: (
     local converted = value;
     assert std.isString(converted) : '"issuer_url" expected to be of type "string"';
     {
       issuer_url: converted,
     }
   ),
-  '#with_jwks_binding':: ' The method of making a request for the OIDC JWKS.',
-  with_jwks_binding(value):: (
+  "#withJwksBinding":: " The method of making a request for the OIDC JWKS.",
+  withJwksBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"jwks_binding" expected to be of type "string"';
     {
       jwks_binding: converted,
     }
   ),
-  '#with_jwks_url':: 'Endpoint where the keys signer publishes its keys in a JWK Set.',
-  with_jwks_url(value):: (
+  "#withJwksUrl":: "Endpoint where the keys signer publishes its keys in a JWK Set.",
+  withJwksUrl(value):: (
     local converted = value;
     assert std.isString(converted) : '"jwks_url" expected to be of type "string"';
     {
       jwks_url: converted,
     }
   ),
-  '#with_max_clock_skew':: 'Maximum allowable clock-skew when processing messages from the IdP.',
-  with_max_clock_skew(value):: (
+  "#withMaxClockSkew":: "Maximum allowable clock-skew when processing messages from the IdP.",
+  withMaxClockSkew(value):: (
     local converted = value;
     assert std.isNumber(converted) : '"max_clock_skew" expected to be of type "number"';
     {
       max_clock_skew: converted,
     }
   ),
-  '#with_name':: 'Name of the idp.',
-  with_name(value):: (
+  "#withName":: "Name of the idp.",
+  withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
     }
   ),
-  '#with_protocol_type':: 'The type of protocol to use.',
-  with_protocol_type(value):: (
+  "#withProtocolType":: "The type of protocol to use.",
+  withProtocolType(value):: (
     local converted = value;
     assert std.isString(converted) : '"protocol_type" expected to be of type "string"';
     {
       protocol_type: converted,
     }
   ),
-  '#with_scopes':: 'The scopes of the IdP.',
-  with_scopes(value):: (
+  "#withScopes":: "The scopes of the IdP.",
+  withScopes(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"scopes" expected to be of type "set"';
     {
       scopes: converted,
     }
   ),
-  '#with_scopes_mixin':: 'The scopes of the IdP.',
-  with_scopes_mixin(value):: (
+  "#withScopesMixin":: "The scopes of the IdP.",
+  withScopesMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"scopes" expected to be of type "set"';
     {
       scopes+: converted,
     }
   ),
-  '#with_token_binding':: 'The method of making a token request.',
-  with_token_binding(value):: (
+  "#withTokenBinding":: "The method of making a token request.",
+  withTokenBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"token_binding" expected to be of type "string"';
     {
       token_binding: converted,
     }
   ),
-  '#with_token_url':: 'IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.',
-  with_token_url(value):: (
+  "#withTokenUrl":: "IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.",
+  withTokenUrl(value):: (
     local converted = value;
     assert std.isString(converted) : '"token_url" expected to be of type "string"';
     {
       token_url: converted,
     }
   ),
-  '#with_type':: 'Type of idp.',
-  with_type(value):: (
+  "#withType":: "Type of idp.",
+  withType(value):: (
     local converted = value;
     assert std.isString(converted) : '"type" expected to be of type "string"';
     {
       type: converted,
     }
   ),
-  '#with_user_info_binding':: 'The method of making a user info request.',
-  with_user_info_binding(value):: (
+  "#withUserInfoBinding":: "The method of making a user info request.",
+  withUserInfoBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"user_info_binding" expected to be of type "string"';
     {
       user_info_binding: converted,
     }
   ),
-  '#with_user_info_url':: 'Protected resource endpoint that returns claims about the authenticated user.',
-  with_user_info_url(value):: (
+  "#withUserInfoUrl":: "Protected resource endpoint that returns claims about the authenticated user.",
+  withUserInfoUrl(value):: (
     local converted = value;
     assert std.isString(converted) : '"user_info_url" expected to be of type "string"';
     {

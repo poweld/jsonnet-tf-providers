@@ -2,90 +2,90 @@
   local block = self,
   new(name):: (
     {}
-    + block.with_name(name)
+    + block.withName(name)
   ),
-  '#with_created_by':: 'Created by of the device assurance polic',
-  with_created_by(value):: (
+  "#withCreatedBy":: "Created by of the device assurance polic",
+  withCreatedBy(value):: (
     local converted = value;
     assert std.isString(converted) : '"created_by" expected to be of type "string"';
     {
       created_by: converted,
     }
   ),
-  '#with_created_date':: 'Created date of the device assurance polic',
-  with_created_date(value):: (
+  "#withCreatedDate":: "Created date of the device assurance polic",
+  withCreatedDate(value):: (
     local converted = value;
     assert std.isString(converted) : '"created_date" expected to be of type "string"';
     {
       created_date: converted,
     }
   ),
-  '#with_id':: 'Policy assurance id',
-  with_id(value):: (
+  "#withId":: "Policy assurance id",
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_jailbreak':: 'Is the device jailbroken in the device assurance policy.',
-  with_jailbreak(value):: (
+  "#withJailbreak":: "Is the device jailbroken in the device assurance policy.",
+  withJailbreak(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"jailbreak" expected to be of type "bool"';
     {
       jailbreak: converted,
     }
   ),
-  '#with_last_update':: 'Last update of the device assurance polic',
-  with_last_update(value):: (
+  "#withLastUpdate":: "Last update of the device assurance polic",
+  withLastUpdate(value):: (
     local converted = value;
     assert std.isString(converted) : '"last_update" expected to be of type "string"';
     {
       last_update: converted,
     }
   ),
-  '#with_last_updated_by':: 'Last updated by of the device assurance polic',
-  with_last_updated_by(value):: (
+  "#withLastUpdatedBy":: "Last updated by of the device assurance polic",
+  withLastUpdatedBy(value):: (
     local converted = value;
     assert std.isString(converted) : '"last_updated_by" expected to be of type "string"';
     {
       last_updated_by: converted,
     }
   ),
-  '#with_name':: 'Name of the device assurance policy.',
-  with_name(value):: (
+  "#withName":: "Name of the device assurance policy.",
+  withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
     }
   ),
-  '#with_os_version':: 'Minimum os version of the device in the device assurance policy.',
-  with_os_version(value):: (
+  "#withOsVersion":: "Minimum os version of the device in the device assurance policy.",
+  withOsVersion(value):: (
     local converted = value;
     assert std.isString(converted) : '"os_version" expected to be of type "string"';
     {
       os_version: converted,
     }
   ),
-  '#with_platform':: 'Policy device assurance platform',
-  with_platform(value):: (
+  "#withPlatform":: "Policy device assurance platform",
+  withPlatform(value):: (
     local converted = value;
     assert std.isString(converted) : '"platform" expected to be of type "string"';
     {
       platform: converted,
     }
   ),
-  '#with_screenlock_type':: 'List of screenlock type, can be `BIOMETRIC` or `BIOMETRIC, PASSCODE`',
-  with_screenlock_type(value):: (
+  "#withScreenlockType":: "List of screenlock type, can be `BIOMETRIC` or `BIOMETRIC, PASSCODE`",
+  withScreenlockType(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"screenlock_type" expected to be of type "set"';
     {
       screenlock_type: converted,
     }
   ),
-  '#with_screenlock_type_mixin':: 'List of screenlock type, can be `BIOMETRIC` or `BIOMETRIC, PASSCODE`',
-  with_screenlock_type_mixin(value):: (
+  "#withScreenlockTypeMixin":: "List of screenlock type, can be `BIOMETRIC` or `BIOMETRIC, PASSCODE`",
+  withScreenlockTypeMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"screenlock_type" expected to be of type "set"';
     {

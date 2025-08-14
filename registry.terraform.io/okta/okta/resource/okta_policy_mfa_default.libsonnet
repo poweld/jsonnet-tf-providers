@@ -3,223 +3,223 @@
   new():: (
     {}
   ),
-  '#with_default_included_group_id':: 'Default group ID (always included)',
-  with_default_included_group_id(value):: (
+  "#withDefaultIncludedGroupId":: "Default group ID (always included)",
+  withDefaultIncludedGroupId(value):: (
     local converted = value;
     assert std.isString(converted) : '"default_included_group_id" expected to be of type "string"';
     {
       default_included_group_id: converted,
     }
   ),
-  '#with_description':: 'Default policy description',
-  with_description(value):: (
+  "#withDescription":: "Default policy description",
+  withDescription(value):: (
     local converted = value;
     assert std.isString(converted) : '"description" expected to be of type "string"';
     {
       description: converted,
     }
   ),
-  with_duo(value):: (
+  withDuo(value):: (
     local converted = value;
     assert std.isObject(converted) : '"duo" expected to be of type "map"';
     {
       duo: converted,
     }
   ),
-  with_external_idp(value):: (
+  withExternalIdp(value):: (
     local converted = value;
     assert std.isObject(converted) : '"external_idp" expected to be of type "map"';
     {
       external_idp: converted,
     }
   ),
-  with_external_idps(value):: (
+  withExternalIdps(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"external_idps" expected to be of type "set"';
     {
       external_idps: converted,
     }
   ),
-  with_external_idps_mixin(value):: (
+  withExternalIdpsMixin(value):: (
     local converted = if std.isArray(value) then value else [value];
     assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"external_idps" expected to be of type "set"';
     {
       external_idps+: converted,
     }
   ),
-  with_fido_u2f(value):: (
+  withFidoU2f(value):: (
     local converted = value;
     assert std.isObject(converted) : '"fido_u2f" expected to be of type "map"';
     {
       fido_u2f: converted,
     }
   ),
-  with_fido_webauthn(value):: (
+  withFidoWebauthn(value):: (
     local converted = value;
     assert std.isObject(converted) : '"fido_webauthn" expected to be of type "map"';
     {
       fido_webauthn: converted,
     }
   ),
-  with_google_otp(value):: (
+  withGoogleOtp(value):: (
     local converted = value;
     assert std.isObject(converted) : '"google_otp" expected to be of type "map"';
     {
       google_otp: converted,
     }
   ),
-  with_hotp(value):: (
+  withHotp(value):: (
     local converted = value;
     assert std.isObject(converted) : '"hotp" expected to be of type "map"';
     {
       hotp: converted,
     }
   ),
-  with_id(value):: (
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_is_oie':: 'Is the policy using Okta Identity Engine (OIE) with authenticators instead of factors?',
-  with_is_oie(value):: (
+  "#withIsOie":: "Is the policy using Okta Identity Engine (OIE) with authenticators instead of factors?",
+  withIsOie(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"is_oie" expected to be of type "bool"';
     {
       is_oie: converted,
     }
   ),
-  '#with_name':: 'Default policy name',
-  with_name(value):: (
+  "#withName":: "Default policy name",
+  withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
     }
   ),
-  with_okta_call(value):: (
+  withOktaCall(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_call" expected to be of type "map"';
     {
       okta_call: converted,
     }
   ),
-  with_okta_email(value):: (
+  withOktaEmail(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_email" expected to be of type "map"';
     {
       okta_email: converted,
     }
   ),
-  with_okta_otp(value):: (
+  withOktaOtp(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_otp" expected to be of type "map"';
     {
       okta_otp: converted,
     }
   ),
-  with_okta_password(value):: (
+  withOktaPassword(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_password" expected to be of type "map"';
     {
       okta_password: converted,
     }
   ),
-  with_okta_push(value):: (
+  withOktaPush(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_push" expected to be of type "map"';
     {
       okta_push: converted,
     }
   ),
-  with_okta_question(value):: (
+  withOktaQuestion(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_question" expected to be of type "map"';
     {
       okta_question: converted,
     }
   ),
-  with_okta_sms(value):: (
+  withOktaSms(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_sms" expected to be of type "map"';
     {
       okta_sms: converted,
     }
   ),
-  with_okta_verify(value):: (
+  withOktaVerify(value):: (
     local converted = value;
     assert std.isObject(converted) : '"okta_verify" expected to be of type "map"';
     {
       okta_verify: converted,
     }
   ),
-  with_onprem_mfa(value):: (
+  withOnpremMfa(value):: (
     local converted = value;
     assert std.isObject(converted) : '"onprem_mfa" expected to be of type "map"';
     {
       onprem_mfa: converted,
     }
   ),
-  with_phone_number(value):: (
+  withPhoneNumber(value):: (
     local converted = value;
     assert std.isObject(converted) : '"phone_number" expected to be of type "map"';
     {
       phone_number: converted,
     }
   ),
-  '#with_priority':: 'Default policy priority',
-  with_priority(value):: (
+  "#withPriority":: "Default policy priority",
+  withPriority(value):: (
     local converted = value;
     assert std.isNumber(converted) : '"priority" expected to be of type "number"';
     {
       priority: converted,
     }
   ),
-  with_rsa_token(value):: (
+  withRsaToken(value):: (
     local converted = value;
     assert std.isObject(converted) : '"rsa_token" expected to be of type "map"';
     {
       rsa_token: converted,
     }
   ),
-  with_security_question(value):: (
+  withSecurityQuestion(value):: (
     local converted = value;
     assert std.isObject(converted) : '"security_question" expected to be of type "map"';
     {
       security_question: converted,
     }
   ),
-  with_smart_card_idp(value):: (
+  withSmartCardIdp(value):: (
     local converted = value;
     assert std.isObject(converted) : '"smart_card_idp" expected to be of type "map"';
     {
       smart_card_idp: converted,
     }
   ),
-  '#with_status':: 'Default policy status',
-  with_status(value):: (
+  "#withStatus":: "Default policy status",
+  withStatus(value):: (
     local converted = value;
     assert std.isString(converted) : '"status" expected to be of type "string"';
     {
       status: converted,
     }
   ),
-  with_symantec_vip(value):: (
+  withSymantecVip(value):: (
     local converted = value;
     assert std.isObject(converted) : '"symantec_vip" expected to be of type "map"';
     {
       symantec_vip: converted,
     }
   ),
-  with_webauthn(value):: (
+  withWebauthn(value):: (
     local converted = value;
     assert std.isObject(converted) : '"webauthn" expected to be of type "map"';
     {
       webauthn: converted,
     }
   ),
-  with_yubikey_token(value):: (
+  withYubikeyToken(value):: (
     local converted = value;
     assert std.isObject(converted) : '"yubikey_token" expected to be of type "map"';
     {

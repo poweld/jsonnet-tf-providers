@@ -3,40 +3,40 @@
   new():: (
     {}
   ),
-  '#with_id':: 'Behavior ID.',
-  with_id(value):: (
+  "#withId":: "Behavior ID.",
+  withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
     }
   ),
-  '#with_name':: 'Behavior name.',
-  with_name(value):: (
+  "#withName":: "Behavior name.",
+  withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
     }
   ),
-  '#with_settings':: 'Map of behavior settings.',
-  with_settings(value):: (
+  "#withSettings":: "Map of behavior settings.",
+  withSettings(value):: (
     local converted = value;
     assert std.isObject(converted) : '"settings" expected to be of type "map"';
     {
       settings: converted,
     }
   ),
-  '#with_status':: 'Behavior status.',
-  with_status(value):: (
+  "#withStatus":: "Behavior status.",
+  withStatus(value):: (
     local converted = value;
     assert std.isString(converted) : '"status" expected to be of type "string"';
     {
       status: converted,
     }
   ),
-  '#with_type':: 'Behavior type.',
-  with_type(value):: (
+  "#withType":: "Behavior type.",
+  withType(value):: (
     local converted = value;
     assert std.isString(converted) : '"type" expected to be of type "string"';
     {
