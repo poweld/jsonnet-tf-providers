@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_behavior",
+      terraformType:: "data",
     }
   ),
   "#withId":: "Behavior ID.",

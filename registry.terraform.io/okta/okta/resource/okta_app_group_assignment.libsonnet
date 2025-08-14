@@ -3,6 +3,7 @@
   new(app_id, group_id):: (
     {
       terraformObject:: "okta_app_group_assignment",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withGroupId(group_id)
@@ -59,6 +60,7 @@
     new():: (
       {
         terraformObject:: "okta_app_group_assignment",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

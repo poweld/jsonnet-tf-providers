@@ -3,6 +3,7 @@
   new(app_id):: (
     {
       terraformObject:: "okta_app_metadata_saml",
+      terraformType:: "data",
     }
     + block.withAppId(app_id)
   ),

@@ -3,6 +3,7 @@
   new(expression_value, group_assignments, name):: (
     {
       terraformObject:: "okta_group_rule",
+      terraformType:: "resource",
     }
     + block.withExpressionValue(expression_value)
     + block.withGroupAssignments(group_assignments)

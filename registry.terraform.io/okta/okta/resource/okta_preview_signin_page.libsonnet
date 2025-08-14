@@ -3,6 +3,7 @@
   new(brand_id, page_content, widget_version):: (
     {
       terraformObject:: "okta_preview_signin_page",
+      terraformType:: "resource",
     }
     + block.withBrandId(brand_id)
     + block.withPageContent(page_content)
@@ -45,6 +46,7 @@
     new():: (
       {
         terraformObject:: "okta_preview_signin_page",
+        terraformType:: "resource",
       }
     ),
     "#withMode":: "enforced or report_only",
@@ -82,6 +84,7 @@
     new(widget_generation):: (
       {
         terraformObject:: "okta_preview_signin_page",
+        terraformType:: "resource",
       }
       + block.withWidgetGeneration(widget_generation)
     ),

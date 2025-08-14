@@ -3,6 +3,7 @@
   new(name, type):: (
     {
       terraformObject:: "okta_behavior",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withType(type)

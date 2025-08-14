@@ -3,6 +3,7 @@
   new(label, type):: (
     {
       terraformObject:: "okta_app_oauth",
+      terraformType:: "resource",
     }
     + block.withLabel(label)
     + block.withType(type)
@@ -443,6 +444,7 @@
     new(name, type, value):: (
       {
         terraformObject:: "okta_app_oauth",
+        terraformType:: "resource",
       }
       + block.withName(name)
       + block.withType(type)
@@ -494,6 +496,7 @@
     new(kid, kty):: (
       {
         terraformObject:: "okta_app_oauth",
+        terraformType:: "resource",
       }
       + block.withKid(kid)
       + block.withKty(kty)
@@ -552,6 +555,7 @@
     new():: (
       {
         terraformObject:: "okta_app_oauth",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

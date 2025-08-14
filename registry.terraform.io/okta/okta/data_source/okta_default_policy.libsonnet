@@ -3,6 +3,7 @@
   new(type):: (
     {
       terraformObject:: "okta_default_policy",
+      terraformType:: "data",
     }
     + block.withType(type)
   ),

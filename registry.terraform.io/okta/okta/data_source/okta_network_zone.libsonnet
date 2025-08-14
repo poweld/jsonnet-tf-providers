@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_network_zone",
+      terraformType:: "data",
     }
   ),
   "#withAsns":: "List of asns included. Format of each array value: a string representation of an ASN numeric value. Use with type `DYNAMIC` or `DYNAMIC_V2`",

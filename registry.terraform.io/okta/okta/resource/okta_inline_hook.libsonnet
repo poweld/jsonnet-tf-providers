@@ -3,6 +3,7 @@
   new(name, type, version):: (
     {
       terraformObject:: "okta_inline_hook",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withType(type)
@@ -74,6 +75,7 @@
     new():: (
       {
         terraformObject:: "okta_inline_hook",
+        terraformType:: "resource",
       }
     ),
     withKey(value):: (

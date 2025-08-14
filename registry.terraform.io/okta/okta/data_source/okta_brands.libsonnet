@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_brands",
+      terraformType:: "data",
     }
   ),
   "#withBrands":: "List of `okta_brand` belonging to the organization",

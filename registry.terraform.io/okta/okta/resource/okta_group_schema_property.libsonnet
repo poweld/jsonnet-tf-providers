@@ -3,6 +3,7 @@
   new(index, title, type):: (
     {
       terraformObject:: "okta_group_schema_property",
+      terraformType:: "resource",
     }
     + block.withIndex(index)
     + block.withTitle(title)
@@ -163,6 +164,7 @@
     new(const, title):: (
       {
         terraformObject:: "okta_group_schema_property",
+        terraformType:: "resource",
       }
       + block.withConst(const)
       + block.withTitle(title)
@@ -189,6 +191,7 @@
     new(value):: (
       {
         terraformObject:: "okta_group_schema_property",
+        terraformType:: "resource",
       }
       + block.withValue(value)
     ),
@@ -212,6 +215,7 @@
     new(const, title):: (
       {
         terraformObject:: "okta_group_schema_property",
+        terraformType:: "resource",
       }
       + block.withConst(const)
       + block.withTitle(title)

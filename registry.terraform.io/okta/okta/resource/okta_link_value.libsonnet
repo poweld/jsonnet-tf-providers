@@ -3,6 +3,7 @@
   new(primary_name, primary_user_id):: (
     {
       terraformObject:: "okta_link_value",
+      terraformType:: "resource",
     }
     + block.withPrimaryName(primary_name)
     + block.withPrimaryUserId(primary_user_id)

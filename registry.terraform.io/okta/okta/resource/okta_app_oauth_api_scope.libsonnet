@@ -3,6 +3,7 @@
   new(app_id, issuer, scopes):: (
     {
       terraformObject:: "okta_app_oauth_api_scope",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withIssuer(issuer)

@@ -3,6 +3,7 @@
   new(label):: (
     {
       terraformObject:: "okta_app_shared_credentials",
+      terraformType:: "resource",
     }
     + block.withLabel(label)
   ),
@@ -250,6 +251,7 @@
     new():: (
       {
         terraformObject:: "okta_app_shared_credentials",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

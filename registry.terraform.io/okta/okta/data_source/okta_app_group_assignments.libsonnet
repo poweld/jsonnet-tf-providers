@@ -3,6 +3,7 @@
   new(id):: (
     {
       terraformObject:: "okta_app_group_assignments",
+      terraformType:: "data",
     }
     + block.withId(id)
   ),

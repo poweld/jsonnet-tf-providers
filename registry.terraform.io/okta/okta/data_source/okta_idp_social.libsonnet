@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_idp_social",
+      terraformType:: "data",
     }
   ),
   "#withAccountLinkAction":: "Specifies the account linking action for an IdP user.",

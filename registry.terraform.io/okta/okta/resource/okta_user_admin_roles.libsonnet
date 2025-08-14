@@ -3,6 +3,7 @@
   new(admin_roles, user_id):: (
     {
       terraformObject:: "okta_user_admin_roles",
+      terraformType:: "resource",
     }
     + block.withAdminRoles(admin_roles)
     + block.withUserId(user_id)

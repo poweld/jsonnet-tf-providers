@@ -3,6 +3,7 @@
   new(auth_server_id, client_whitelist, description, name, priority):: (
     {
       terraformObject:: "okta_auth_server_policy",
+      terraformType:: "resource",
     }
     + block.withAuthServerId(auth_server_id)
     + block.withClientWhitelist(client_whitelist)

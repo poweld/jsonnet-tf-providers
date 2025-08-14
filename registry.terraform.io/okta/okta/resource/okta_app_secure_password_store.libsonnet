@@ -3,6 +3,7 @@
   new(label, password_field, url, username_field):: (
     {
       terraformObject:: "okta_app_secure_password_store",
+      terraformType:: "resource",
     }
     + block.withLabel(label)
     + block.withPasswordField(password_field)
@@ -277,6 +278,7 @@
     new():: (
       {
         terraformObject:: "okta_app_secure_password_store",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_user_type",
+      terraformType:: "data",
     }
   ),
   "#withDescription":: "Description of user type.",

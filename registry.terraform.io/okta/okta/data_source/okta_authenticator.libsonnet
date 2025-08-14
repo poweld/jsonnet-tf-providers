@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_authenticator",
+      terraformType:: "data",
     }
   ),
   "#withId":: "ID of the authenticator.",

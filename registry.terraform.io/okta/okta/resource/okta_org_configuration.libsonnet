@@ -3,6 +3,7 @@
   new(company_name):: (
     {
       terraformObject:: "okta_org_configuration",
+      terraformType:: "resource",
     }
     + block.withCompanyName(company_name)
   ),

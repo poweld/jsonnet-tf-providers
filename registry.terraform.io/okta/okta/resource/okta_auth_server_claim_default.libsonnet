@@ -3,6 +3,7 @@
   new(auth_server_id, name):: (
     {
       terraformObject:: "okta_auth_server_claim_default",
+      terraformType:: "resource",
     }
     + block.withAuthServerId(auth_server_id)
     + block.withName(name)

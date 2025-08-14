@@ -3,6 +3,7 @@
   new(app_id):: (
     {
       terraformObject:: "okta_app_signon_policy",
+      terraformType:: "data",
     }
     + block.withAppId(app_id)
   ),

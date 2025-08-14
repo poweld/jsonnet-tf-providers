@@ -3,6 +3,7 @@
   new(feature_id):: (
     {
       terraformObject:: "okta_feature",
+      terraformType:: "resource",
     }
     + block.withFeatureId(feature_id)
   ),

@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_device_assurance_policy",
+      terraformType:: "data",
     }
   ),
   "#withDiskEncryptionType":: "List of disk encryption type, can be `FULL`, `USER`",

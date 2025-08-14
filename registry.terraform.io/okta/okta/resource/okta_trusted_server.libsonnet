@@ -3,6 +3,7 @@
   new(auth_server_id, trusted):: (
     {
       terraformObject:: "okta_trusted_server",
+      terraformType:: "resource",
     }
     + block.withAuthServerId(auth_server_id)
     + block.withTrusted(trusted)

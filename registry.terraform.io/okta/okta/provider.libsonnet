@@ -5,6 +5,7 @@
   new():: (
     {
       terraformObject:: "registry.terraform.io/okta/okta",
+      terraformType:: "provider",
     }
   ),
   "#withAccessToken":: "Bearer token granting privileges to Okta API.",

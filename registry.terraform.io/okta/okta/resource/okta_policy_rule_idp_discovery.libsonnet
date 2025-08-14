@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_rule_idp_discovery",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),
@@ -106,6 +107,7 @@
     new(type):: (
       {
         terraformObject:: "okta_policy_rule_idp_discovery",
+        terraformType:: "resource",
       }
       + block.withType(type)
     ),
@@ -136,6 +138,7 @@
     new(type):: (
       {
         terraformObject:: "okta_policy_rule_idp_discovery",
+        terraformType:: "resource",
       }
       + block.withType(type)
     ),
@@ -166,6 +169,7 @@
     new():: (
       {
         terraformObject:: "okta_policy_rule_idp_discovery",
+        terraformType:: "resource",
       }
     ),
     "#withId":: "The identifier for the Idp the rule should route to if all conditions are met.",
@@ -190,6 +194,7 @@
     new():: (
       {
         terraformObject:: "okta_policy_rule_idp_discovery",
+        terraformType:: "resource",
       }
     ),
     "#withOsExpression":: "Only available with OTHER OS type",
@@ -220,6 +225,7 @@
     new():: (
       {
         terraformObject:: "okta_policy_rule_idp_discovery",
+        terraformType:: "resource",
       }
     ),
     withMatchType(value):: (

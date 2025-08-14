@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_features",
+      terraformType:: "data",
     }
   ),
   "#withFeatures":: "The list of features that match the search criteria.",

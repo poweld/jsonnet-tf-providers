@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_profile_enrollment",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

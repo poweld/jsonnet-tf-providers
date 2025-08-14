@@ -3,6 +3,7 @@
   new(app_id, index, title, type):: (
     {
       terraformObject:: "okta_app_user_base_schema_property",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withIndex(index)

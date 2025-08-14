@@ -3,6 +3,7 @@
   new(brand_id, display_name, domain, user_name):: (
     {
       terraformObject:: "okta_email_domain",
+      terraformType:: "resource",
     }
     + block.withBrandId(brand_id)
     + block.withDisplayName(display_name)

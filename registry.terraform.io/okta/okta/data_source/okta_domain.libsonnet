@@ -3,6 +3,7 @@
   new(domain_id_or_name):: (
     {
       terraformObject:: "okta_domain",
+      terraformType:: "data",
     }
     + block.withDomainIdOrName(domain_id_or_name)
   ),

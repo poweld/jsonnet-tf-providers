@@ -3,6 +3,7 @@
   new(app_id, user_id):: (
     {
       terraformObject:: "okta_app_user",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withUserId(user_id)

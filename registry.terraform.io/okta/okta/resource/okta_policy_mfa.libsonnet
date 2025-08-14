@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_mfa",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

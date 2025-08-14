@@ -3,6 +3,7 @@
   new(description, display_name, name):: (
     {
       terraformObject:: "okta_user_type",
+      terraformType:: "resource",
     }
     + block.withDescription(description)
     + block.withDisplayName(display_name)

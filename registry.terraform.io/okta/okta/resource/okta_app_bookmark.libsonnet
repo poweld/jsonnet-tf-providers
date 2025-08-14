@@ -3,6 +3,7 @@
   new(label, url):: (
     {
       terraformObject:: "okta_app_bookmark",
+      terraformType:: "resource",
     }
     + block.withLabel(label)
     + block.withUrl(url)
@@ -163,6 +164,7 @@
     new():: (
       {
         terraformObject:: "okta_app_bookmark",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_users",
+      terraformType:: "data",
     }
   ),
   "#withCompoundSearchOperator":: "Search operator used when joining multiple search clauses",
@@ -73,6 +74,7 @@
     new():: (
       {
         terraformObject:: "okta_users",
+        terraformType:: "data",
       }
     ),
     withComparison(value):: (

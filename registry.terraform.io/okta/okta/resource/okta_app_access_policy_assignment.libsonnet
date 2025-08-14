@@ -3,6 +3,7 @@
   new(app_id, policy_id):: (
     {
       terraformObject:: "okta_app_access_policy_assignment",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withPolicyId(policy_id)

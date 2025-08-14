@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_policy_mfa_default",
+      terraformType:: "resource",
     }
   ),
   "#withDefaultIncludedGroupId":: "Default group ID (always included)",

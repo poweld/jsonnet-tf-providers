@@ -3,6 +3,7 @@
   new(group_id, id_of_group_owner, type):: (
     {
       terraformObject:: "okta_group_owner",
+      terraformType:: "resource",
     }
     + block.withGroupId(group_id)
     + block.withIdOfGroupOwner(id_of_group_owner)

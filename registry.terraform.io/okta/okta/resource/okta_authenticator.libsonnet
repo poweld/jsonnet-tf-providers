@@ -3,6 +3,7 @@
   new(key, name):: (
     {
       terraformObject:: "okta_authenticator",
+      terraformType:: "resource",
     }
     + block.withKey(key)
     + block.withName(name)

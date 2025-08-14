@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_domain",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

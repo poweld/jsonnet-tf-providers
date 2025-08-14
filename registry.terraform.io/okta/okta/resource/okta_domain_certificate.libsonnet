@@ -3,6 +3,7 @@
   new(certificate, certificate_chain, domain_id, private_key):: (
     {
       terraformObject:: "okta_domain_certificate",
+      terraformType:: "resource",
     }
     + block.withCertificate(certificate)
     + block.withCertificateChain(certificate_chain)

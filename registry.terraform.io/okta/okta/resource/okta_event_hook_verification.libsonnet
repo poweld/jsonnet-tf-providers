@@ -3,6 +3,7 @@
   new(event_hook_id):: (
     {
       terraformObject:: "okta_event_hook_verification",
+      terraformType:: "resource",
     }
     + block.withEventHookId(event_hook_id)
   ),

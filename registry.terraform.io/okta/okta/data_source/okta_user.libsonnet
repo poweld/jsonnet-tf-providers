@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_user",
+      terraformType:: "data",
     }
   ),
   withAdminRoles(value):: (
@@ -330,6 +331,7 @@
     new():: (
       {
         terraformObject:: "okta_user",
+        terraformType:: "data",
       }
     ),
     withComparison(value):: (

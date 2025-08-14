@@ -3,6 +3,7 @@
   new(button_selector, extra_field_selector, extra_field_value, label, password_selector, url, username_selector):: (
     {
       terraformObject:: "okta_app_three_field",
+      terraformType:: "resource",
     }
     + block.withButtonSelector(button_selector)
     + block.withExtraFieldSelector(extra_field_selector)
@@ -264,6 +265,7 @@
     new():: (
       {
         terraformObject:: "okta_app_three_field",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

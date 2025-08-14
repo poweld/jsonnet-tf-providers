@@ -3,6 +3,7 @@
   new(name, policy_id):: (
     {
       terraformObject:: "okta_app_signon_policy_rule",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withPolicyId(policy_id)
@@ -315,6 +316,7 @@
     new():: (
       {
         terraformObject:: "okta_app_signon_policy_rule",
+        terraformType:: "resource",
       }
     ),
     "#withOsExpression":: "Only available with OTHER OS type",

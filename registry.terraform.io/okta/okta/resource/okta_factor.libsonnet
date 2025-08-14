@@ -3,6 +3,7 @@
   new(provider_id):: (
     {
       terraformObject:: "okta_factor",
+      terraformType:: "resource",
     }
     + block.withProviderId(provider_id)
   ),

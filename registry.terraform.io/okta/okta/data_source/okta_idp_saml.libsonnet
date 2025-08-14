@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_idp_saml",
+      terraformType:: "data",
     }
   ),
   "#withAcsBinding":: "ACS binding",

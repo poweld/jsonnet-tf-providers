@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_device_assurance_windows",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

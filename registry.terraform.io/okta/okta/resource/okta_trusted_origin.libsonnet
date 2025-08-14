@@ -3,6 +3,7 @@
   new(name, origin, scopes):: (
     {
       terraformObject:: "okta_trusted_origin",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withOrigin(origin)

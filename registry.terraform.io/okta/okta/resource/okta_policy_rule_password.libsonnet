@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_rule_password",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

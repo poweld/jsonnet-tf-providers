@@ -3,6 +3,7 @@
   new(description, label):: (
     {
       terraformObject:: "okta_resource_set",
+      terraformType:: "resource",
     }
     + block.withDescription(description)
     + block.withLabel(label)

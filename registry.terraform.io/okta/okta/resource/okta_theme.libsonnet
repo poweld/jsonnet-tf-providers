@@ -3,6 +3,7 @@
   new(brand_id):: (
     {
       terraformObject:: "okta_theme",
+      terraformType:: "resource",
     }
     + block.withBrandId(brand_id)
   ),

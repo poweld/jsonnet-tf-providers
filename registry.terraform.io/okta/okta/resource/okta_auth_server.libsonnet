@@ -3,6 +3,7 @@
   new(audiences, name):: (
     {
       terraformObject:: "okta_auth_server",
+      terraformType:: "resource",
     }
     + block.withAudiences(audiences)
     + block.withName(name)

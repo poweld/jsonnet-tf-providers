@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_policy_password_default",
+      terraformType:: "resource",
     }
   ),
   "#withCallRecovery":: "Enable or disable voice call recovery: ACTIVE or INACTIVE. Default: `INACTIVE`",

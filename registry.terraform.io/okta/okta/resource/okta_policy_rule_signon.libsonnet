@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_rule_signon",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),
@@ -242,6 +243,7 @@
     new(primary_criteria_factor_type, primary_criteria_provider):: (
       {
         terraformObject:: "okta_policy_rule_signon",
+        terraformType:: "resource",
       }
       + block.withPrimaryCriteriaFactorType(primary_criteria_factor_type)
       + block.withPrimaryCriteriaProvider(primary_criteria_provider)
@@ -267,6 +269,7 @@
       new(factor_type, provider):: (
         {
           terraformObject:: "okta_policy_rule_signon",
+          terraformType:: "resource",
         }
         + block.withFactorType(factor_type)
         + block.withProvider(provider)

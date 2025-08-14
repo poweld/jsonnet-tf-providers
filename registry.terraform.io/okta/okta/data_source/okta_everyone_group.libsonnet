@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_everyone_group",
+      terraformType:: "data",
     }
   ),
   "#withDescription":: "Description of group.",

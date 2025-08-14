@@ -3,6 +3,7 @@
   new(app_id, index, title, type):: (
     {
       terraformObject:: "okta_app_user_schema_property",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withIndex(index)
@@ -189,6 +190,7 @@
     new(const, title):: (
       {
         terraformObject:: "okta_app_user_schema_property",
+        terraformType:: "resource",
       }
       + block.withConst(const)
       + block.withTitle(title)
@@ -215,6 +217,7 @@
     new(const, title):: (
       {
         terraformObject:: "okta_app_user_schema_property",
+        terraformType:: "resource",
       }
       + block.withConst(const)
       + block.withTitle(title)

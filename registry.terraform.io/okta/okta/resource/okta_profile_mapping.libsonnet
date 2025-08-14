@@ -3,6 +3,7 @@
   new(source_id, target_id):: (
     {
       terraformObject:: "okta_profile_mapping",
+      terraformType:: "resource",
     }
     + block.withSourceId(source_id)
     + block.withTargetId(target_id)
@@ -83,6 +84,7 @@
     new(expression, id):: (
       {
         terraformObject:: "okta_profile_mapping",
+        terraformType:: "resource",
       }
       + block.withExpression(expression)
       + block.withId(id)

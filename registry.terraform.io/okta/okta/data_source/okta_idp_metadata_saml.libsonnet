@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_idp_metadata_saml",
+      terraformType:: "data",
     }
   ),
   "#withAssertionsSigned":: "Whether assertions are signed.",

@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_log_stream",
+      terraformType:: "data",
     }
   ),
   "#withId":: "ID of the log stream to retrieve, conflicts with `name`.",
@@ -42,6 +43,7 @@
     new():: (
       {
         terraformObject:: "okta_log_stream",
+        terraformType:: "data",
       }
     ),
     "#withAccountId":: "AWS account ID. Required only for 'aws_eventbridge' type",

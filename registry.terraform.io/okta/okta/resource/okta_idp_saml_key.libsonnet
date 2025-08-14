@@ -3,6 +3,7 @@
   new(x5c):: (
     {
       terraformObject:: "okta_idp_saml_key",
+      terraformType:: "resource",
     }
     + block.withX5c(x5c)
   ),

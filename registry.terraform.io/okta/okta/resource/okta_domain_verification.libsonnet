@@ -3,6 +3,7 @@
   new(domain_id):: (
     {
       terraformObject:: "okta_domain_verification",
+      terraformType:: "resource",
     }
     + block.withDomainId(domain_id)
   ),

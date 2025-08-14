@@ -3,6 +3,7 @@
   new(authorize, login):: (
     {
       terraformObject:: "okta_rate_limiting",
+      terraformType:: "resource",
     }
     + block.withAuthorize(authorize)
     + block.withLogin(login)

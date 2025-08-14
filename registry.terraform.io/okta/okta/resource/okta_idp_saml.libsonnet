@@ -3,6 +3,7 @@
   new(issuer, kid, name, sso_url):: (
     {
       terraformObject:: "okta_idp_saml",
+      terraformType:: "resource",
     }
     + block.withIssuer(issuer)
     + block.withKid(kid)

@@ -3,6 +3,7 @@
   new(label):: (
     {
       terraformObject:: "okta_app_saml",
+      terraformType:: "resource",
     }
     + block.withLabel(label)
   ),
@@ -514,6 +515,7 @@
     new(index, url):: (
       {
         terraformObject:: "okta_app_saml",
+        terraformType:: "resource",
       }
       + block.withIndex(index)
       + block.withUrl(url)
@@ -538,6 +540,7 @@
     new(name):: (
       {
         terraformObject:: "okta_app_saml",
+        terraformType:: "resource",
       }
       + block.withName(name)
     ),
@@ -601,6 +604,7 @@
     new():: (
       {
         terraformObject:: "okta_app_saml",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

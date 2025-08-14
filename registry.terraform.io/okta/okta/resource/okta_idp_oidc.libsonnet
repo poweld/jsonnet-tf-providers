@@ -3,6 +3,7 @@
   new(authorization_binding, authorization_url, client_id, client_secret, issuer_url, jwks_binding, jwks_url, name, scopes, token_binding, token_url):: (
     {
       terraformObject:: "okta_idp_oidc",
+      terraformType:: "resource",
     }
     + block.withAuthorizationBinding(authorization_binding)
     + block.withAuthorizationUrl(authorization_url)

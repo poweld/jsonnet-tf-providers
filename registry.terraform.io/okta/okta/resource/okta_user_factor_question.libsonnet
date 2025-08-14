@@ -3,6 +3,7 @@
   new(answer, key, user_id):: (
     {
       terraformObject:: "okta_user_factor_question",
+      terraformType:: "resource",
     }
     + block.withAnswer(answer)
     + block.withKey(key)

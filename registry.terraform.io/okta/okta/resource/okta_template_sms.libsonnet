@@ -3,6 +3,7 @@
   new(template, type):: (
     {
       terraformObject:: "okta_template_sms",
+      terraformType:: "resource",
     }
     + block.withTemplate(template)
     + block.withType(type)
@@ -35,6 +36,7 @@
     new(language, template):: (
       {
         terraformObject:: "okta_template_sms",
+        terraformType:: "resource",
       }
       + block.withLanguage(language)
       + block.withTemplate(template)

@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_org_metadata",
+      terraformType:: "data",
     }
   ),
   "#withId":: "The unique identifier of the Org.",
@@ -26,6 +27,7 @@
     new():: (
       {
         terraformObject:: "okta_org_metadata",
+        terraformType:: "data",
       }
     ),
     "#withAlternate":: "Custom Domain Org URI",
@@ -50,6 +52,7 @@
     new():: (
       {
         terraformObject:: "okta_org_metadata",
+        terraformType:: "data",
       }
     ),
     withAnalyticsCollectionEnabled(value):: (

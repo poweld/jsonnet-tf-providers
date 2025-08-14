@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_idp_oidc",
+      terraformType:: "data",
     }
   ),
   "#withAuthorizationBinding":: "The method of making an authorization request.",

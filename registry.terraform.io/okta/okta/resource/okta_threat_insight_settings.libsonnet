@@ -3,6 +3,7 @@
   new(action):: (
     {
       terraformObject:: "okta_threat_insight_settings",
+      terraformType:: "resource",
     }
     + block.withAction(action)
   ),

@@ -3,6 +3,7 @@
   new(notification_type, role_type):: (
     {
       terraformObject:: "okta_role_subscription",
+      terraformType:: "resource",
     }
     + block.withNotificationType(notification_type)
     + block.withRoleType(role_type)

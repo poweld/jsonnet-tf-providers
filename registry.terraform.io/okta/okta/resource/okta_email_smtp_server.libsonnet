@@ -3,6 +3,7 @@
   new(alias, host, password, port, username):: (
     {
       terraformObject:: "okta_email_smtp_server",
+      terraformType:: "resource",
     }
     + block.withAlias(alias)
     + block.withHost(host)

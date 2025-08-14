@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_factor_totp",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

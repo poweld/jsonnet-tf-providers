@@ -3,6 +3,7 @@
   new(channel, events, name):: (
     {
       terraformObject:: "okta_event_hook",
+      terraformType:: "resource",
     }
     + block.withChannel(channel)
     + block.withEvents(events)
@@ -68,6 +69,7 @@
     new():: (
       {
         terraformObject:: "okta_event_hook",
+        terraformType:: "resource",
       }
     ),
     withKey(value):: (

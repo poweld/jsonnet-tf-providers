@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_app_oauth",
+      terraformType:: "data",
     }
   ),
   "#withActiveOnly":: "Search only ACTIVE applications.",

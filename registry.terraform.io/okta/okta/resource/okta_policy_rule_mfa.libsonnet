@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_policy_rule_mfa",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),
@@ -114,6 +115,7 @@
     new(type):: (
       {
         terraformObject:: "okta_policy_rule_mfa",
+        terraformType:: "resource",
       }
       + block.withType(type)
     ),
@@ -144,6 +146,7 @@
     new(type):: (
       {
         terraformObject:: "okta_policy_rule_mfa",
+        terraformType:: "resource",
       }
       + block.withType(type)
     ),

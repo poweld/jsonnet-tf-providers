@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_app_saml",
+      terraformType:: "data",
     }
   ),
   "#withAccessibilityErrorRedirectUrl":: "Custom error page URL",

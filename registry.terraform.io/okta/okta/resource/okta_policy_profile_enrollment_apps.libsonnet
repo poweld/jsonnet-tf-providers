@@ -3,6 +3,7 @@
   new(policy_id):: (
     {
       terraformObject:: "okta_policy_profile_enrollment_apps",
+      terraformType:: "resource",
     }
     + block.withPolicyId(policy_id)
   ),

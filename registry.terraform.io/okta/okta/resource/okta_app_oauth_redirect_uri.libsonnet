@@ -3,6 +3,7 @@
   new(app_id, uri):: (
     {
       terraformObject:: "okta_app_oauth_redirect_uri",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withUri(uri)

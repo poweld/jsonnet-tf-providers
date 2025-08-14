@@ -3,6 +3,7 @@
   new(name, type):: (
     {
       terraformObject:: "okta_policy",
+      terraformType:: "data",
     }
     + block.withName(name)
     + block.withType(type)

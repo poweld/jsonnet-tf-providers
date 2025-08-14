@@ -3,6 +3,7 @@
   new(id):: (
     {
       terraformObject:: "okta_email_smtp_server",
+      terraformType:: "data",
     }
     + block.withId(id)
   ),

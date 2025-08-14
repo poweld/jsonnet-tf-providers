@@ -3,6 +3,7 @@
   new(name, type):: (
     {
       terraformObject:: "okta_network_zone",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withType(type)

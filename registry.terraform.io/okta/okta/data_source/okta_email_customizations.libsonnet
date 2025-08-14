@@ -3,6 +3,7 @@
   new(brand_id, template_name):: (
     {
       terraformObject:: "okta_email_customizations",
+      terraformType:: "data",
     }
     + block.withBrandId(brand_id)
     + block.withTemplateName(template_name)

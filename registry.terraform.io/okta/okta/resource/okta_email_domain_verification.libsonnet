@@ -3,6 +3,7 @@
   new(email_domain_id):: (
     {
       terraformObject:: "okta_email_domain_verification",
+      terraformType:: "resource",
     }
     + block.withEmailDomainId(email_domain_id)
   ),

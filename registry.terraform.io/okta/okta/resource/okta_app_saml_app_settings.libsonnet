@@ -3,6 +3,7 @@
   new(app_id, settings):: (
     {
       terraformObject:: "okta_app_saml_app_settings",
+      terraformType:: "resource",
     }
     + block.withAppId(app_id)
     + block.withSettings(settings)

@@ -3,6 +3,7 @@
   new(brand_id):: (
     {
       terraformObject:: "okta_default_signin_page",
+      terraformType:: "data",
     }
     + block.withBrandId(brand_id)
   ),
@@ -43,6 +44,7 @@
     new():: (
       {
         terraformObject:: "okta_default_signin_page",
+        terraformType:: "data",
       }
     ),
     "#withMode":: "enforced or report_only",
@@ -80,6 +82,7 @@
     new():: (
       {
         terraformObject:: "okta_default_signin_page",
+        terraformType:: "data",
       }
     ),
     withAuthenticatorPageCustomLinkLabel(value):: (

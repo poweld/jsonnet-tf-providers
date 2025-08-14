@@ -3,6 +3,7 @@
   new(index, title, type):: (
     {
       terraformObject:: "okta_user_base_schema_property",
+      terraformType:: "resource",
     }
     + block.withIndex(index)
     + block.withTitle(title)

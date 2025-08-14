@@ -3,6 +3,7 @@
   new(sender_id):: (
     {
       terraformObject:: "okta_email_sender_verification",
+      terraformType:: "resource",
     }
     + block.withSenderId(sender_id)
   ),

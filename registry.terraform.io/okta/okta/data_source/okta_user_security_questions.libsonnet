@@ -3,6 +3,7 @@
   new(user_id):: (
     {
       terraformObject:: "okta_user_security_questions",
+      terraformType:: "data",
     }
     + block.withUserId(user_id)
   ),

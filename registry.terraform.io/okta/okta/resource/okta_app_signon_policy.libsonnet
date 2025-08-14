@@ -3,6 +3,7 @@
   new(description, name):: (
     {
       terraformObject:: "okta_app_signon_policy",
+      terraformType:: "resource",
     }
     + block.withDescription(description)
     + block.withName(name)

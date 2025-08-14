@@ -3,6 +3,7 @@
   new(auth_server_id):: (
     {
       terraformObject:: "okta_auth_server_scopes",
+      terraformType:: "data",
     }
     + block.withAuthServerId(auth_server_id)
   ),

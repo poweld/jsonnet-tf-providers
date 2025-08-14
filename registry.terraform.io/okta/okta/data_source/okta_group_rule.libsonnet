@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_group_rule",
+      terraformType:: "data",
     }
   ),
   "#withExpressionType":: "The expression type to use to invoke the rule.",

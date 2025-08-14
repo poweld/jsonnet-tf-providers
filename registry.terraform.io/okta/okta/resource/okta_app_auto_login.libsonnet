@@ -3,6 +3,7 @@
   new(label):: (
     {
       terraformObject:: "okta_app_auto_login",
+      terraformType:: "resource",
     }
     + block.withLabel(label)
   ),
@@ -234,6 +235,7 @@
     new():: (
       {
         terraformObject:: "okta_app_auto_login",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

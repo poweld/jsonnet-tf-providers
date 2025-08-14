@@ -3,6 +3,7 @@
   new(policy_id, unknown_user_action):: (
     {
       terraformObject:: "okta_policy_rule_profile_enrollment",
+      terraformType:: "resource",
     }
     + block.withPolicyId(policy_id)
     + block.withUnknownUserAction(unknown_user_action)
@@ -115,6 +116,7 @@
     new(label, name):: (
       {
         terraformObject:: "okta_policy_rule_profile_enrollment",
+        terraformType:: "resource",
       }
       + block.withLabel(label)
       + block.withName(name)

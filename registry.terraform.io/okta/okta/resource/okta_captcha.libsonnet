@@ -3,6 +3,7 @@
   new(name, secret_key, site_key, type):: (
     {
       terraformObject:: "okta_captcha",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withSecretKey(secret_key)

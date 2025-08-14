@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_trusted_origins",
+      terraformType:: "data",
     }
   ),
   "#withFilter":: "Filter criteria. Filter value will be URL-encoded by the provider",

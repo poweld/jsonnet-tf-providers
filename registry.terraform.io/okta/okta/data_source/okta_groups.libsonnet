@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_groups",
+      terraformType:: "data",
     }
   ),
   withGroups(value):: (

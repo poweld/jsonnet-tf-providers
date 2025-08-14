@@ -3,6 +3,7 @@
   new(associated_description, associated_name, associated_title, primary_description, primary_name, primary_title):: (
     {
       terraformObject:: "okta_link_definition",
+      terraformType:: "resource",
     }
     + block.withAssociatedDescription(associated_description)
     + block.withAssociatedName(associated_name)

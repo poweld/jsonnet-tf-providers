@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_auth_server",
+      terraformType:: "data",
     }
     + block.withName(name)
   ),

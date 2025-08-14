@@ -3,6 +3,7 @@
   new(brand_id, recipients, template_name):: (
     {
       terraformObject:: "okta_email_template_settings",
+      terraformType:: "resource",
     }
     + block.withBrandId(brand_id)
     + block.withRecipients(recipients)

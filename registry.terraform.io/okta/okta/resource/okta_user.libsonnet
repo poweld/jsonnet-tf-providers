@@ -3,6 +3,7 @@
   new(email, first_name, last_name, login):: (
     {
       terraformObject:: "okta_user",
+      terraformType:: "resource",
     }
     + block.withEmail(email)
     + block.withFirstName(first_name)
@@ -365,6 +366,7 @@
     new(algorithm, value):: (
       {
         terraformObject:: "okta_user",
+        terraformType:: "resource",
       }
       + block.withAlgorithm(algorithm)
       + block.withValue(value)

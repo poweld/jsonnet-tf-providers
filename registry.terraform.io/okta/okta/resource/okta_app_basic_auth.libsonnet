@@ -3,6 +3,7 @@
   new(auth_url, label, url):: (
     {
       terraformObject:: "okta_app_basic_auth",
+      terraformType:: "resource",
     }
     + block.withAuthUrl(auth_url)
     + block.withLabel(label)
@@ -220,6 +221,7 @@
     new():: (
       {
         terraformObject:: "okta_app_basic_auth",
+        terraformType:: "resource",
       }
     ),
     withCreate(value):: (

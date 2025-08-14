@@ -3,6 +3,7 @@
   new(name):: (
     {
       terraformObject:: "okta_brand",
+      terraformType:: "resource",
     }
     + block.withName(name)
   ),

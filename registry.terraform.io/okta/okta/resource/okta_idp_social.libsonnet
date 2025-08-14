@@ -3,6 +3,7 @@
   new(name, scopes, type):: (
     {
       terraformObject:: "okta_idp_social",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withScopes(scopes)

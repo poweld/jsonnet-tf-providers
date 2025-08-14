@@ -3,6 +3,7 @@
   new(name, type):: (
     {
       terraformObject:: "okta_log_stream",
+      terraformType:: "resource",
     }
     + block.withName(name)
     + block.withType(type)
@@ -44,6 +45,7 @@
     new():: (
       {
         terraformObject:: "okta_log_stream",
+        terraformType:: "resource",
       }
     ),
     "#withAccountId":: "AWS account ID. Required only for 'aws_eventbridge' type",

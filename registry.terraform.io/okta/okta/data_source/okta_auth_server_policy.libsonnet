@@ -3,6 +3,7 @@
   new(auth_server_id, name):: (
     {
       terraformObject:: "okta_auth_server_policy",
+      terraformType:: "data",
     }
     + block.withAuthServerId(auth_server_id)
     + block.withName(name)

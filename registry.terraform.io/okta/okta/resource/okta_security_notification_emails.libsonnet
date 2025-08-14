@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_security_notification_emails",
+      terraformType:: "resource",
     }
   ),
   withId(value):: (

@@ -3,6 +3,7 @@
   new():: (
     {
       terraformObject:: "okta_app",
+      terraformType:: "data",
     }
   ),
   "#withActiveOnly":: "Search only ACTIVE applications.",
