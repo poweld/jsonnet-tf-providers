@@ -1,7 +1,9 @@
 {
   local block = self,
   new(label):: (
-    {}
+    {
+      terraformObject:: "okta_app_saml",
+    }
     + block.withLabel(label)
   ),
   "#withAccessibilityErrorRedirectUrl":: "Custom error page URL",
@@ -510,7 +512,9 @@
   acs_endpoints_indices:: {
     local block = self,
     new(index, url):: (
-      {}
+      {
+        terraformObject:: "okta_app_saml",
+      }
       + block.withIndex(index)
       + block.withUrl(url)
     ),
@@ -532,7 +536,9 @@
   attribute_statements:: {
     local block = self,
     new(name):: (
-      {}
+      {
+        terraformObject:: "okta_app_saml",
+      }
       + block.withName(name)
     ),
     "#withFilterType":: "Type of group attribute filter. Valid values are: `STARTS_WITH`, `EQUALS`, `CONTAINS`, or `REGEX`",
@@ -593,7 +599,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_saml",
+      }
     ),
     withCreate(value):: (
       local converted = value;

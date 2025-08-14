@@ -1,7 +1,9 @@
 {
   local block = self,
   new(custom_role_id, resource_set_id):: (
-    {}
+    {
+      terraformObject:: "okta_admin_role_custom_assignments",
+    }
     + block.withCustomRoleId(custom_role_id)
     + block.withResourceSetId(resource_set_id)
   ),

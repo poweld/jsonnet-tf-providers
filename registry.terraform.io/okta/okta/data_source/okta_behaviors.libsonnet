@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_behaviors",
+    }
   ),
   withBehaviors(value):: (
     local converted = if std.isArray(value) then value else [value];

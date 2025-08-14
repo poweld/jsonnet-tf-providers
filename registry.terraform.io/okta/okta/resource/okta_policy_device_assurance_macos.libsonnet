@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_device_assurance_macos",
+    }
     + block.withName(name)
   ),
   "#withCreatedBy":: "Created by",

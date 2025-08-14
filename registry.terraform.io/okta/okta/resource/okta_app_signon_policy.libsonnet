@@ -1,7 +1,9 @@
 {
   local block = self,
   new(description, name):: (
-    {}
+    {
+      terraformObject:: "okta_app_signon_policy",
+    }
     + block.withDescription(description)
     + block.withName(name)
   ),

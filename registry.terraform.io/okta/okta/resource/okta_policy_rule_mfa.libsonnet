@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_rule_mfa",
+    }
     + block.withName(name)
   ),
   "#withEnroll":: "When a user should be prompted for MFA. It can be `CHALLENGE`, `LOGIN`, or `NEVER`.",
@@ -110,7 +112,9 @@
   app_exclude:: {
     local block = self,
     new(type):: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_mfa",
+      }
       + block.withType(type)
     ),
     withId(value):: (
@@ -138,7 +142,9 @@
   app_include:: {
     local block = self,
     new(type):: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_mfa",
+      }
       + block.withType(type)
     ),
     withId(value):: (

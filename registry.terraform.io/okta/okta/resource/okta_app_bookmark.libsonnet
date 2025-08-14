@@ -1,7 +1,9 @@
 {
   local block = self,
   new(label, url):: (
-    {}
+    {
+      terraformObject:: "okta_app_bookmark",
+    }
     + block.withLabel(label)
     + block.withUrl(url)
   ),
@@ -159,7 +161,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_bookmark",
+      }
     ),
     withCreate(value):: (
       local converted = value;

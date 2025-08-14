@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id, issuer, scopes):: (
-    {}
+    {
+      terraformObject:: "okta_app_oauth_api_scope",
+    }
     + block.withAppId(app_id)
     + block.withIssuer(issuer)
     + block.withScopes(scopes)

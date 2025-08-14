@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_idp_social",
+    }
   ),
   "#withAccountLinkAction":: "Specifies the account linking action for an IdP user.",
   withAccountLinkAction(value):: (

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(brand_id, theme_id):: (
-    {}
+    {
+      terraformObject:: "okta_theme",
+    }
     + block.withBrandId(brand_id)
     + block.withThemeId(theme_id)
   ),

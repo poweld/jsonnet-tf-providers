@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_brands",
+    }
   ),
   "#withBrands":: "List of `okta_brand` belonging to the organization",
   withBrands(value):: (

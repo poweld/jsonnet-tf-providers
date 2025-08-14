@@ -1,7 +1,9 @@
 {
   local block = self,
   new(index, title, type):: (
-    {}
+    {
+      terraformObject:: "okta_group_schema_property",
+    }
     + block.withIndex(index)
     + block.withTitle(title)
     + block.withType(type)
@@ -159,7 +161,9 @@
   array_one_of:: {
     local block = self,
     new(const, title):: (
-      {}
+      {
+        terraformObject:: "okta_group_schema_property",
+      }
       + block.withConst(const)
       + block.withTitle(title)
     ),
@@ -183,7 +187,9 @@
   master_override_priority:: {
     local block = self,
     new(value):: (
-      {}
+      {
+        terraformObject:: "okta_group_schema_property",
+      }
       + block.withValue(value)
     ),
     withType(value):: (
@@ -204,7 +210,9 @@
   one_of:: {
     local block = self,
     new(const, title):: (
-      {}
+      {
+        terraformObject:: "okta_group_schema_property",
+      }
       + block.withConst(const)
       + block.withTitle(title)
     ),

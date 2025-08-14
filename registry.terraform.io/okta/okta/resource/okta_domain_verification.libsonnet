@@ -1,7 +1,9 @@
 {
   local block = self,
   new(domain_id):: (
-    {}
+    {
+      terraformObject:: "okta_domain_verification",
+    }
     + block.withDomainId(domain_id)
   ),
   "#withDomainId":: "Domain's ID",

@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_policy_mfa_default",
+    }
   ),
   "#withDefaultIncludedGroupId":: "Default group ID (always included)",
   withDefaultIncludedGroupId(value):: (

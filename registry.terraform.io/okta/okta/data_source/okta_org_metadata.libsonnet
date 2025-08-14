@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_org_metadata",
+    }
   ),
   "#withId":: "The unique identifier of the Org.",
   withId(value):: (
@@ -22,7 +24,9 @@
   domains:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_org_metadata",
+      }
     ),
     "#withAlternate":: "Custom Domain Org URI",
     withAlternate(value):: (
@@ -44,7 +48,9 @@
   settings:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_org_metadata",
+      }
     ),
     withAnalyticsCollectionEnabled(value):: (
       local converted = value;

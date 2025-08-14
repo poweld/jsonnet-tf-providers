@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_org_support",
+    }
   ),
   "#withExpiration":: "Expiration of Okta Support",
   withExpiration(value):: (

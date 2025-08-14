@@ -1,7 +1,9 @@
 {
   local block = self,
   new(label):: (
-    {}
+    {
+      terraformObject:: "okta_app_auto_login",
+    }
     + block.withLabel(label)
   ),
   "#withAccessibilityErrorRedirectUrl":: "Custom error page URL",
@@ -230,7 +232,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_auto_login",
+      }
     ),
     withCreate(value):: (
       local converted = value;

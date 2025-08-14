@@ -1,7 +1,9 @@
 {
   local block = self,
   new(source_id, target_id):: (
-    {}
+    {
+      terraformObject:: "okta_profile_mapping",
+    }
     + block.withSourceId(source_id)
     + block.withTargetId(target_id)
   ),
@@ -79,7 +81,9 @@
   mappings:: {
     local block = self,
     new(expression, id):: (
-      {}
+      {
+        terraformObject:: "okta_profile_mapping",
+      }
       + block.withExpression(expression)
       + block.withId(id)
     ),

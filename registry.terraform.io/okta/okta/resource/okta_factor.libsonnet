@@ -1,7 +1,9 @@
 {
   local block = self,
   new(provider_id):: (
-    {}
+    {
+      terraformObject:: "okta_factor",
+    }
     + block.withProviderId(provider_id)
   ),
   "#withActive":: "Whether to activate the provider, by default, it is set to `true`.",

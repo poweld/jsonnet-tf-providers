@@ -1,7 +1,9 @@
 {
   local block = self,
   new(domain_id_or_name):: (
-    {}
+    {
+      terraformObject:: "okta_domain",
+    }
     + block.withDomainIdOrName(domain_id_or_name)
   ),
   "#withCertificateSourceType":: "Certificate source type that indicates whether the certificate is provided by the user or Okta. Values: MANUAL, OKTA_MANAGED",

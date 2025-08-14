@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id, policy_id):: (
-    {}
+    {
+      terraformObject:: "okta_app_access_policy_assignment",
+    }
     + block.withAppId(app_id)
     + block.withPolicyId(policy_id)
   ),

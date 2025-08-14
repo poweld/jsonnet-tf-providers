@@ -3,7 +3,9 @@
   source:: "okta/okta",
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "registry.terraform.io/okta/okta",
+    }
   ),
   "#withAccessToken":: "Bearer token granting privileges to Okta API.",
   withAccessToken(value):: (

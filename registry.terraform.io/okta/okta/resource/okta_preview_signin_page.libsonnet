@@ -1,7 +1,9 @@
 {
   local block = self,
   new(brand_id, page_content, widget_version):: (
-    {}
+    {
+      terraformObject:: "okta_preview_signin_page",
+    }
     + block.withBrandId(brand_id)
     + block.withPageContent(page_content)
     + block.withWidgetVersion(widget_version)
@@ -41,7 +43,9 @@
   content_security_policy_setting:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_preview_signin_page",
+      }
     ),
     "#withMode":: "enforced or report_only",
     withMode(value):: (
@@ -76,7 +80,9 @@
   widget_customizations:: {
     local block = self,
     new(widget_generation):: (
-      {}
+      {
+        terraformObject:: "okta_preview_signin_page",
+      }
       + block.withWidgetGeneration(widget_generation)
     ),
     withAuthenticatorPageCustomLinkLabel(value):: (

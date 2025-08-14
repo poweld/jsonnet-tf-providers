@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_mfa",
+    }
     + block.withName(name)
   ),
   "#withDescription":: "Policy Description",

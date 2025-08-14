@@ -1,7 +1,9 @@
 {
   local block = self,
   new(group_id, role_type):: (
-    {}
+    {
+      terraformObject:: "okta_group_role",
+    }
     + block.withGroupId(group_id)
     + block.withRoleType(role_type)
   ),

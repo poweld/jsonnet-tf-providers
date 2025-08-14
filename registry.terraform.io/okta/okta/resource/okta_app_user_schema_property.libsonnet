@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id, index, title, type):: (
-    {}
+    {
+      terraformObject:: "okta_app_user_schema_property",
+    }
     + block.withAppId(app_id)
     + block.withIndex(index)
     + block.withTitle(title)
@@ -185,7 +187,9 @@
   array_one_of:: {
     local block = self,
     new(const, title):: (
-      {}
+      {
+        terraformObject:: "okta_app_user_schema_property",
+      }
       + block.withConst(const)
       + block.withTitle(title)
     ),
@@ -209,7 +213,9 @@
   one_of:: {
     local block = self,
     new(const, title):: (
-      {}
+      {
+        terraformObject:: "okta_app_user_schema_property",
+      }
       + block.withConst(const)
       + block.withTitle(title)
     ),

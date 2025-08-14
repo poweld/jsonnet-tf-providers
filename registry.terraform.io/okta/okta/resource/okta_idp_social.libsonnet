@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name, scopes, type):: (
-    {}
+    {
+      terraformObject:: "okta_idp_social",
+    }
     + block.withName(name)
     + block.withScopes(scopes)
     + block.withType(type)

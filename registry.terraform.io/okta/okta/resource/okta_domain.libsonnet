@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_domain",
+    }
     + block.withName(name)
   ),
   "#withBrandId":: "Brand id of the domain",

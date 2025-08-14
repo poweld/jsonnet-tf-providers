@@ -1,7 +1,9 @@
 {
   local block = self,
   new(brand_id, recipients, template_name):: (
-    {}
+    {
+      terraformObject:: "okta_email_template_settings",
+    }
     + block.withBrandId(brand_id)
     + block.withRecipients(recipients)
     + block.withTemplateName(template_name)

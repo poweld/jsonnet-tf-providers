@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_auth_server",
+    }
     + block.withName(name)
   ),
   "#withAudiences":: "Description of Authorization server.",

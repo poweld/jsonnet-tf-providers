@@ -1,7 +1,9 @@
 {
   local block = self,
   new(client_id, type):: (
-    {}
+    {
+      terraformObject:: "okta_app_oauth_role_assignment",
+    }
     + block.withClientId(client_id)
     + block.withType(type)
   ),

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(feature_id):: (
-    {}
+    {
+      terraformObject:: "okta_feature",
+    }
     + block.withFeatureId(feature_id)
   ),
   "#withDescription":: "Brief description of the feature and what it provides.",

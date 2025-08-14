@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_device_assurance_policy",
+    }
   ),
   "#withDiskEncryptionType":: "List of disk encryption type, can be `FULL`, `USER`",
   withDiskEncryptionType(value):: (

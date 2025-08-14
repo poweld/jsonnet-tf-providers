@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name, type, version):: (
-    {}
+    {
+      terraformObject:: "okta_inline_hook",
+    }
     + block.withName(name)
     + block.withType(type)
     + block.withVersion(version)
@@ -70,7 +72,9 @@
   headers:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_inline_hook",
+      }
     ),
     withKey(value):: (
       local converted = value;

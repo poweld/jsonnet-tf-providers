@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_everyone_group",
+    }
   ),
   "#withDescription":: "Description of group.",
   withDescription(value):: (

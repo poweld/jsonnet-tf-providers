@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_log_stream",
+    }
   ),
   "#withId":: "ID of the log stream to retrieve, conflicts with `name`.",
   withId(value):: (
@@ -38,7 +40,9 @@
   settings:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_log_stream",
+      }
     ),
     "#withAccountId":: "AWS account ID. Required only for 'aws_eventbridge' type",
     withAccountId(value):: (

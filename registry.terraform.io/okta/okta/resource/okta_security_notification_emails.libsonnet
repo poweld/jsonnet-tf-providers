@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_security_notification_emails",
+    }
   ),
   withId(value):: (
     local converted = value;

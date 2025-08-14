@@ -1,7 +1,9 @@
 {
   local block = self,
   new(button_selector, extra_field_selector, extra_field_value, label, password_selector, url, username_selector):: (
-    {}
+    {
+      terraformObject:: "okta_app_three_field",
+    }
     + block.withButtonSelector(button_selector)
     + block.withExtraFieldSelector(extra_field_selector)
     + block.withExtraFieldValue(extra_field_value)
@@ -260,7 +262,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_three_field",
+      }
     ),
     withCreate(value):: (
       local converted = value;

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(id):: (
-    {}
+    {
+      terraformObject:: "okta_app_group_assignments",
+    }
     + block.withId(id)
   ),
   "#withGroups":: "List of groups IDs assigned to the app",

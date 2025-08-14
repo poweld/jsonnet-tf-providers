@@ -1,7 +1,9 @@
 {
   local block = self,
   new(index, title, type):: (
-    {}
+    {
+      terraformObject:: "okta_user_base_schema_property",
+    }
     + block.withIndex(index)
     + block.withTitle(title)
     + block.withType(type)

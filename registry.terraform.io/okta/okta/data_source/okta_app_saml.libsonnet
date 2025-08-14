@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_app_saml",
+    }
   ),
   "#withAccessibilityErrorRedirectUrl":: "Custom error page URL",
   withAccessibilityErrorRedirectUrl(value):: (

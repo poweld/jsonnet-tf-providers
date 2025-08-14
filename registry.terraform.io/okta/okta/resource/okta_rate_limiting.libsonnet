@@ -1,7 +1,9 @@
 {
   local block = self,
   new(authorize, login):: (
-    {}
+    {
+      terraformObject:: "okta_rate_limiting",
+    }
     + block.withAuthorize(authorize)
     + block.withLogin(login)
   ),

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name, origin, scopes):: (
-    {}
+    {
+      terraformObject:: "okta_trusted_origin",
+    }
     + block.withName(name)
     + block.withOrigin(origin)
     + block.withScopes(scopes)

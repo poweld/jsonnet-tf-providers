@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id):: (
-    {}
+    {
+      terraformObject:: "okta_app_metadata_saml",
+    }
     + block.withAppId(app_id)
   ),
   "#withAppId":: "The application ID.",

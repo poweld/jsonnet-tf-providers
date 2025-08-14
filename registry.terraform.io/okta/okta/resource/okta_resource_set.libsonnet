@@ -1,7 +1,9 @@
 {
   local block = self,
   new(description, label):: (
-    {}
+    {
+      terraformObject:: "okta_resource_set",
+    }
     + block.withDescription(description)
     + block.withLabel(label)
   ),

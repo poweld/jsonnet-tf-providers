@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_trusted_origins",
+    }
   ),
   "#withFilter":: "Filter criteria. Filter value will be URL-encoded by the provider",
   withFilter(value):: (

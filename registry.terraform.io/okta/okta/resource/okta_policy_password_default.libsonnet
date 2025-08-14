@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_policy_password_default",
+    }
   ),
   "#withCallRecovery":: "Enable or disable voice call recovery: ACTIVE or INACTIVE. Default: `INACTIVE`",
   withCallRecovery(value):: (

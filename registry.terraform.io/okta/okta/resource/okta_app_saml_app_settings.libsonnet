@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id, settings):: (
-    {}
+    {
+      terraformObject:: "okta_app_saml_app_settings",
+    }
     + block.withAppId(app_id)
     + block.withSettings(settings)
   ),

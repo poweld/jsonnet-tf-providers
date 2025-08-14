@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_idp_saml",
+    }
   ),
   "#withAcsBinding":: "ACS binding",
   withAcsBinding(value):: (

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(auth_server_id, trusted):: (
-    {}
+    {
+      terraformObject:: "okta_trusted_server",
+    }
     + block.withAuthServerId(auth_server_id)
     + block.withTrusted(trusted)
   ),

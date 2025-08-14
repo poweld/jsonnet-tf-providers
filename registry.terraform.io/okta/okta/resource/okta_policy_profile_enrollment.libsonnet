@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_profile_enrollment",
+    }
     + block.withName(name)
   ),
   withId(value):: (

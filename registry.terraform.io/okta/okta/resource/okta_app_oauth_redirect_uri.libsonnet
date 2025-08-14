@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id, uri):: (
-    {}
+    {
+      terraformObject:: "okta_app_oauth_redirect_uri",
+    }
     + block.withAppId(app_id)
     + block.withUri(uri)
   ),

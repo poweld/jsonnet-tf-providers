@@ -1,7 +1,9 @@
 {
   local block = self,
   new(brand_id):: (
-    {}
+    {
+      terraformObject:: "okta_default_signin_page",
+    }
     + block.withBrandId(brand_id)
   ),
   "#withBrandId":: "brand id of the preview signin page",
@@ -39,7 +41,9 @@
   content_security_policy_setting:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_default_signin_page",
+      }
     ),
     "#withMode":: "enforced or report_only",
     withMode(value):: (
@@ -74,7 +78,9 @@
   widget_customizations:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_default_signin_page",
+      }
     ),
     withAuthenticatorPageCustomLinkLabel(value):: (
       local converted = value;

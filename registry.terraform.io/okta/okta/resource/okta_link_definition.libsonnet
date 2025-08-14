@@ -1,7 +1,9 @@
 {
   local block = self,
   new(associated_description, associated_name, associated_title, primary_description, primary_name, primary_title):: (
-    {}
+    {
+      terraformObject:: "okta_link_definition",
+    }
     + block.withAssociatedDescription(associated_description)
     + block.withAssociatedName(associated_name)
     + block.withAssociatedTitle(associated_title)

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(type):: (
-    {}
+    {
+      terraformObject:: "okta_default_policy",
+    }
     + block.withType(type)
   ),
   withId(value):: (

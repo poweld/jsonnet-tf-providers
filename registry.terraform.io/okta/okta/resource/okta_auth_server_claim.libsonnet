@@ -1,7 +1,9 @@
 {
   local block = self,
   new(auth_server_id, claim_type, name, value):: (
-    {}
+    {
+      terraformObject:: "okta_auth_server_claim",
+    }
     + block.withAuthServerId(auth_server_id)
     + block.withClaimType(claim_type)
     + block.withName(name)

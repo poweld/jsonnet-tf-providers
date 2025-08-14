@@ -1,7 +1,9 @@
 {
   local block = self,
   new(x5c):: (
-    {}
+    {
+      terraformObject:: "okta_idp_saml_key",
+    }
     + block.withX5c(x5c)
   ),
   "#withCreated":: "Date created.",

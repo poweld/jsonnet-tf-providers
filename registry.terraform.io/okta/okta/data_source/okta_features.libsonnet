@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_features",
+    }
   ),
   "#withFeatures":: "The list of features that match the search criteria.",
   withFeatures(value):: (

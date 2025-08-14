@@ -1,7 +1,9 @@
 {
   local block = self,
   new(event_hook_id):: (
-    {}
+    {
+      terraformObject:: "okta_event_hook_verification",
+    }
     + block.withEventHookId(event_hook_id)
   ),
   "#withEventHookId":: "Event hook ID",

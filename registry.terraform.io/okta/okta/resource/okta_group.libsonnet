@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_group",
+    }
     + block.withName(name)
   ),
   "#withCustomProfileAttributes":: "JSON formatted custom attributes for a group. It must be JSON due to various types Okta allows.",

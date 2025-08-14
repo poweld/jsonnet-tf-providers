@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_authenticator",
+    }
   ),
   "#withId":: "ID of the authenticator.",
   withId(value):: (

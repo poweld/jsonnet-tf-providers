@@ -1,7 +1,9 @@
 {
   local block = self,
   new(company_name):: (
-    {}
+    {
+      terraformObject:: "okta_org_configuration",
+    }
     + block.withCompanyName(company_name)
   ),
   "#withAddress_1":: "Primary address of org",

@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_users",
+    }
   ),
   "#withCompoundSearchOperator":: "Search operator used when joining multiple search clauses",
   withCompoundSearchOperator(value):: (
@@ -69,7 +71,9 @@
   search:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_users",
+      }
     ),
     withComparison(value):: (
       local converted = value;

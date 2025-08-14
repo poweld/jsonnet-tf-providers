@@ -1,7 +1,9 @@
 {
   local block = self,
   new(channel, events, name):: (
-    {}
+    {
+      terraformObject:: "okta_event_hook",
+    }
     + block.withChannel(channel)
     + block.withEvents(events)
     + block.withName(name)
@@ -64,7 +66,9 @@
   headers:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_event_hook",
+      }
     ),
     withKey(value):: (
       local converted = value;

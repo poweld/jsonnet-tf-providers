@@ -1,7 +1,9 @@
 {
   local block = self,
   new(id):: (
-    {}
+    {
+      terraformObject:: "okta_email_smtp_server",
+    }
     + block.withId(id)
   ),
   "#withAlias":: "Human-readable name for your SMTP server.",

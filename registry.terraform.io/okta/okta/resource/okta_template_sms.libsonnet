@@ -1,7 +1,9 @@
 {
   local block = self,
   new(template, type):: (
-    {}
+    {
+      terraformObject:: "okta_template_sms",
+    }
     + block.withTemplate(template)
     + block.withType(type)
   ),
@@ -31,7 +33,9 @@
   translations:: {
     local block = self,
     new(language, template):: (
-      {}
+      {
+        terraformObject:: "okta_template_sms",
+      }
       + block.withLanguage(language)
       + block.withTemplate(template)
     ),

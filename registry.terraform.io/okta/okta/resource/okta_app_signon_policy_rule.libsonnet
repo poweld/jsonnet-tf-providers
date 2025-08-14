@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name, policy_id):: (
-    {}
+    {
+      terraformObject:: "okta_app_signon_policy_rule",
+    }
     + block.withName(name)
     + block.withPolicyId(policy_id)
   ),
@@ -311,7 +313,9 @@
   platform_include:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_signon_policy_rule",
+      }
     ),
     "#withOsExpression":: "Only available with OTHER OS type",
     withOsExpression(value):: (

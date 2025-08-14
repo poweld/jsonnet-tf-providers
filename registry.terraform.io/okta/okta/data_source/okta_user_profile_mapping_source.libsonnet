@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_user_profile_mapping_source",
+    }
   ),
   "#withId":: "ID of the source",
   withId(value):: (

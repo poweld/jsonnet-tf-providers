@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_idp_metadata_saml",
+    }
   ),
   "#withAssertionsSigned":: "Whether assertions are signed.",
   withAssertionsSigned(value):: (

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_rule_idp_discovery",
+    }
     + block.withName(name)
   ),
   withId(value):: (
@@ -102,7 +104,9 @@
   app_exclude:: {
     local block = self,
     new(type):: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_idp_discovery",
+      }
       + block.withType(type)
     ),
     withId(value):: (
@@ -130,7 +134,9 @@
   app_include:: {
     local block = self,
     new(type):: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_idp_discovery",
+      }
       + block.withType(type)
     ),
     withId(value):: (
@@ -158,7 +164,9 @@
   idp_providers:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_idp_discovery",
+      }
     ),
     "#withId":: "The identifier for the Idp the rule should route to if all conditions are met.",
     withId(value):: (
@@ -180,7 +188,9 @@
   platform_include:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_idp_discovery",
+      }
     ),
     "#withOsExpression":: "Only available with OTHER OS type",
     withOsExpression(value):: (
@@ -208,7 +218,9 @@
   user_identifier_patterns:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_idp_discovery",
+      }
     ),
     withMatchType(value):: (
       local converted = value;

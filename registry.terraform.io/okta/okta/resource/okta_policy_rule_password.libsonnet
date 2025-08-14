@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_rule_password",
+    }
     + block.withName(name)
   ),
   withId(value):: (

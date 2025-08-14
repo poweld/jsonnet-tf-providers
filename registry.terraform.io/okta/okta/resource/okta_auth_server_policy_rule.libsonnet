@@ -1,7 +1,9 @@
 {
   local block = self,
   new(auth_server_id, grant_type_whitelist, name, policy_id, priority):: (
-    {}
+    {
+      terraformObject:: "okta_auth_server_policy_rule",
+    }
     + block.withAuthServerId(auth_server_id)
     + block.withGrantTypeWhitelist(grant_type_whitelist)
     + block.withName(name)

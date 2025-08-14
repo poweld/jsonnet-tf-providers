@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id):: (
-    {}
+    {
+      terraformObject:: "okta_app_signon_policy",
+    }
     + block.withAppId(app_id)
   ),
   "#withAppId":: "App ID",

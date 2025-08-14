@@ -1,7 +1,9 @@
 {
   local block = self,
   new(auth_server_id):: (
-    {}
+    {
+      terraformObject:: "okta_auth_server_scopes",
+    }
     + block.withAuthServerId(auth_server_id)
   ),
   "#withAuthServerId":: "Auth server ID",

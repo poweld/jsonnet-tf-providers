@@ -1,7 +1,9 @@
 {
   local block = self,
   new(label, password_field, url, username_field):: (
-    {}
+    {
+      terraformObject:: "okta_app_secure_password_store",
+    }
     + block.withLabel(label)
     + block.withPasswordField(password_field)
     + block.withUrl(url)
@@ -273,7 +275,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_secure_password_store",
+      }
     ),
     withCreate(value):: (
       local converted = value;

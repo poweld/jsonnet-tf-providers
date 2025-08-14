@@ -1,7 +1,9 @@
 {
   local block = self,
   new(auth_server_id):: (
-    {}
+    {
+      terraformObject:: "okta_auth_server_claim",
+    }
     + block.withAuthServerId(auth_server_id)
   ),
   "#withAlwaysIncludeInToken":: "Specifies whether to include Claims in the token.",

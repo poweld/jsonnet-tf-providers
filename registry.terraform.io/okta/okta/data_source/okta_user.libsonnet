@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_user",
+    }
   ),
   withAdminRoles(value):: (
     local converted = if std.isArray(value) then value else [value];
@@ -326,7 +328,9 @@
   search:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_user",
+      }
     ),
     withComparison(value):: (
       local converted = value;

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(email_domain_id):: (
-    {}
+    {
+      terraformObject:: "okta_email_domain_verification",
+    }
     + block.withEmailDomainId(email_domain_id)
   ),
   "#withEmailDomainId":: "Email domain ID",

@@ -1,7 +1,9 @@
 {
   local block = self,
   new(email, first_name, last_name, login):: (
-    {}
+    {
+      terraformObject:: "okta_user",
+    }
     + block.withEmail(email)
     + block.withFirstName(first_name)
     + block.withLastName(last_name)
@@ -361,7 +363,9 @@
   password_hash:: {
     local block = self,
     new(algorithm, value):: (
-      {}
+      {
+        terraformObject:: "okta_user",
+      }
       + block.withAlgorithm(algorithm)
       + block.withValue(value)
     ),

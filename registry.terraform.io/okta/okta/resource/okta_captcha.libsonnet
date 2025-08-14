@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name, secret_key, site_key, type):: (
-    {}
+    {
+      terraformObject:: "okta_captcha",
+    }
     + block.withName(name)
     + block.withSecretKey(secret_key)
     + block.withSiteKey(site_key)

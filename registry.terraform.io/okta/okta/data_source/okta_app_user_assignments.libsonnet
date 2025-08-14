@@ -1,7 +1,9 @@
 {
   local block = self,
   new(id):: (
-    {}
+    {
+      terraformObject:: "okta_app_user_assignments",
+    }
     + block.withId(id)
   ),
   "#withId":: "ID of the Okta App being queried for groups",

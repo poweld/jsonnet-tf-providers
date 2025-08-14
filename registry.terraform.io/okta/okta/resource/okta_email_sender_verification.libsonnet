@@ -1,7 +1,9 @@
 {
   local block = self,
   new(sender_id):: (
-    {}
+    {
+      terraformObject:: "okta_email_sender_verification",
+    }
     + block.withSenderId(sender_id)
   ),
   withId(value):: (

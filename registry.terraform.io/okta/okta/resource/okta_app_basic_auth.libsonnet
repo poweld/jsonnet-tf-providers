@@ -1,7 +1,9 @@
 {
   local block = self,
   new(auth_url, label, url):: (
-    {}
+    {
+      terraformObject:: "okta_app_basic_auth",
+    }
     + block.withAuthUrl(auth_url)
     + block.withLabel(label)
     + block.withUrl(url)
@@ -216,7 +218,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_basic_auth",
+      }
     ),
     withCreate(value):: (
       local converted = value;

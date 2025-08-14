@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_user_type",
+    }
   ),
   "#withDescription":: "Description of user type.",
   withDescription(value):: (

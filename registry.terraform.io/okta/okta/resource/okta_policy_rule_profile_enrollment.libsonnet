@@ -1,7 +1,9 @@
 {
   local block = self,
   new(policy_id, unknown_user_action):: (
-    {}
+    {
+      terraformObject:: "okta_policy_rule_profile_enrollment",
+    }
     + block.withPolicyId(policy_id)
     + block.withUnknownUserAction(unknown_user_action)
   ),
@@ -111,7 +113,9 @@
   profile_attributes:: {
     local block = self,
     new(label, name):: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_profile_enrollment",
+      }
       + block.withLabel(label)
       + block.withName(name)
     ),

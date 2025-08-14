@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id):: (
-    {}
+    {
+      terraformObject:: "okta_app_group_assignments",
+    }
     + block.withAppId(app_id)
   ),
   "#withAppId":: "The ID of the application to assign a group to.",
@@ -22,7 +24,9 @@
   group:: {
     local block = self,
     new(id):: (
-      {}
+      {
+        terraformObject:: "okta_app_group_assignments",
+      }
       + block.withId(id)
     ),
     "#withId":: "A group to associate with the application",
@@ -53,7 +57,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_group_assignments",
+      }
     ),
     withCreate(value):: (
       local converted = value;

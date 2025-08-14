@@ -1,7 +1,9 @@
 {
   local block = self,
   new(groups, user_id):: (
-    {}
+    {
+      terraformObject:: "okta_user_group_memberships",
+    }
     + block.withGroups(groups)
     + block.withUserId(user_id)
   ),

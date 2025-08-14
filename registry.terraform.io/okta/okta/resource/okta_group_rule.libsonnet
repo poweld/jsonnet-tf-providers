@@ -1,7 +1,9 @@
 {
   local block = self,
   new(expression_value, group_assignments, name):: (
-    {}
+    {
+      terraformObject:: "okta_group_rule",
+    }
     + block.withExpressionValue(expression_value)
     + block.withGroupAssignments(group_assignments)
     + block.withName(name)

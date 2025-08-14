@@ -1,7 +1,9 @@
 {
   local block = self,
   new(from_address, from_name, subdomain):: (
-    {}
+    {
+      terraformObject:: "okta_email_sender",
+    }
     + block.withFromAddress(from_address)
     + block.withFromName(from_name)
     + block.withSubdomain(subdomain)

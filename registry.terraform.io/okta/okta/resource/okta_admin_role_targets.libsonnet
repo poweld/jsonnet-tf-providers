@@ -1,7 +1,9 @@
 {
   local block = self,
   new(role_type, user_id):: (
-    {}
+    {
+      terraformObject:: "okta_admin_role_targets",
+    }
     + block.withRoleType(role_type)
     + block.withUserId(user_id)
   ),

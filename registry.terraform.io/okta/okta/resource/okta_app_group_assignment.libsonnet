@@ -1,7 +1,9 @@
 {
   local block = self,
   new(app_id, group_id):: (
-    {}
+    {
+      terraformObject:: "okta_app_group_assignment",
+    }
     + block.withAppId(app_id)
     + block.withGroupId(group_id)
   ),
@@ -55,7 +57,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_group_assignment",
+      }
     ),
     withCreate(value):: (
       local converted = value;

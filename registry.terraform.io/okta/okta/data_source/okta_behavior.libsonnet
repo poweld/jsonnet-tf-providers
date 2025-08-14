@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_behavior",
+    }
   ),
   "#withId":: "Behavior ID.",
   withId(value):: (

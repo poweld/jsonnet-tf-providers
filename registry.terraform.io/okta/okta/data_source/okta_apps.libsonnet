@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_apps",
+    }
   ),
   "#withActiveOnly":: "Search only active applications.",
   withActiveOnly(value):: (

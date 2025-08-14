@@ -1,7 +1,9 @@
 {
   local block = self,
   new(policy_id):: (
-    {}
+    {
+      terraformObject:: "okta_policy_profile_enrollment_apps",
+    }
     + block.withPolicyId(policy_id)
   ),
   "#withApps":: "List of app IDs to be added to this policy",

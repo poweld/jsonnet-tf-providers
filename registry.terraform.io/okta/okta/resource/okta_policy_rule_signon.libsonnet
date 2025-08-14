@@ -1,7 +1,9 @@
 {
   local block = self,
   new(name):: (
-    {}
+    {
+      terraformObject:: "okta_policy_rule_signon",
+    }
     + block.withName(name)
   ),
   "#withAccess":: "Allow or deny access based on the rule conditions: `ALLOW`, `DENY` or `CHALLENGE`. Default: `ALLOW`",
@@ -238,7 +240,9 @@
   factor_sequence:: {
     local block = self,
     new(primary_criteria_factor_type, primary_criteria_provider):: (
-      {}
+      {
+        terraformObject:: "okta_policy_rule_signon",
+      }
       + block.withPrimaryCriteriaFactorType(primary_criteria_factor_type)
       + block.withPrimaryCriteriaProvider(primary_criteria_provider)
     ),
@@ -261,7 +265,9 @@
     secondary_criteria:: {
       local block = self,
       new(factor_type, provider):: (
-        {}
+        {
+          terraformObject:: "okta_policy_rule_signon",
+        }
         + block.withFactorType(factor_type)
         + block.withProvider(provider)
       ),

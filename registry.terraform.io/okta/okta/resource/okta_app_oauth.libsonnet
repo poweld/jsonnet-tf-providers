@@ -1,7 +1,9 @@
 {
   local block = self,
   new(label, type):: (
-    {}
+    {
+      terraformObject:: "okta_app_oauth",
+    }
     + block.withLabel(label)
     + block.withType(type)
   ),
@@ -439,7 +441,9 @@
   groups_claim:: {
     local block = self,
     new(name, type, value):: (
-      {}
+      {
+        terraformObject:: "okta_app_oauth",
+      }
       + block.withName(name)
       + block.withType(type)
       + block.withValue(value)
@@ -488,7 +492,9 @@
   jwks:: {
     local block = self,
     new(kid, kty):: (
-      {}
+      {
+        terraformObject:: "okta_app_oauth",
+      }
       + block.withKid(kid)
       + block.withKty(kty)
     ),
@@ -544,7 +550,9 @@
   timeouts:: {
     local block = self,
     new():: (
-      {}
+      {
+        terraformObject:: "okta_app_oauth",
+      }
     ),
     withCreate(value):: (
       local converted = value;

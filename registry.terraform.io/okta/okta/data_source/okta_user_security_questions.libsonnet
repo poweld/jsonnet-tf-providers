@@ -1,7 +1,9 @@
 {
   local block = self,
   new(user_id):: (
-    {}
+    {
+      terraformObject:: "okta_user_security_questions",
+    }
     + block.withUserId(user_id)
   ),
   withId(value):: (

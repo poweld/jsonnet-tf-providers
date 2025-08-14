@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_group_rule",
+    }
   ),
   "#withExpressionType":: "The expression type to use to invoke the rule.",
   withExpressionType(value):: (

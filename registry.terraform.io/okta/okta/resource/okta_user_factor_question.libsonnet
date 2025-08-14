@@ -1,7 +1,9 @@
 {
   local block = self,
   new(answer, key, user_id):: (
-    {}
+    {
+      terraformObject:: "okta_user_factor_question",
+    }
     + block.withAnswer(answer)
     + block.withKey(key)
     + block.withUserId(user_id)

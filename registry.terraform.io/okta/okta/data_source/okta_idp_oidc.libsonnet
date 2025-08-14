@@ -1,7 +1,9 @@
 {
   local block = self,
   new():: (
-    {}
+    {
+      terraformObject:: "okta_idp_oidc",
+    }
   ),
   "#withAuthorizationBinding":: "The method of making an authorization request.",
   withAuthorizationBinding(value):: (

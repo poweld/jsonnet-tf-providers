@@ -1,7 +1,9 @@
 {
   local block = self,
   new(description, label):: (
-    {}
+    {
+      terraformObject:: "okta_admin_role_custom",
+    }
     + block.withDescription(description)
     + block.withLabel(label)
   ),
