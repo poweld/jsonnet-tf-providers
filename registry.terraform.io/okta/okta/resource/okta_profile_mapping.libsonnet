@@ -39,44 +39,12 @@
       source_id: converted,
     }
   ),
-  "#withSourceName":: "Name of the mapping source.",
-  withSourceName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"source_name" expected to be of type "string"';
-    {
-      source_name: converted,
-    }
-  ),
-  "#withSourceType":: "ID of the mapping source.",
-  withSourceType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"source_type" expected to be of type "string"';
-    {
-      source_type: converted,
-    }
-  ),
   "#withTargetId":: "The target id of the mapping to manage.",
   withTargetId(value):: (
     local converted = value;
     assert std.isString(converted) : '"target_id" expected to be of type "string"';
     {
       target_id: converted,
-    }
-  ),
-  "#withTargetName":: "Name of the mapping target.",
-  withTargetName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"target_name" expected to be of type "string"';
-    {
-      target_name: converted,
-    }
-  ),
-  "#withTargetType":: "ID of the mapping target.",
-  withTargetType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"target_type" expected to be of type "string"';
-    {
-      target_type: converted,
     }
   ),
   mappings:: {

@@ -6,22 +6,6 @@
       terraformType:: "resource",
     }
   ),
-  "#withDefaultIncludedGroupId":: "Default group ID (always included)",
-  withDefaultIncludedGroupId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"default_included_group_id" expected to be of type "string"';
-    {
-      default_included_group_id: converted,
-    }
-  ),
-  "#withDescription":: "Default policy description",
-  withDescription(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"description" expected to be of type "string"';
-    {
-      description: converted,
-    }
-  ),
   withDuo(value):: (
     local converted = value;
     assert std.isObject(converted) : '"duo" expected to be of type "map"';
@@ -91,14 +75,6 @@
     assert std.isBoolean(converted) : '"is_oie" expected to be of type "bool"';
     {
       is_oie: converted,
-    }
-  ),
-  "#withName":: "Default policy name",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
     }
   ),
   withOktaCall(value):: (
@@ -171,14 +147,6 @@
       phone_number: converted,
     }
   ),
-  "#withPriority":: "Default policy priority",
-  withPriority(value):: (
-    local converted = value;
-    assert std.isNumber(converted) : '"priority" expected to be of type "number"';
-    {
-      priority: converted,
-    }
-  ),
   withRsaToken(value):: (
     local converted = value;
     assert std.isObject(converted) : '"rsa_token" expected to be of type "map"';
@@ -198,14 +166,6 @@
     assert std.isObject(converted) : '"smart_card_idp" expected to be of type "map"';
     {
       smart_card_idp: converted,
-    }
-  ),
-  "#withStatus":: "Default policy status",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
     }
   ),
   withSymantecVip(value):: (

@@ -17,14 +17,6 @@
       brand_id: converted,
     }
   ),
-  "#withId":: "The ID of the resource. This is a compound ID of the brand ID and the template name.",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
   "#withRecipients":: "The recipients the emails of this template will be sent to - Valid values: `ALL_USERS`, `ADMINS_ONLY`, `NO_USERS`",
   withRecipients(value):: (
     local converted = value;

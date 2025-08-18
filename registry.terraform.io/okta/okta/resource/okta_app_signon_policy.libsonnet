@@ -16,28 +16,12 @@
       catch_all: converted,
     }
   ),
-  "#withDefaultRuleId":: "Default rule (system=true) id of the policy",
-  withDefaultRuleId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"default_rule_id" expected to be of type "string"';
-    {
-      default_rule_id: converted,
-    }
-  ),
   "#withDescription":: "Description of the policy.",
   withDescription(value):: (
     local converted = value;
     assert std.isString(converted) : '"description" expected to be of type "string"';
     {
       description: converted,
-    }
-  ),
-  "#withId":: "Policy id",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
     }
   ),
   "#withName":: "Name of the policy.",

@@ -47,14 +47,6 @@
       id: converted,
     }
   ),
-  "#withRoleId":: "ID of a role",
-  withRoleId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"role_id" expected to be of type "string"';
-    {
-      role_id: converted,
-    }
-  ),
   "#withRoleType":: "Type of the role that is assigned to the user and supports optional targets. See [API Docs](https://developer.okta.com/docs/api/openapi/okta-management/guides/roles/#standard-roles)",
   withRoleType(value):: (
     local converted = value;

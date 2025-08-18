@@ -8,22 +8,6 @@
     + block.withName(name)
     + block.withRealmType(realm_type)
   ),
-  "#withId":: "Realm ID",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
-  "#withIsDefault":: "Indicates whether the realm is the default realm.",
-  withIsDefault(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"is_default" expected to be of type "bool"';
-    {
-      is_default: converted,
-    }
-  ),
   "#withName":: "The name of the Okta Realm.",
   withName(value):: (
     local converted = value;

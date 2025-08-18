@@ -304,14 +304,6 @@
       token_url: converted,
     }
   ),
-  "#withType":: "Type of OIDC IdP.",
-  withType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"type" expected to be of type "string"';
-    {
-      type: converted,
-    }
-  ),
   withUserInfoBinding(value):: (
     local converted = value;
     assert std.isString(converted) : '"user_info_binding" expected to be of type "string"';
@@ -325,14 +317,6 @@
     assert std.isString(converted) : '"user_info_url" expected to be of type "string"';
     {
       user_info_url: converted,
-    }
-  ),
-  "#withUserTypeId":: "User type ID. Can be used as `target_id` in the `okta_profile_mapping` resource.",
-  withUserTypeId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"user_type_id" expected to be of type "string"';
-    {
-      user_type_id: converted,
     }
   ),
   "#withUsernameTemplate":: "Okta EL Expression to generate or transform a unique username for the IdP user. Default: `idpuser.email`",

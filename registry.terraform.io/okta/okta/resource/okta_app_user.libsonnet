@@ -16,13 +16,6 @@
       app_id: converted,
     }
   ),
-  withHasSharedUsername(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"has_shared_username" expected to be of type "bool"';
-    {
-      has_shared_username: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';

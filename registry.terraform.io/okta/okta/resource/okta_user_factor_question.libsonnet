@@ -32,22 +32,6 @@
       key: converted,
     }
   ),
-  "#withStatus":: "The status of the security question factor.",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
-    }
-  ),
-  "#withText":: "Display text for security question.",
-  withText(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"text" expected to be of type "string"';
-    {
-      text: converted,
-    }
-  ),
   "#withUserId":: "ID of the user. Resource will be recreated when `user_id` changes.",
   withUserId(value):: (
     local converted = value;

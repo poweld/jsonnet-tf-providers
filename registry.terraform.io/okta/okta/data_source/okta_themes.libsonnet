@@ -22,20 +22,4 @@
       id: converted,
     }
   ),
-  "#withThemes":: "List of `okta_them` belonging to the brand in the organization",
-  withThemes(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"themes" expected to be of type "set"';
-    {
-      themes: converted,
-    }
-  ),
-  "#withThemesMixin":: "List of `okta_them` belonging to the brand in the organization",
-  withThemesMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"themes" expected to be of type "set"';
-    {
-      themes+: converted,
-    }
-  ),
 }

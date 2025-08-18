@@ -23,22 +23,6 @@
       certificate_source_type: converted,
     }
   ),
-  "#withDnsRecords":: "TXT and CNAME records to be registered for the Domain",
-  withDnsRecords(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"dns_records" expected to be of type "list"';
-    {
-      dns_records: converted,
-    }
-  ),
-  "#withDnsRecordsMixin":: "TXT and CNAME records to be registered for the Domain",
-  withDnsRecordsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"dns_records" expected to be of type "list"';
-    {
-      dns_records+: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
@@ -52,14 +36,6 @@
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
-    }
-  ),
-  "#withValidationStatus":: "Status of the domain",
-  withValidationStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"validation_status" expected to be of type "string"';
-    {
-      validation_status: converted,
     }
   ),
 }

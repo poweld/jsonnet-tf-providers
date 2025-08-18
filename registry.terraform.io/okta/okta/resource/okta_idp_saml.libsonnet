@@ -34,26 +34,12 @@
       account_link_group_include+: converted,
     }
   ),
-  withAcsBinding(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"acs_binding" expected to be of type "string"';
-    {
-      acs_binding: converted,
-    }
-  ),
   "#withAcsType":: "The type of ACS. It can be `INSTANCE` or `ORG`. Default: `INSTANCE`",
   withAcsType(value):: (
     local converted = value;
     assert std.isString(converted) : '"acs_type" expected to be of type "string"';
     {
       acs_type: converted,
-    }
-  ),
-  withAudience(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"audience" expected to be of type "string"';
-    {
-      audience: converted,
     }
   ),
   "#withDeprovisionedAction":: "Action for a previously deprovisioned IdP user during authentication. Can be `NONE` or `REACTIVATE`. Default: `NONE`",
@@ -301,20 +287,6 @@
     assert std.isString(converted) : '"suspended_action" expected to be of type "string"';
     {
       suspended_action: converted,
-    }
-  ),
-  withType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"type" expected to be of type "string"';
-    {
-      type: converted,
-    }
-  ),
-  withUserTypeId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"user_type_id" expected to be of type "string"';
-    {
-      user_type_id: converted,
     }
   ),
   "#withUsernameTemplate":: "Okta EL Expression to generate or transform a unique username for the IdP user. Default: `idpuser.email`",

@@ -32,14 +32,6 @@
       force_is_default: converted,
     }
   ),
-  "#withId":: "The ID of the customization",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
   "#withIsDefault":: "Whether the customization is the default",
   withIsDefault(value):: (
     local converted = value;
@@ -54,14 +46,6 @@
     assert std.isString(converted) : '"language" expected to be of type "string"';
     {
       language: converted,
-    }
-  ),
-  "#withLinks":: "Link relations for this object - JSON HAL - Discoverable resources related to the email template",
-  withLinks(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"links" expected to be of type "string"';
-    {
-      links: converted,
     }
   ),
   "#withSubject":: "The subject of the customization",

@@ -14,30 +14,6 @@
       call_recovery: converted,
     }
   ),
-  "#withDefaultAuthProvider":: "Default Authentication Provider",
-  withDefaultAuthProvider(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"default_auth_provider" expected to be of type "string"';
-    {
-      default_auth_provider: converted,
-    }
-  ),
-  "#withDefaultIncludedGroupId":: "Default group ID (always included)",
-  withDefaultIncludedGroupId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"default_included_group_id" expected to be of type "string"';
-    {
-      default_included_group_id: converted,
-    }
-  ),
-  "#withDescription":: "Default policy description",
-  withDescription(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"description" expected to be of type "string"';
-    {
-      description: converted,
-    }
-  ),
   "#withEmailRecovery":: "Enable or disable email password recovery: ACTIVE or INACTIVE. Default: `ACTIVE`",
   withEmailRecovery(value):: (
     local converted = value;
@@ -51,14 +27,6 @@
     assert std.isString(converted) : '"id" expected to be of type "string"';
     {
       id: converted,
-    }
-  ),
-  "#withName":: "Default policy name",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
     }
   ),
   "#withPasswordAutoUnlockMinutes":: "Number of minutes before a locked account is unlocked: 0 = no limit. Default: `0`",
@@ -205,14 +173,6 @@
       password_show_lockout_failures: converted,
     }
   ),
-  "#withPriority":: "Default policy priority",
-  withPriority(value):: (
-    local converted = value;
-    assert std.isNumber(converted) : '"priority" expected to be of type "number"';
-    {
-      priority: converted,
-    }
-  ),
   "#withQuestionMinLength":: "Min length of the password recovery question answer. Default: `4`",
   withQuestionMinLength(value):: (
     local converted = value;
@@ -251,14 +211,6 @@
     assert std.isString(converted) : '"sms_recovery" expected to be of type "string"';
     {
       sms_recovery: converted,
-    }
-  ),
-  "#withStatus":: "Default policy status",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
     }
   ),
 }

@@ -154,14 +154,6 @@
       status: converted,
     }
   ),
-  "#withSystem":: "The rule is the system (default) rule for its associated policy",
-  withSystem(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"system" expected to be of type "bool"';
-    {
-      system: converted,
-    }
-  ),
   "#withType":: "Auth server policy rule type, unlikely this will be anything other then the default",
   withType(value):: (
     local converted = value;

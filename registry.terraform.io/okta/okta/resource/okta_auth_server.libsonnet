@@ -24,22 +24,6 @@
       audiences+: converted,
     }
   ),
-  "#withCredentialsLastRotated":: "The timestamp when the authorization server started to use the `kid` for signing tokens.",
-  withCredentialsLastRotated(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"credentials_last_rotated" expected to be of type "string"';
-    {
-      credentials_last_rotated: converted,
-    }
-  ),
-  "#withCredentialsNextRotation":: "The timestamp when the authorization server changes the key for signing tokens. Only returned when `credentials_rotation_mode` is `AUTO`.",
-  withCredentialsNextRotation(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"credentials_next_rotation" expected to be of type "string"';
-    {
-      credentials_next_rotation: converted,
-    }
-  ),
   "#withCredentialsRotationMode":: "The key rotation mode for the authorization server. Can be `AUTO` or `MANUAL`. Default: `AUTO`",
   withCredentialsRotationMode(value):: (
     local converted = value;
@@ -63,28 +47,12 @@
       id: converted,
     }
   ),
-  "#withIssuer":: "The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.",
-  withIssuer(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"issuer" expected to be of type "string"';
-    {
-      issuer: converted,
-    }
-  ),
   "#withIssuerMode":: "*Early Access Property*. Allows you to use a custom issuer URL. It can be set to `CUSTOM_URL`, `ORG_URL`, or `DYNAMIC`. Default: `ORG_URL`",
   withIssuerMode(value):: (
     local converted = value;
     assert std.isString(converted) : '"issuer_mode" expected to be of type "string"';
     {
       issuer_mode: converted,
-    }
-  ),
-  "#withKid":: "The ID of the JSON Web Key used for signing tokens issued by the authorization server.",
-  withKid(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"kid" expected to be of type "string"';
-    {
-      kid: converted,
     }
   ),
   "#withName":: "The name of the authorization server.",

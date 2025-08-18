@@ -31,12 +31,4 @@
       role_type: converted,
     }
   ),
-  "#withStatus":: "Status of subscription",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
-    }
-  ),
 }

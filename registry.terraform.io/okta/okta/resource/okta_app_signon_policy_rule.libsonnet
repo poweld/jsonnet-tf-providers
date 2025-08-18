@@ -231,14 +231,6 @@
       status: converted,
     }
   ),
-  "#withSystem":: "Often the `Catch-all Rule` this rule is the system (default) rule for its associated policy",
-  withSystem(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"system" expected to be of type "bool"';
-    {
-      system: converted,
-    }
-  ),
   "#withType":: "The Verification Method type",
   withType(value):: (
     local converted = value;

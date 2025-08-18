@@ -96,14 +96,6 @@
       client_id: converted,
     }
   ),
-  "#withClientSecret":: "OAuth client secret value, this is output only. This will be in plain text in your statefile unless you set omit_secret above.",
-  withClientSecret(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"client_secret" expected to be of type "string"';
-    {
-      client_secret: converted,
-    }
-  ),
   "#withClientUri":: "URI to a web page providing information about the client.",
   withClientUri(value):: (
     local converted = value;
@@ -247,22 +239,6 @@
       logo_uri: converted,
     }
   ),
-  "#withLogoUrl":: "URL of the application's logo",
-  withLogoUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"logo_url" expected to be of type "string"';
-    {
-      logo_url: converted,
-    }
-  ),
-  "#withName":: "Name of the app.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
   "#withOmitSecret":: "This tells the provider not manage the client_secret value in state. When this is false (the default), it will cause the auto-generated client_secret to be persisted in the client_secret attribute in state. This also means that every time an update to this app is run, this value is also set on the API. If this changes from false => true, the `client_secret` is dropped from state and the secret at the time of the apply is what remains. If this is ever changes from true => false your app will be recreated, due to the need to regenerate a secret we can store in state.",
   withOmitSecret(value):: (
     local converted = value;
@@ -359,14 +335,6 @@
       response_types+: converted,
     }
   ),
-  "#withSignOnMode":: "Sign on mode of application.",
-  withSignOnMode(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"sign_on_mode" expected to be of type "string"';
-    {
-      sign_on_mode: converted,
-    }
-  ),
   "#withStatus":: "Status of application. By default, it is `ACTIVE`",
   withStatus(value):: (
     local converted = value;
@@ -456,14 +424,6 @@
       assert std.isString(converted) : '"filter_type" expected to be of type "string"';
       {
         filter_type: converted,
-      }
-    ),
-    "#withIssuerMode":: "Issuer mode inherited from OAuth App",
-    withIssuerMode(value):: (
-      local converted = value;
-      assert std.isString(converted) : '"issuer_mode" expected to be of type "string"';
-      {
-        issuer_mode: converted,
       }
     ),
     "#withName":: "Name of the claim that will be used in the token.",

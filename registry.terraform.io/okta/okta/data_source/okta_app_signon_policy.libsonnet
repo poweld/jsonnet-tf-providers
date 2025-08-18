@@ -22,12 +22,4 @@
       id: converted,
     }
   ),
-  "#withName":: "Policy name",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
 }

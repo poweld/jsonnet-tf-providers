@@ -15,22 +15,6 @@
       auth_server_id: converted,
     }
   ),
-  "#withClaims":: "Collection of authorization server claims retrieved from Okta with the following properties.",
-  withClaims(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"claims" expected to be of type "list"';
-    {
-      claims: converted,
-    }
-  ),
-  "#withClaimsMixin":: "Collection of authorization server claims retrieved from Okta with the following properties.",
-  withClaimsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"claims" expected to be of type "list"';
-    {
-      claims+: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';

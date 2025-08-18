@@ -23,14 +23,6 @@
       id: converted,
     }
   ),
-  "#withLinks":: "Link relations for this object - JSON HAL - Discoverable resources related to the email template",
-  withLinks(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"links" expected to be of type "string"';
-    {
-      links: converted,
-    }
-  ),
   "#withName":: "The name of the email template",
   withName(value):: (
     local converted = value;

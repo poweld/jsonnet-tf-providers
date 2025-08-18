@@ -16,22 +16,6 @@
       brand_id: converted,
     }
   ),
-  "#withEmailCustomizations":: "List of `okta_email_customization` belonging to the named email template of the brand in the organization",
-  withEmailCustomizations(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"email_customizations" expected to be of type "set"';
-    {
-      email_customizations: converted,
-    }
-  ),
-  "#withEmailCustomizationsMixin":: "List of `okta_email_customization` belonging to the named email template of the brand in the organization",
-  withEmailCustomizationsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"email_customizations" expected to be of type "set"';
-    {
-      email_customizations+: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';

@@ -63,14 +63,6 @@
       provider_hostname: converted,
     }
   ),
-  "#withProviderInstanceId":: "App Instance ID.",
-  withProviderInstanceId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"provider_instance_id" expected to be of type "string"';
-    {
-      provider_instance_id: converted,
-    }
-  ),
   "#withProviderIntegrationKey":: "(DUO specific) - The Duo Security integration key.  Conflicts with `provider_json` argument.",
   withProviderIntegrationKey(value):: (
     local converted = value;
@@ -103,14 +95,6 @@
       provider_shared_secret: converted,
     }
   ),
-  "#withProviderType":: "Provider type. Supported value for Duo: `DUO`. Supported value for Custom App: `PUSH`",
-  withProviderType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"provider_type" expected to be of type "string"';
-    {
-      provider_type: converted,
-    }
-  ),
   "#withProviderUserNameTemplate":: "Username template expected by the provider. Used only for authenticators with type `security_key`.  Conflicts with `provider_json` argument.",
   withProviderUserNameTemplate(value):: (
     local converted = value;
@@ -133,14 +117,6 @@
     assert std.isString(converted) : '"status" expected to be of type "string"';
     {
       status: converted,
-    }
-  ),
-  "#withType":: "he type of Authenticator. Values include: `password`, `security_question`, `phone`, `email`, `app`, `federated`, and `security_key`.",
-  withType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"type" expected to be of type "string"';
-    {
-      type: converted,
     }
   ),
 }

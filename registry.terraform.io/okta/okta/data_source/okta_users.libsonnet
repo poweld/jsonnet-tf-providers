@@ -53,22 +53,6 @@
       include_roles: converted,
     }
   ),
-  "#withUsers":: "collection of users retrieved from Okta.",
-  withUsers(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"users" expected to be of type "list"';
-    {
-      users: converted,
-    }
-  ),
-  "#withUsersMixin":: "collection of users retrieved from Okta.",
-  withUsersMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"users" expected to be of type "list"';
-    {
-      users+: converted,
-    }
-  ),
   search:: {
     local block = self,
     new():: (

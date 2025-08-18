@@ -57,22 +57,6 @@
       apple_team_id: converted,
     }
   ),
-  "#withAuthorizationBinding":: "The method of making an authorization request. It can be set to `HTTP-POST` or `HTTP-REDIRECT`.",
-  withAuthorizationBinding(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"authorization_binding" expected to be of type "string"';
-    {
-      authorization_binding: converted,
-    }
-  ),
-  "#withAuthorizationUrl":: "IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.",
-  withAuthorizationUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"authorization_url" expected to be of type "string"';
-    {
-      authorization_url: converted,
-    }
-  ),
   "#withClientId":: "Unique identifier issued by AS for the Okta IdP instance.",
   withClientId(value):: (
     local converted = value;
@@ -246,62 +230,6 @@
     assert std.isString(converted) : '"suspended_action" expected to be of type "string"';
     {
       suspended_action: converted,
-    }
-  ),
-  "#withTokenBinding":: "The method of making a token request. It can be set to `HTTP-POST` or `HTTP-REDIRECT`.",
-  withTokenBinding(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"token_binding" expected to be of type "string"';
-    {
-      token_binding: converted,
-    }
-  ),
-  "#withTokenUrl":: "IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.",
-  withTokenUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"token_url" expected to be of type "string"';
-    {
-      token_url: converted,
-    }
-  ),
-  "#withTrustAudience":: "Trust audience for the Okta IdP instance.",
-  withTrustAudience(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"trust_audience" expected to be of type "string"';
-    {
-      trust_audience: converted,
-    }
-  ),
-  "#withTrustIssuer":: "Trust issuer for the Okta IdP instance.",
-  withTrustIssuer(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"trust_issuer" expected to be of type "string"';
-    {
-      trust_issuer: converted,
-    }
-  ),
-  "#withTrustKid":: "Trust kid for the Okta IdP instance.",
-  withTrustKid(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"trust_kid" expected to be of type "string"';
-    {
-      trust_kid: converted,
-    }
-  ),
-  "#withTrustRevocation":: "Trust revocation for the Okta IdP instance.",
-  withTrustRevocation(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"trust_revocation" expected to be of type "string"';
-    {
-      trust_revocation: converted,
-    }
-  ),
-  "#withTrustRevocationCacheLifetime":: "Trust revocation cache lifetime for the Okta IdP instance.",
-  withTrustRevocationCacheLifetime(value):: (
-    local converted = value;
-    assert std.isNumber(converted) : '"trust_revocation_cache_lifetime" expected to be of type "number"';
-    {
-      trust_revocation_cache_lifetime: converted,
     }
   ),
   "#withType":: "Identity Provider Types: https://developer.okta.com/docs/reference/api/idps/#identity-provider-type",

@@ -14,20 +14,6 @@
       id: converted,
     }
   ),
-  withQuestions(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"questions" expected to be of type "list"';
-    {
-      questions: converted,
-    }
-  ),
-  withQuestionsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"questions" expected to be of type "list"';
-    {
-      questions+: converted,
-    }
-  ),
   "#withUserId":: "ID of a Okta User",
   withUserId(value):: (
     local converted = value;

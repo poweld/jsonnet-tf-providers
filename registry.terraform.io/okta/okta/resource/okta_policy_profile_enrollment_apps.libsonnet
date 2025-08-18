@@ -23,14 +23,6 @@
       apps+: converted,
     }
   ),
-  "#withDefaultPolicyId":: "ID of the Default Enrollment Policy. This policy is used as a policy to re-assign apps to when they are unassigned from this one",
-  withDefaultPolicyId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"default_policy_id" expected to be of type "string"';
-    {
-      default_policy_id: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';

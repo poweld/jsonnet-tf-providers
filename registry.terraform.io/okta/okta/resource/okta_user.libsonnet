@@ -265,14 +265,6 @@
       profile_url: converted,
     }
   ),
-  "#withRawStatus":: "The raw status of the User in Okta - (status is mapped)",
-  withRawStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"raw_status" expected to be of type "string"';
-    {
-      raw_status: converted,
-    }
-  ),
   "#withRecoveryAnswer":: "User Password Recovery Answer",
   withRecoveryAnswer(value):: (
     local converted = value;

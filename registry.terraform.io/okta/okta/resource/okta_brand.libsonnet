@@ -55,38 +55,6 @@
       default_app_classic_application_uri: converted,
     }
   ),
-  "#withEmailDomainId":: "Email Domain ID tied to this brand",
-  withEmailDomainId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"email_domain_id" expected to be of type "string"';
-    {
-      email_domain_id: converted,
-    }
-  ),
-  "#withId":: "Brand id",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
-  "#withIsDefault":: "Is this the default brand",
-  withIsDefault(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"is_default" expected to be of type "bool"';
-    {
-      is_default: converted,
-    }
-  ),
-  "#withLinks":: "Link relations for this object - JSON HAL - Discoverable resources related to the brand",
-  withLinks(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"links" expected to be of type "string"';
-    {
-      links: converted,
-    }
-  ),
   "#withLocale":: "The language specified as an IETF BCP 47 language tag",
   withLocale(value):: (
     local converted = value;

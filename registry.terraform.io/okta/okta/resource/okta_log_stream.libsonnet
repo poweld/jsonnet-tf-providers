@@ -8,14 +8,6 @@
     + block.withName(name)
     + block.withType(type)
   ),
-  "#withId":: "Log Stream ID",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
   "#withName":: "Unique name for the Log Stream object",
   withName(value):: (
     local converted = value;

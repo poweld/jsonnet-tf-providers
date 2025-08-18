@@ -118,22 +118,6 @@
       logo: converted,
     }
   ),
-  "#withLogoUrl":: "URL of the application's logo",
-  withLogoUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"logo_url" expected to be of type "string"';
-    {
-      logo_url: converted,
-    }
-  ),
-  "#withName":: "Name of the app.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
   "#withPreconfiguredApp":: "Tells Okta to use an existing application in their application catalog, as opposed to a custom application.",
   withPreconfiguredApp(value):: (
     local converted = value;
@@ -164,14 +148,6 @@
     assert std.isString(converted) : '"shared_username" expected to be of type "string"';
     {
       shared_username: converted,
-    }
-  ),
-  "#withSignOnMode":: "Sign on mode of application.",
-  withSignOnMode(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"sign_on_mode" expected to be of type "string"';
-    {
-      sign_on_mode: converted,
     }
   ),
   "#withSignOnRedirectUrl":: "Post login redirect URL",

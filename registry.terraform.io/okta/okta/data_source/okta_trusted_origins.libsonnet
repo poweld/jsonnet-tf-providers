@@ -21,18 +21,4 @@
       id: converted,
     }
   ),
-  withTrustedOrigins(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"trusted_origins" expected to be of type "list"';
-    {
-      trusted_origins: converted,
-    }
-  ),
-  withTrustedOriginsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"trusted_origins" expected to be of type "list"';
-    {
-      trusted_origins+: converted,
-    }
-  ),
 }

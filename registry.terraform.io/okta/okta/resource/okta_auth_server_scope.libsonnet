@@ -79,12 +79,4 @@
       optional: converted,
     }
   ),
-  "#withSystem":: "Whether Okta created the Scope",
-  withSystem(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"system" expected to be of type "bool"';
-    {
-      system: converted,
-    }
-  ),
 }

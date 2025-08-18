@@ -23,14 +23,6 @@
       name: converted,
     }
   ),
-  "#withStatus":: "Status of the policy",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
-    }
-  ),
   "#withType":: "Policy type, see https://developer.okta.com/docs/reference/api/policy/#policy-object",
   withType(value):: (
     local converted = value;

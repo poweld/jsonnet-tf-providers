@@ -22,28 +22,4 @@
       name: converted,
     }
   ),
-  "#withSettings":: "Map of behavior settings.",
-  withSettings(value):: (
-    local converted = value;
-    assert std.isObject(converted) : '"settings" expected to be of type "map"';
-    {
-      settings: converted,
-    }
-  ),
-  "#withStatus":: "Behavior status.",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
-    }
-  ),
-  "#withType":: "Behavior type.",
-  withType(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"type" expected to be of type "string"';
-    {
-      type: converted,
-    }
-  ),
 }

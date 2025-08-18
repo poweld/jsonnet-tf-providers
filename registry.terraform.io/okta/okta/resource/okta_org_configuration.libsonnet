@@ -63,14 +63,6 @@
       end_user_support_help_url: converted,
     }
   ),
-  "#withExpiresAt":: "Expiration of org",
-  withExpiresAt(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"expires_at" expected to be of type "string"';
-    {
-      expires_at: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';
@@ -116,14 +108,6 @@
     assert std.isString(converted) : '"state" expected to be of type "string"';
     {
       state: converted,
-    }
-  ),
-  "#withSubdomain":: "Subdomain of org",
-  withSubdomain(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"subdomain" expected to be of type "string"';
-    {
-      subdomain: converted,
     }
   ),
   "#withSupportPhoneNumber":: "Support help phone of org",

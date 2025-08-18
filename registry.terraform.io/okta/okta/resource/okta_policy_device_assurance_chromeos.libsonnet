@@ -7,60 +7,12 @@
     }
     + block.withName(name)
   ),
-  "#withCreatedBy":: "Created by",
-  withCreatedBy(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"created_by" expected to be of type "string"';
-    {
-      created_by: converted,
-    }
-  ),
-  "#withCreatedDate":: "Created date",
-  withCreatedDate(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"created_date" expected to be of type "string"';
-    {
-      created_date: converted,
-    }
-  ),
-  "#withId":: "Policy assurance id",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
-  "#withLastUpdate":: "Last update",
-  withLastUpdate(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"last_update" expected to be of type "string"';
-    {
-      last_update: converted,
-    }
-  ),
-  "#withLastUpdatedBy":: "Last updated by",
-  withLastUpdatedBy(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"last_updated_by" expected to be of type "string"';
-    {
-      last_updated_by: converted,
-    }
-  ),
   "#withName":: "Name of the device assurance policy.",
   withName(value):: (
     local converted = value;
     assert std.isString(converted) : '"name" expected to be of type "string"';
     {
       name: converted,
-    }
-  ),
-  "#withPlatform":: "Policy device assurance platform",
-  withPlatform(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"platform" expected to be of type "string"';
-    {
-      platform: converted,
     }
   ),
   "#withTpspAllowScreenLock":: "Third party signal provider allow screen lock",

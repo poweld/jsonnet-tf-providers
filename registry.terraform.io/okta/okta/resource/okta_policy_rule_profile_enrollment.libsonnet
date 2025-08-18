@@ -55,14 +55,6 @@
       inline_hook_id: converted,
     }
   ),
-  "#withName":: "Name of the rule",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
   "#withPolicyId":: "ID of the policy",
   withPolicyId(value):: (
     local converted = value;
@@ -77,14 +69,6 @@
     assert std.isString(converted) : '"progressive_profiling_action" expected to be of type "string"';
     {
       progressive_profiling_action: converted,
-    }
-  ),
-  "#withStatus":: "Status of the rule",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
     }
   ),
   "#withTargetGroupId":: "The ID of a Group that this User should be added to",

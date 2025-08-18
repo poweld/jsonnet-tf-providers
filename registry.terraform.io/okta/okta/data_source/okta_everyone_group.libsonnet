@@ -6,14 +6,6 @@
       terraformType:: "data",
     }
   ),
-  "#withDescription":: "Description of group.",
-  withDescription(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"description" expected to be of type "string"';
-    {
-      description: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';

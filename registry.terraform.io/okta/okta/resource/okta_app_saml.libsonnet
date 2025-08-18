@@ -111,14 +111,6 @@
       auto_submit_toolbar: converted,
     }
   ),
-  "#withCertificate":: "cert from SAML XML metadata payload",
-  withCertificate(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"certificate" expected to be of type "string"';
-    {
-      certificate: converted,
-    }
-  ),
   "#withDefaultRelayState":: "Identifies a specific application resource in an IDP initiated SSO scenario.",
   withDefaultRelayState(value):: (
     local converted = value;
@@ -143,52 +135,12 @@
       digest_algorithm: converted,
     }
   ),
-  "#withEmbedUrl":: "The url that can be used to embed this application in other portals.",
-  withEmbedUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"embed_url" expected to be of type "string"';
-    {
-      embed_url: converted,
-    }
-  ),
   "#withEnduserNote":: "Application notes for end users.",
   withEnduserNote(value):: (
     local converted = value;
     assert std.isString(converted) : '"enduser_note" expected to be of type "string"';
     {
       enduser_note: converted,
-    }
-  ),
-  "#withEntityKey":: "Entity ID, the ID portion of the entity_url",
-  withEntityKey(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"entity_key" expected to be of type "string"';
-    {
-      entity_key: converted,
-    }
-  ),
-  "#withEntityUrl":: "Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8",
-  withEntityUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"entity_url" expected to be of type "string"';
-    {
-      entity_url: converted,
-    }
-  ),
-  "#withFeatures":: "features to enable",
-  withFeatures(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"features" expected to be of type "set"';
-    {
-      features: converted,
-    }
-  ),
-  "#withFeaturesMixin":: "features to enable",
-  withFeaturesMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"features" expected to be of type "set"';
-    {
-      features+: converted,
     }
   ),
   "#withHideIos":: "Do not display application icon on mobile app",
@@ -213,22 +165,6 @@
     assert std.isBoolean(converted) : '"honor_force_authn" expected to be of type "bool"';
     {
       honor_force_authn: converted,
-    }
-  ),
-  "#withHttpPostBinding":: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.",
-  withHttpPostBinding(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"http_post_binding" expected to be of type "string"';
-    {
-      http_post_binding: converted,
-    }
-  ),
-  "#withHttpRedirectBinding":: "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.",
-  withHttpRedirectBinding(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"http_redirect_binding" expected to be of type "string"';
-    {
-      http_redirect_binding: converted,
     }
   ),
   withId(value):: (
@@ -262,14 +198,6 @@
       inline_hook_id: converted,
     }
   ),
-  "#withKeyId":: "Certificate ID",
-  withKeyId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"key_id" expected to be of type "string"';
-    {
-      key_id: converted,
-    }
-  ),
   "#withKeyName":: "Certificate name. This modulates the rotation of keys. New name == new key. Required to be set with `key_years_valid`",
   withKeyName(value):: (
     local converted = value;
@@ -286,22 +214,6 @@
       key_years_valid: converted,
     }
   ),
-  "#withKeys":: "Application keys",
-  withKeys(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"keys" expected to be of type "list"';
-    {
-      keys: converted,
-    }
-  ),
-  "#withKeysMixin":: "Application keys",
-  withKeysMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"keys" expected to be of type "list"';
-    {
-      keys+: converted,
-    }
-  ),
   "#withLabel":: "The Application's display name.",
   withLabel(value):: (
     local converted = value;
@@ -316,38 +228,6 @@
     assert std.isString(converted) : '"logo" expected to be of type "string"';
     {
       logo: converted,
-    }
-  ),
-  "#withLogoUrl":: "URL of the application's logo",
-  withLogoUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"logo_url" expected to be of type "string"';
-    {
-      logo_url: converted,
-    }
-  ),
-  "#withMetadata":: "SAML xml metadata payload",
-  withMetadata(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"metadata" expected to be of type "string"';
-    {
-      metadata: converted,
-    }
-  ),
-  "#withMetadataUrl":: "SAML xml metadata URL",
-  withMetadataUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"metadata_url" expected to be of type "string"';
-    {
-      metadata_url: converted,
-    }
-  ),
-  "#withName":: "Name of the app.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
     }
   ),
   "#withPreconfiguredApp":: "Name of application from the Okta Integration Network. For instance 'slack'. If not included a custom app will be created.  If not provided the following arguments are required: 'sso_url' 'recipient' 'destination' 'audience' 'subject_name_id_template' 'subject_name_id_format' 'signature_algorithm' 'digest_algorithm' 'authn_context_class_ref'",
@@ -396,14 +276,6 @@
     assert std.isString(converted) : '"saml_version" expected to be of type "string"';
     {
       saml_version: converted,
-    }
-  ),
-  "#withSignOnMode":: "Sign on mode of application.",
-  withSignOnMode(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"sign_on_mode" expected to be of type "string"';
-    {
-      sign_on_mode: converted,
     }
   ),
   "#withSignatureAlgorithm":: "Signature algorithm used to digitally sign the assertion and response",

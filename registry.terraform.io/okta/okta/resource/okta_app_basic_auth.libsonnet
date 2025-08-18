@@ -120,22 +120,6 @@
       logo: converted,
     }
   ),
-  "#withLogoUrl":: "URL of the application's logo",
-  withLogoUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"logo_url" expected to be of type "string"';
-    {
-      logo_url: converted,
-    }
-  ),
-  "#withName":: "Name of the app.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
   "#withRevealPassword":: "Allow user to reveal password. Default is false. It can not be set to true if credentials_scheme is 'ADMIN_SETS_CREDENTIALS', 'SHARED_USERNAME_AND_PASSWORD' or 'EXTERNAL_PASSWORD_SYNC'.",
   withRevealPassword(value):: (
     local converted = value;
@@ -158,14 +142,6 @@
     assert std.isString(converted) : '"shared_username" expected to be of type "string"';
     {
       shared_username: converted,
-    }
-  ),
-  "#withSignOnMode":: "Sign on mode of application.",
-  withSignOnMode(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"sign_on_mode" expected to be of type "string"';
-    {
-      sign_on_mode: converted,
     }
   ),
   "#withStatus":: "Status of application. By default, it is `ACTIVE`",

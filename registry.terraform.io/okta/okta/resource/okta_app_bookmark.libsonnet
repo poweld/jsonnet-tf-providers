@@ -111,36 +111,12 @@
       logo: converted,
     }
   ),
-  "#withLogoUrl":: "URL of the application's logo",
-  withLogoUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"logo_url" expected to be of type "string"';
-    {
-      logo_url: converted,
-    }
-  ),
-  "#withName":: "Name of the app.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
   "#withRequestIntegration":: "Would you like Okta to add an integration for this app?",
   withRequestIntegration(value):: (
     local converted = value;
     assert std.isBoolean(converted) : '"request_integration" expected to be of type "bool"';
     {
       request_integration: converted,
-    }
-  ),
-  "#withSignOnMode":: "Sign on mode of application.",
-  withSignOnMode(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"sign_on_mode" expected to be of type "string"';
-    {
-      sign_on_mode: converted,
     }
   ),
   "#withStatus":: "Status of application. By default, it is `ACTIVE`",

@@ -22,20 +22,4 @@
       id: converted,
     }
   ),
-  "#withScopes":: "Collection of authorization server scopes retrieved from Okta with the following properties.",
-  withScopes(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"scopes" expected to be of type "list"';
-    {
-      scopes: converted,
-    }
-  ),
-  "#withScopesMixin":: "Collection of authorization server scopes retrieved from Okta with the following properties.",
-  withScopesMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"scopes" expected to be of type "list"';
-    {
-      scopes+: converted,
-    }
-  ),
 }

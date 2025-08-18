@@ -17,22 +17,6 @@
       condition_expression: converted,
     }
   ),
-  "#withId":: "Realm Assignment ID.",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
-  "#withIsDefault":: "Indicates whether the realm assignment is the default.",
-  withIsDefault(value):: (
-    local converted = value;
-    assert std.isBoolean(converted) : '"is_default" expected to be of type "bool"';
-    {
-      is_default: converted,
-    }
-  ),
   "#withName":: "The name of the Okta Realm Assignment.",
   withName(value):: (
     local converted = value;

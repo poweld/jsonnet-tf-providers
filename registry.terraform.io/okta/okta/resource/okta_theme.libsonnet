@@ -15,14 +15,6 @@
       background_image: converted,
     }
   ),
-  "#withBackgroundImageUrl":: "Background image URL",
-  withBackgroundImageUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"background_image_url" expected to be of type "string"';
-    {
-      background_image_url: converted,
-    }
-  ),
   "#withBrandId":: "Brand ID",
   withBrandId(value):: (
     local converted = value;
@@ -63,44 +55,12 @@
       favicon: converted,
     }
   ),
-  "#withFaviconUrl":: "Favicon URL",
-  withFaviconUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"favicon_url" expected to be of type "string"';
-    {
-      favicon_url: converted,
-    }
-  ),
-  "#withId":: "Brand ID",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
-  "#withLinks":: "Link relations for this object - JSON HAL - Discoverable resources related to the email template",
-  withLinks(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"links" expected to be of type "string"';
-    {
-      links: converted,
-    }
-  ),
   "#withLogo":: "Path to local file",
   withLogo(value):: (
     local converted = value;
     assert std.isString(converted) : '"logo" expected to be of type "string"';
     {
       logo: converted,
-    }
-  ),
-  "#withLogoUrl":: "Logo URL",
-  withLogoUrl(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"logo_url" expected to be of type "string"';
-    {
-      logo_url: converted,
     }
   ),
   "#withPrimaryColorContrastHex":: "Primary color contrast hex code",

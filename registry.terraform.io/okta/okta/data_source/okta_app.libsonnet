@@ -14,22 +14,6 @@
       active_only: converted,
     }
   ),
-  "#withGroups":: "Groups associated with the application",
-  withGroups(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"groups" expected to be of type "set"';
-    {
-      groups: converted,
-    }
-  ),
-  "#withGroupsMixin":: "Groups associated with the application",
-  withGroupsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"groups" expected to be of type "set"';
-    {
-      groups+: converted,
-    }
-  ),
   "#withId":: "Id of application to retrieve, conflicts with label and label_prefix.",
   withId(value):: (
     local converted = value;
@@ -54,22 +38,6 @@
       label_prefix: converted,
     }
   ),
-  "#withLinks":: "Discoverable resources related to the app",
-  withLinks(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"links" expected to be of type "string"';
-    {
-      links: converted,
-    }
-  ),
-  "#withName":: "Name of application.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
-    }
-  ),
   "#withSkipGroups":: "Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources",
   withSkipGroups(value):: (
     local converted = value;
@@ -84,30 +52,6 @@
     assert std.isBoolean(converted) : '"skip_users" expected to be of type "bool"';
     {
       skip_users: converted,
-    }
-  ),
-  "#withStatus":: "Status of application.",
-  withStatus(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"status" expected to be of type "string"';
-    {
-      status: converted,
-    }
-  ),
-  "#withUsers":: "Users associated with the application",
-  withUsers(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"users" expected to be of type "set"';
-    {
-      users: converted,
-    }
-  ),
-  "#withUsersMixin":: "Users associated with the application",
-  withUsersMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert (std.isArray(converted) && std.length(std.set(converted)) == std.length(converted)) : '"users" expected to be of type "set"';
-    {
-      users+: converted,
     }
   ),
 }

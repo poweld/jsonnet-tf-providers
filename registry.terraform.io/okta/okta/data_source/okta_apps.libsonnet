@@ -14,22 +14,6 @@
       active_only: converted,
     }
   ),
-  "#withApps":: "The list of applications that match the search criteria.",
-  withApps(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"apps" expected to be of type "list"';
-    {
-      apps: converted,
-    }
-  ),
-  "#withAppsMixin":: "The list of applications that match the search criteria.",
-  withAppsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"apps" expected to be of type "list"';
-    {
-      apps+: converted,
-    }
-  ),
   "#withIncludeNonDeleted":: "Specifies whether to include non-active, but not deleted apps in the results.",
   withIncludeNonDeleted(value):: (
     local converted = value;

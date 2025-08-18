@@ -16,14 +16,6 @@
       auth_server_id: converted,
     }
   ),
-  "#withId":: "Resource id",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
   "#withTrusted":: "A list of the authorization server IDs user want to trust",
   withTrusted(value):: (
     local converted = if std.isArray(value) then value else [value];

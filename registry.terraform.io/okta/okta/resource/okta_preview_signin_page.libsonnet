@@ -17,14 +17,6 @@
       brand_id: converted,
     }
   ),
-  "#withId":: "placeholder id",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
   "#withPageContent":: "page content of the preview signin page",
   withPageContent(value):: (
     local converted = value;

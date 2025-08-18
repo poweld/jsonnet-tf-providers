@@ -6,20 +6,6 @@
       terraformType:: "data",
     }
   ),
-  withGroups(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"groups" expected to be of type "list"';
-    {
-      groups: converted,
-    }
-  ),
-  withGroupsMixin(value):: (
-    local converted = if std.isArray(value) then value else [value];
-    assert std.isArray(converted) : '"groups" expected to be of type "list"';
-    {
-      groups+: converted,
-    }
-  ),
   withId(value):: (
     local converted = value;
     assert std.isString(converted) : '"id" expected to be of type "string"';

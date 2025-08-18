@@ -6,22 +6,6 @@
       terraformType:: "data",
     }
   ),
-  "#withDescription":: "Description of user type.",
-  withDescription(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"description" expected to be of type "string"';
-    {
-      description: converted,
-    }
-  ),
-  "#withDisplayName":: "Display name of user type.",
-  withDisplayName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"display_name" expected to be of type "string"';
-    {
-      display_name: converted,
-    }
-  ),
   "#withId":: "ID of the user type to retrieve, conflicts with `name`.",
   withId(value):: (
     local converted = value;

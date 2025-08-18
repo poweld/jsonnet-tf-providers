@@ -16,14 +16,6 @@
       app_id: converted,
     }
   ),
-  "#withId":: "The ID of the resource. This ID is simply the application ID.",
-  withId(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"id" expected to be of type "string"';
-    {
-      id: converted,
-    }
-  ),
   "#withPolicyId":: "The access policy ID.",
   withPolicyId(value):: (
     local converted = value;
