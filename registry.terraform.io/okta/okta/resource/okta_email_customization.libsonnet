@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(brand_id, template_name):: (
+  new(name, brand_id, template_name):: (
     {
-      terraformObject:: "okta_email_customization",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_email_customization",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["body", "brand_id", "force_is_default", "id", "is_default", "language", "links", "subject", "template_name"],
+      },
     }
     + block.withBrandId(brand_id)
     + block.withTemplateName(template_name)

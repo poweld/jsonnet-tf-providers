@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(app_id, policy_id):: (
+  new(name, app_id, policy_id):: (
     {
-      terraformObject:: "okta_app_access_policy_assignment",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_access_policy_assignment",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["app_id", "id", "policy_id"],
+      },
     }
     + block.withAppId(app_id)
     + block.withPolicyId(policy_id)

@@ -2,8 +2,13 @@
   local block = self,
   new(name):: (
     {
-      terraformObject:: "okta_policy_rule_password",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_rule_password",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "id", "network_connection", "network_excludes", "network_includes", "password_change", "password_reset", "password_unlock", "policy_id", "priority", "status", "users_excluded"],
+      },
     }
     + block.withName(name)
   ),

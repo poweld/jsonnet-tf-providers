@@ -2,8 +2,13 @@
   local block = self,
   new(name, type, version):: (
     {
-      terraformObject:: "okta_inline_hook",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_inline_hook",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "auth", "channel", "channel_json", "id", "status", "type", "version"],
+      },
     }
     + block.withName(name)
     + block.withType(type)
@@ -72,10 +77,15 @@
   ),
   headers:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_inline_hook",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_inline_hook",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["key", "value"],
+        },
       }
     ),
     withKey(value):: (

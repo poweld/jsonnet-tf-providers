@@ -1,9 +1,14 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_captcha_org_wide_settings",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_captcha_org_wide_settings",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["captcha_id", "enabled_for", "id"],
+      },
     }
   ),
   "#withCaptchaId":: "Array of pages that have CAPTCHA enabled. Valid values: `SSR`, `SSPR` and `SIGN_IN`.",

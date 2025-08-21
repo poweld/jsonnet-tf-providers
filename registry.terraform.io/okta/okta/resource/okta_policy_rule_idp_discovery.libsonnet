@@ -2,8 +2,13 @@
   local block = self,
   new(name):: (
     {
-      terraformObject:: "okta_policy_rule_idp_discovery",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_rule_idp_discovery",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "id", "network_connection", "network_excludes", "network_includes", "policy_id", "priority", "status", "user_identifier_attribute", "user_identifier_type"],
+      },
     }
     + block.withName(name)
   ),
@@ -104,11 +109,17 @@
   ),
   app_exclude:: {
     local block = self,
-    new(type):: (
+    new(name, type):: (
       {
-        terraformObject:: "okta_policy_rule_idp_discovery",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_idp_discovery",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["name", "id", "type"],
+        },
       }
+      + block.withName(name)
       + block.withType(type)
     ),
     withId(value):: (
@@ -135,11 +146,17 @@
   },
   app_include:: {
     local block = self,
-    new(type):: (
+    new(name, type):: (
       {
-        terraformObject:: "okta_policy_rule_idp_discovery",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_idp_discovery",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["name", "id", "type"],
+        },
       }
+      + block.withName(name)
       + block.withType(type)
     ),
     withId(value):: (
@@ -166,10 +183,15 @@
   },
   idp_providers:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_policy_rule_idp_discovery",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_idp_discovery",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["id", "type"],
+        },
       }
     ),
     "#withId":: "The identifier for the Idp the rule should route to if all conditions are met.",
@@ -191,10 +213,15 @@
   },
   platform_include:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_policy_rule_idp_discovery",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_idp_discovery",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["os_expression", "os_type", "type"],
+        },
       }
     ),
     "#withOsExpression":: "Only available with OTHER OS type",
@@ -222,10 +249,15 @@
   },
   user_identifier_patterns:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_policy_rule_idp_discovery",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_idp_discovery",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["match_type", "value"],
+        },
       }
     ),
     withMatchType(value):: (

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(source_id, target_id):: (
+  new(name, source_id, target_id):: (
     {
-      terraformObject:: "okta_profile_mapping",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_profile_mapping",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["always_apply", "delete_when_absent", "id", "source_id", "source_name", "source_type", "target_id", "target_name", "target_type"],
+      },
     }
     + block.withSourceId(source_id)
     + block.withTargetId(target_id)
@@ -49,10 +54,15 @@
   ),
   mappings:: {
     local block = self,
-    new(expression, id):: (
+    new(name, expression, id):: (
       {
-        terraformObject:: "okta_profile_mapping",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_profile_mapping",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["expression", "id", "push_status"],
+        },
       }
       + block.withExpression(expression)
       + block.withId(id)

@@ -1,13 +1,18 @@
 {
   local block = self,
-  new(auth_server_id, grant_type_whitelist, name, policy_id, priority):: (
+  new(name, auth_server_id, grant_type_whitelist, policy_id, priority):: (
     {
-      terraformObject:: "okta_auth_server_policy_rule",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_auth_server_policy_rule",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "access_token_lifetime_minutes", "auth_server_id", "grant_type_whitelist", "group_blacklist", "group_whitelist", "id", "inline_hook_id", "policy_id", "priority", "refresh_token_lifetime_minutes", "refresh_token_window_minutes", "scope_whitelist", "status", "system", "type", "user_blacklist", "user_whitelist"],
+      },
     }
+    + block.withName(name)
     + block.withAuthServerId(auth_server_id)
     + block.withGrantTypeWhitelist(grant_type_whitelist)
-    + block.withName(name)
     + block.withPolicyId(policy_id)
     + block.withPriority(priority)
   ),

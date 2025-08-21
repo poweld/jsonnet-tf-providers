@@ -1,9 +1,14 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_apps",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_apps",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["active_only", "apps", "include_non_deleted", "label", "label_prefix", "q", "use_optimization"],
+      },
     }
   ),
   "#withActiveOnly":: "Search only active applications.",

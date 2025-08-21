@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(index, title, type):: (
+  new(name, index, title, type):: (
     {
-      terraformObject:: "okta_user_schema_property",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_user_schema_property",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["array_enum", "array_type", "description", "enum", "external_name", "external_namespace", "id", "index", "master", "max_length", "min_length", "pattern", "permissions", "required", "scope", "title", "type", "unique", "user_type"],
+      },
     }
     + block.withIndex(index)
     + block.withTitle(title)
@@ -178,10 +183,15 @@
   ),
   array_one_of:: {
     local block = self,
-    new(const, title):: (
+    new(name, const, title):: (
       {
-        terraformObject:: "okta_user_schema_property",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_user_schema_property",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["const", "title"],
+        },
       }
       + block.withConst(const)
       + block.withTitle(title)
@@ -205,10 +215,15 @@
   },
   master_override_priority:: {
     local block = self,
-    new(value):: (
+    new(name, value):: (
       {
-        terraformObject:: "okta_user_schema_property",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_user_schema_property",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["type", "value"],
+        },
       }
       + block.withValue(value)
     ),
@@ -229,10 +244,15 @@
   },
   one_of:: {
     local block = self,
-    new(const, title):: (
+    new(name, const, title):: (
       {
-        terraformObject:: "okta_user_schema_property",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_user_schema_property",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["const", "title"],
+        },
       }
       + block.withConst(const)
       + block.withTitle(title)

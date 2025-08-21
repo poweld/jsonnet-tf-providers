@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(group_id, role_type):: (
+  new(name, group_id, role_type):: (
     {
-      terraformObject:: "okta_group_role",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_group_role",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["disable_notifications", "group_id", "id", "resource_set_id", "role_id", "role_type", "target_app_list", "target_group_list"],
+      },
     }
     + block.withGroupId(group_id)
     + block.withRoleType(role_type)

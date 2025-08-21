@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_realm",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_realm",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "id", "is_default", "realm_type"],
+      },
     }
+    + block.withName(name)
   ),
   "#withId":: "The id of the Okta Realm.",
   withId(value):: (

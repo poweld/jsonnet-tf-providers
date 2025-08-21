@@ -1,12 +1,17 @@
 {
   local block = self,
-  new(audiences, name):: (
+  new(name, audiences):: (
     {
-      terraformObject:: "okta_auth_server",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_auth_server",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "audiences", "credentials_last_rotated", "credentials_next_rotation", "credentials_rotation_mode", "description", "id", "issuer", "issuer_mode", "kid", "status"],
+      },
     }
-    + block.withAudiences(audiences)
     + block.withName(name)
+    + block.withAudiences(audiences)
   ),
   "#withAudiences":: "The recipients that the tokens are intended for. This becomes the `aud` claim in an access token. Currently Okta only supports a single value here.",
   withAudiences(value):: (

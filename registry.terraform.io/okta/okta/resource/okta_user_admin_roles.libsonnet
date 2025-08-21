@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(admin_roles, user_id):: (
+  new(name, admin_roles, user_id):: (
     {
-      terraformObject:: "okta_user_admin_roles",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_user_admin_roles",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["admin_roles", "disable_notifications", "id", "user_id"],
+      },
     }
     + block.withAdminRoles(admin_roles)
     + block.withUserId(user_id)

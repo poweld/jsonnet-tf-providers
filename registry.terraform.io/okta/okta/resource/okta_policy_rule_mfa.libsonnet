@@ -2,8 +2,13 @@
   local block = self,
   new(name):: (
     {
-      terraformObject:: "okta_policy_rule_mfa",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_rule_mfa",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "enroll", "id", "network_connection", "network_excludes", "network_includes", "policy_id", "priority", "status", "users_excluded"],
+      },
     }
     + block.withName(name)
   ),
@@ -112,11 +117,17 @@
   ),
   app_exclude:: {
     local block = self,
-    new(type):: (
+    new(name, type):: (
       {
-        terraformObject:: "okta_policy_rule_mfa",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_mfa",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["name", "id", "type"],
+        },
       }
+      + block.withName(name)
       + block.withType(type)
     ),
     withId(value):: (
@@ -143,11 +154,17 @@
   },
   app_include:: {
     local block = self,
-    new(type):: (
+    new(name, type):: (
       {
-        terraformObject:: "okta_policy_rule_mfa",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_mfa",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["name", "id", "type"],
+        },
       }
+      + block.withName(name)
       + block.withType(type)
     ),
     withId(value):: (

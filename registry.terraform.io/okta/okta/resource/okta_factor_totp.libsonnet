@@ -2,8 +2,13 @@
   local block = self,
   new(name):: (
     {
-      terraformObject:: "okta_factor_totp",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_factor_totp",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "clock_drift_interval", "hmac_algorithm", "id", "otp_length", "shared_secret_encoding", "time_step"],
+      },
     }
     + block.withName(name)
   ),

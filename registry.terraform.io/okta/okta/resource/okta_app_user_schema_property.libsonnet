@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(app_id, index, title, type):: (
+  new(name, app_id, index, title, type):: (
     {
-      terraformObject:: "okta_app_user_schema_property",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_user_schema_property",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["app_id", "array_enum", "array_type", "description", "enum", "external_name", "external_namespace", "id", "index", "master", "max_length", "min_length", "permissions", "required", "scope", "title", "type", "union", "unique", "user_type"],
+      },
     }
     + block.withAppId(app_id)
     + block.withIndex(index)
@@ -187,10 +192,15 @@
   ),
   array_one_of:: {
     local block = self,
-    new(const, title):: (
+    new(name, const, title):: (
       {
-        terraformObject:: "okta_app_user_schema_property",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_user_schema_property",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["const", "title"],
+        },
       }
       + block.withConst(const)
       + block.withTitle(title)
@@ -214,10 +224,15 @@
   },
   one_of:: {
     local block = self,
-    new(const, title):: (
+    new(name, const, title):: (
       {
-        terraformObject:: "okta_app_user_schema_property",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_user_schema_property",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["const", "title"],
+        },
       }
       + block.withConst(const)
       + block.withTitle(title)

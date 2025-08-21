@@ -1,10 +1,16 @@
 {
   local block = self,
-  new(auth_server_id):: (
+  new(name, auth_server_id):: (
     {
-      terraformObject:: "okta_auth_server_claim",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_auth_server_claim",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "always_include_in_token", "auth_server_id", "claim_type", "id", "scopes", "status", "value", "value_type"],
+      },
     }
+    + block.withName(name)
     + block.withAuthServerId(auth_server_id)
   ),
   "#withAuthServerId":: "Auth server ID",

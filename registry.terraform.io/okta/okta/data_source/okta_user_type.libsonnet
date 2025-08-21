@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_user_type",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_user_type",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "description", "display_name", "id"],
+      },
     }
+    + block.withName(name)
   ),
   "#withId":: "ID of the user type to retrieve, conflicts with `name`.",
   withId(value):: (

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(custom_role_id, resource_set_id):: (
+  new(name, custom_role_id, resource_set_id):: (
     {
-      terraformObject:: "okta_admin_role_custom_assignments",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_admin_role_custom_assignments",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["custom_role_id", "id", "members", "resource_set_id"],
+      },
     }
     + block.withCustomRoleId(custom_role_id)
     + block.withResourceSetId(resource_set_id)

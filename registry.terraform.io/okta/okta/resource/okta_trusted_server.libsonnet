@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(auth_server_id, trusted):: (
+  new(name, auth_server_id, trusted):: (
     {
-      terraformObject:: "okta_trusted_server",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_trusted_server",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["auth_server_id", "id", "trusted"],
+      },
     }
     + block.withAuthServerId(auth_server_id)
     + block.withTrusted(trusted)

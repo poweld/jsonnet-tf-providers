@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(associated_description, associated_name, associated_title, primary_description, primary_name, primary_title):: (
+  new(name, associated_description, associated_name, associated_title, primary_description, primary_name, primary_title):: (
     {
-      terraformObject:: "okta_link_definition",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_link_definition",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["associated_description", "associated_name", "associated_title", "id", "primary_description", "primary_name", "primary_title"],
+      },
     }
     + block.withAssociatedDescription(associated_description)
     + block.withAssociatedName(associated_name)

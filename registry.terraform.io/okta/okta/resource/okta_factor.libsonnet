@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(provider_id):: (
+  new(name, provider_id):: (
     {
-      terraformObject:: "okta_factor",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_factor",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["active", "id", "provider_id"],
+      },
     }
     + block.withProviderId(provider_id)
   ),

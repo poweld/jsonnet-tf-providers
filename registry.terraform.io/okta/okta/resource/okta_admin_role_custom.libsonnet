@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(description, label):: (
+  new(name, description, label):: (
     {
-      terraformObject:: "okta_admin_role_custom",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_admin_role_custom",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["description", "id", "label", "permissions"],
+      },
     }
     + block.withDescription(description)
     + block.withLabel(label)

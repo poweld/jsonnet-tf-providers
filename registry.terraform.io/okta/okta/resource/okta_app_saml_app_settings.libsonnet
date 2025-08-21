@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(app_id, settings):: (
+  new(name, app_id, settings):: (
     {
-      terraformObject:: "okta_app_saml_app_settings",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_saml_app_settings",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["app_id", "id", "settings"],
+      },
     }
     + block.withAppId(app_id)
     + block.withSettings(settings)

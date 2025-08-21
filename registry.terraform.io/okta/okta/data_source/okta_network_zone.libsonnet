@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_network_zone",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_network_zone",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "asns", "dynamic_locations", "dynamic_locations_exclude", "dynamic_proxy_type", "gateways", "id", "ip_service_categories_exclude", "ip_service_categories_include", "proxies", "status", "type", "usage"],
+      },
     }
+    + block.withName(name)
   ),
   "#withDynamicLocationsExclude":: "Array of locations ISO-3166-1(2) excluded. Format code: countryCode OR countryCode-regionCode. Use with type `DYNAMIC_V2`",
   withDynamicLocationsExclude(value):: (

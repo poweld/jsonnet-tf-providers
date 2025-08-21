@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(app_id, uri):: (
+  new(name, app_id, uri):: (
     {
-      terraformObject:: "okta_app_oauth_post_logout_redirect_uri",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_oauth_post_logout_redirect_uri",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["app_id", "id", "uri"],
+      },
     }
     + block.withAppId(app_id)
     + block.withUri(uri)

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(notification_type, role_type):: (
+  new(name, notification_type, role_type):: (
     {
-      terraformObject:: "okta_role_subscription",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_role_subscription",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["id", "notification_type", "role_type", "status"],
+      },
     }
     + block.withNotificationType(notification_type)
     + block.withRoleType(role_type)

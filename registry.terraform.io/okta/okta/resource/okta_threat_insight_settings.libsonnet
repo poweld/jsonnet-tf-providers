@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(action):: (
+  new(name, action):: (
     {
-      terraformObject:: "okta_threat_insight_settings",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_threat_insight_settings",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["action", "id", "network_excludes"],
+      },
     }
     + block.withAction(action)
   ),

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_users",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_users",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["compound_search_operator", "delay_read_seconds", "group_id", "id", "include_groups", "include_roles", "users"],
+      },
     }
   ),
   "#withCompoundSearchOperator":: "Search operator used when joining multiple search clauses",
@@ -55,11 +60,17 @@
   ),
   search:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_users",
-        terraformType:: "data",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_users",
+          terraformType:: "data",
+          terraformPrefix:: "data",
+          terraformName:: name,
+          terraformAttributes:: ["name", "comparison", "expression", "value"],
+        },
       }
+      + block.withName(name)
     ),
     withComparison(value):: (
       local converted = value;

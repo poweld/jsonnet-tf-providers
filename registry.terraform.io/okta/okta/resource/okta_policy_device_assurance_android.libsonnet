@@ -2,8 +2,13 @@
   local block = self,
   new(name):: (
     {
-      terraformObject:: "okta_policy_device_assurance_android",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_device_assurance_android",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "created_by", "created_date", "disk_encryption_type", "id", "jailbreak", "last_update", "last_updated_by", "os_version", "platform", "screenlock_type", "secure_hardware_present"],
+      },
     }
     + block.withName(name)
   ),

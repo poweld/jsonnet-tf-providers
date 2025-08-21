@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(from_address, from_name, subdomain):: (
+  new(name, from_address, from_name, subdomain):: (
     {
-      terraformObject:: "okta_email_sender",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_email_sender",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["dns_records", "from_address", "from_name", "id", "status", "subdomain"],
+      },
     }
     + block.withFromAddress(from_address)
     + block.withFromName(from_name)

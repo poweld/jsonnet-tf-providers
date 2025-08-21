@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(id):: (
+  new(name, id):: (
     {
-      terraformObject:: "okta_email_smtp_server",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_email_smtp_server",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["alias", "enabled", "host", "id", "port", "username"],
+      },
     }
     + block.withId(id)
   ),

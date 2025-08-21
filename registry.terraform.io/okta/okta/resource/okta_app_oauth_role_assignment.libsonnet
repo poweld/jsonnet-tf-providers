@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(client_id, type):: (
+  new(name, client_id, type):: (
     {
-      terraformObject:: "okta_app_oauth_role_assignment",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_oauth_role_assignment",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["client_id", "id", "label", "resource_set", "role", "status", "type"],
+      },
     }
     + block.withClientId(client_id)
     + block.withType(type)

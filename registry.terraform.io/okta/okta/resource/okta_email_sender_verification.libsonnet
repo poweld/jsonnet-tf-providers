@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(sender_id):: (
+  new(name, sender_id):: (
     {
-      terraformObject:: "okta_email_sender_verification",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_email_sender_verification",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["id", "sender_id"],
+      },
     }
     + block.withSenderId(sender_id)
   ),

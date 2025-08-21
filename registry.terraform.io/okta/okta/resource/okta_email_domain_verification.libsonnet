@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(email_domain_id):: (
+  new(name, email_domain_id):: (
     {
-      terraformObject:: "okta_email_domain_verification",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_email_domain_verification",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["email_domain_id", "id"],
+      },
     }
     + block.withEmailDomainId(email_domain_id)
   ),

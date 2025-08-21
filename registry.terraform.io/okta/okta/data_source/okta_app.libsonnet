@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_app",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "active_only", "groups", "id", "label", "label_prefix", "links", "skip_groups", "skip_users", "status", "users"],
+      },
     }
+    + block.withName(name)
   ),
   "#withActiveOnly":: "Search only ACTIVE applications.",
   withActiveOnly(value):: (
@@ -36,6 +42,14 @@
     assert std.isString(converted) : '"label_prefix" expected to be of type "string"';
     {
       label_prefix: converted,
+    }
+  ),
+  "#withName":: "Name of application.",
+  withName(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"name" expected to be of type "string"';
+    {
+      name: converted,
     }
   ),
   "#withSkipGroups":: "Ignore groups sync. This is a temporary solution until 'groups' field is supported in all the app-like resources",

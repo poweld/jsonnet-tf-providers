@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_authenticator",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_authenticator",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "id", "key", "provider_auth_port", "provider_hostname", "provider_instance_id", "provider_json", "provider_type", "provider_user_name_template", "settings", "status", "type"],
+      },
     }
+    + block.withName(name)
   ),
   "#withId":: "ID of the authenticator.",
   withId(value):: (

@@ -2,8 +2,13 @@
   local block = self,
   new(name, origin, scopes):: (
     {
-      terraformObject:: "okta_trusted_origin",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_trusted_origin",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "active", "id", "origin", "scopes"],
+      },
     }
     + block.withName(name)
     + block.withOrigin(origin)

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(app_id):: (
+  new(name, app_id):: (
     {
-      terraformObject:: "okta_app_metadata_saml",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_metadata_saml",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["app_id", "certificate", "entity_id", "http_post_binding", "http_redirect_binding", "id", "key_id", "metadata", "want_authn_requests_signed"],
+      },
     }
     + block.withAppId(app_id)
   ),

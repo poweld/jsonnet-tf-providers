@@ -2,8 +2,13 @@
   local block = self,
   new(name, profile_source_id, realm_id):: (
     {
-      terraformObject:: "okta_realm_assignment",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_realm_assignment",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "condition_expression", "id", "is_default", "priority", "profile_source_id", "realm_id", "status"],
+      },
     }
     + block.withName(name)
     + block.withProfileSourceId(profile_source_id)

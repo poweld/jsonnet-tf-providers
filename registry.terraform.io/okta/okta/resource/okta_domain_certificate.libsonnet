@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(certificate, certificate_chain, domain_id, private_key):: (
+  new(name, certificate, certificate_chain, domain_id, private_key):: (
     {
-      terraformObject:: "okta_domain_certificate",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_domain_certificate",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["certificate", "certificate_chain", "domain_id", "id", "private_key", "type"],
+      },
     }
     + block.withCertificate(certificate)
     + block.withCertificateChain(certificate_chain)

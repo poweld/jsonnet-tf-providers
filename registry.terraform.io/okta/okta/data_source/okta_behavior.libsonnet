@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_behavior",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_behavior",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "id", "settings", "status", "type"],
+      },
     }
+    + block.withName(name)
   ),
   "#withId":: "Behavior ID.",
   withId(value):: (

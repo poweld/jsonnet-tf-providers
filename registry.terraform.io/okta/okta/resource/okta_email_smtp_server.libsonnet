@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(alias, host, password, port, username):: (
+  new(name, alias, host, password, port, username):: (
     {
-      terraformObject:: "okta_email_smtp_server",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_email_smtp_server",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["alias", "enabled", "host", "id", "password", "port", "username"],
+      },
     }
     + block.withAlias(alias)
     + block.withHost(host)

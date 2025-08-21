@@ -2,8 +2,13 @@
   local block = self,
   new(name):: (
     {
-      terraformObject:: "okta_policy_rule_signon",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_rule_signon",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "access", "authtype", "behaviors", "id", "identity_provider", "identity_provider_ids", "mfa_lifetime", "mfa_prompt", "mfa_remember_device", "mfa_required", "network_connection", "network_excludes", "network_includes", "policy_id", "primary_factor", "priority", "risc_level", "risk_level", "session_idle", "session_lifetime", "session_persistent", "status", "users_excluded"],
+      },
     }
     + block.withName(name)
   ),
@@ -240,10 +245,15 @@
   ),
   factor_sequence:: {
     local block = self,
-    new(primary_criteria_factor_type, primary_criteria_provider):: (
+    new(name, primary_criteria_factor_type, primary_criteria_provider):: (
       {
-        terraformObject:: "okta_policy_rule_signon",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_signon",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["primary_criteria_factor_type", "primary_criteria_provider"],
+        },
       }
       + block.withPrimaryCriteriaFactorType(primary_criteria_factor_type)
       + block.withPrimaryCriteriaProvider(primary_criteria_provider)
@@ -266,10 +276,15 @@
     ),
     secondary_criteria:: {
       local block = self,
-      new(factor_type, provider):: (
+      new(name, factor_type, provider):: (
         {
-          terraformObject:: "okta_policy_rule_signon",
-          terraformType:: "resource",
+          jsonnetTfMetadata:: {
+            terraformObject:: "okta_policy_rule_signon",
+            terraformType:: "resource",
+            terraformPrefix:: "",
+            terraformName:: name,
+            terraformAttributes:: ["factor_type", "provider"],
+          },
         }
         + block.withFactorType(factor_type)
         + block.withProvider(provider)

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(authorize, login):: (
+  new(name, authorize, login):: (
     {
-      terraformObject:: "okta_rate_limiting",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_rate_limiting",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["authorize", "communications_enabled", "id", "login"],
+      },
     }
     + block.withAuthorize(authorize)
     + block.withLogin(login)

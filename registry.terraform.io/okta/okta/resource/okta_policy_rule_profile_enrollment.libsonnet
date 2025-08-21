@@ -1,10 +1,16 @@
 {
   local block = self,
-  new(policy_id, unknown_user_action):: (
+  new(name, policy_id, unknown_user_action):: (
     {
-      terraformObject:: "okta_policy_rule_profile_enrollment",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_rule_profile_enrollment",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "access", "email_verification", "enroll_authenticator_types", "id", "inline_hook_id", "policy_id", "progressive_profiling_action", "status", "target_group_id", "ui_schema_id", "unknown_user_action"],
+      },
     }
+    + block.withName(name)
     + block.withPolicyId(policy_id)
     + block.withUnknownUserAction(unknown_user_action)
   ),
@@ -55,6 +61,14 @@
       inline_hook_id: converted,
     }
   ),
+  "#withName":: "Name of the rule",
+  withName(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"name" expected to be of type "string"';
+    {
+      name: converted,
+    }
+  ),
   "#withPolicyId":: "ID of the policy",
   withPolicyId(value):: (
     local converted = value;
@@ -97,13 +111,18 @@
   ),
   profile_attributes:: {
     local block = self,
-    new(label, name):: (
+    new(name, label):: (
       {
-        terraformObject:: "okta_policy_rule_profile_enrollment",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_policy_rule_profile_enrollment",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["name", "label", "required"],
+        },
       }
-      + block.withLabel(label)
       + block.withName(name)
+      + block.withLabel(label)
     ),
     "#withLabel":: "A display-friendly label for this property",
     withLabel(value):: (

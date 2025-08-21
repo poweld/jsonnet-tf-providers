@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(event_hook_id):: (
+  new(name, event_hook_id):: (
     {
-      terraformObject:: "okta_event_hook_verification",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_event_hook_verification",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["event_hook_id", "id"],
+      },
     }
     + block.withEventHookId(event_hook_id)
   ),

@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(primary_name, primary_user_id):: (
+  new(name, primary_name, primary_user_id):: (
     {
-      terraformObject:: "okta_link_value",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_link_value",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["associated_user_ids", "id", "primary_name", "primary_user_id"],
+      },
     }
     + block.withPrimaryName(primary_name)
     + block.withPrimaryUserId(primary_user_id)

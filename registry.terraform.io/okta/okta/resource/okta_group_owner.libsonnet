@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(group_id, id_of_group_owner, type):: (
+  new(name, group_id, id_of_group_owner, type):: (
     {
-      terraformObject:: "okta_group_owner",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_group_owner",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["display_name", "group_id", "id", "id_of_group_owner", "origin_id", "origin_type", "resolved", "type"],
+      },
     }
     + block.withGroupId(group_id)
     + block.withIdOfGroupOwner(id_of_group_owner)

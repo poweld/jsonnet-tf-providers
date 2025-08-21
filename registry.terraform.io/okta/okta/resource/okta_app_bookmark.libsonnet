@@ -1,10 +1,16 @@
 {
   local block = self,
-  new(label, url):: (
+  new(name, label, url):: (
     {
-      terraformObject:: "okta_app_bookmark",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_bookmark",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "authentication_policy", "auto_submit_toolbar", "enduser_note", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "request_integration", "sign_on_mode", "status", "url"],
+      },
     }
+    + block.withName(name)
     + block.withLabel(label)
     + block.withUrl(url)
   ),
@@ -111,6 +117,14 @@
       logo: converted,
     }
   ),
+  "#withName":: "Name of the app.",
+  withName(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"name" expected to be of type "string"';
+    {
+      name: converted,
+    }
+  ),
   "#withRequestIntegration":: "Would you like Okta to add an integration for this app?",
   withRequestIntegration(value):: (
     local converted = value;
@@ -137,10 +151,15 @@
   ),
   timeouts:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_app_bookmark",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_bookmark",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["create", "read", "update"],
+        },
       }
     ),
     withCreate(value):: (

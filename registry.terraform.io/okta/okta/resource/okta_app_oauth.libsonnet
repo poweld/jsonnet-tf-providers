@@ -1,10 +1,16 @@
 {
   local block = self,
-  new(label, type):: (
+  new(name, label, type):: (
     {
-      terraformObject:: "okta_app_oauth",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_oauth",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "app_settings_json", "authentication_policy", "auto_key_rotation", "auto_submit_toolbar", "client_basic_secret", "client_id", "client_secret", "client_uri", "consent_method", "enduser_note", "grant_types", "hide_ios", "hide_web", "id", "implicit_assignment", "issuer_mode", "jwks_uri", "label", "login_mode", "login_scopes", "login_uri", "logo", "logo_uri", "logo_url", "omit_secret", "pkce_required", "policy_uri", "post_logout_redirect_uris", "profile", "redirect_uris", "refresh_token_leeway", "refresh_token_rotation", "response_types", "sign_on_mode", "status", "token_endpoint_auth_method", "tos_uri", "type", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type", "wildcard_redirect"],
+      },
     }
+    + block.withName(name)
     + block.withLabel(label)
     + block.withType(type)
   ),
@@ -239,6 +245,14 @@
       logo_uri: converted,
     }
   ),
+  "#withName":: "Name of the app.",
+  withName(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"name" expected to be of type "string"';
+    {
+      name: converted,
+    }
+  ),
   "#withOmitSecret":: "This tells the provider not manage the client_secret value in state. When this is false (the default), it will cause the auto-generated client_secret to be persisted in the client_secret attribute in state. This also means that every time an update to this app is run, this value is also set on the API. If this changes from false => true, the `client_secret` is dropped from state and the secret at the time of the apply is what remains. If this is ever changes from true => false your app will be recreated, due to the need to regenerate a secret we can store in state.",
   withOmitSecret(value):: (
     local converted = value;
@@ -411,8 +425,13 @@
     local block = self,
     new(name, type, value):: (
       {
-        terraformObject:: "okta_app_oauth",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_oauth",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["name", "filter_type", "issuer_mode", "type", "value"],
+        },
       }
       + block.withName(name)
       + block.withType(type)
@@ -453,10 +472,15 @@
   },
   jwks:: {
     local block = self,
-    new(kid, kty):: (
+    new(name, kid, kty):: (
       {
-        terraformObject:: "okta_app_oauth",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_oauth",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["e", "kid", "kty", "n", "x", "y"],
+        },
       }
       + block.withKid(kid)
       + block.withKty(kty)
@@ -512,10 +536,15 @@
   },
   timeouts:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_app_oauth",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_oauth",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["create", "read", "update"],
+        },
       }
     ),
     withCreate(value):: (

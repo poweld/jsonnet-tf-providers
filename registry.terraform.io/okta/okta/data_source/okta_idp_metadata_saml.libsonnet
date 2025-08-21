@@ -1,9 +1,14 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_idp_metadata_saml",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_idp_metadata_saml",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["assertions_signed", "authn_request_signed", "encryption_certificate", "entity_id", "http_post_binding", "http_redirect_binding", "id", "idp_id", "metadata", "signing_certificate"],
+      },
     }
   ),
   withId(value):: (

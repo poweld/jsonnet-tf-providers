@@ -1,9 +1,14 @@
 {
   local block = self,
-  new(app_id):: (
+  new(name, app_id):: (
     {
-      terraformObject:: "okta_app_group_assignments",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_group_assignments",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["app_id", "id"],
+      },
     }
     + block.withAppId(app_id)
   ),
@@ -24,10 +29,15 @@
   ),
   group:: {
     local block = self,
-    new(id):: (
+    new(name, id):: (
       {
-        terraformObject:: "okta_app_group_assignments",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_group_assignments",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["id", "priority", "profile"],
+        },
       }
       + block.withId(id)
     ),
@@ -58,10 +68,15 @@
   },
   timeouts:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_app_group_assignments",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_group_assignments",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["create", "read", "update"],
+        },
       }
     ),
     withCreate(value):: (

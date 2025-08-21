@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_policy_mfa_default",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_policy_mfa_default",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "default_included_group_id", "description", "duo", "external_idp", "external_idps", "fido_u2f", "fido_webauthn", "google_otp", "hotp", "id", "is_oie", "okta_call", "okta_email", "okta_otp", "okta_password", "okta_push", "okta_question", "okta_sms", "okta_verify", "onprem_mfa", "phone_number", "priority", "rsa_token", "security_question", "smart_card_idp", "status", "symantec_vip", "webauthn", "yubikey_token"],
+      },
     }
+    + block.withName(name)
   ),
   withDuo(value):: (
     local converted = value;
@@ -75,6 +81,14 @@
     assert std.isBoolean(converted) : '"is_oie" expected to be of type "bool"';
     {
       is_oie: converted,
+    }
+  ),
+  "#withName":: "Default policy name",
+  withName(value):: (
+    local converted = value;
+    assert std.isString(converted) : '"name" expected to be of type "string"';
+    {
+      name: converted,
     }
   ),
   withOktaCall(value):: (

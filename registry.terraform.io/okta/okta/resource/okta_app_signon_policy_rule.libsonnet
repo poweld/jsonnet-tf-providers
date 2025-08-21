@@ -2,8 +2,13 @@
   local block = self,
   new(name, policy_id):: (
     {
-      terraformObject:: "okta_app_signon_policy_rule",
-      terraformType:: "resource",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_app_signon_policy_rule",
+        terraformType:: "resource",
+        terraformPrefix:: "",
+        terraformName:: name,
+        terraformAttributes:: ["name", "access", "chains", "constraints", "custom_expression", "device_assurances_included", "device_is_managed", "device_is_registered", "factor_mode", "groups_excluded", "groups_included", "id", "inactivity_period", "network_connection", "network_excludes", "network_includes", "policy_id", "priority", "re_authentication_frequency", "risk_score", "status", "system", "type", "user_types_excluded", "user_types_included", "users_excluded", "users_included"],
+      },
     }
     + block.withName(name)
     + block.withPolicyId(policy_id)
@@ -305,10 +310,15 @@
   ),
   platform_include:: {
     local block = self,
-    new():: (
+    new(name):: (
       {
-        terraformObject:: "okta_app_signon_policy_rule",
-        terraformType:: "resource",
+        jsonnetTfMetadata:: {
+          terraformObject:: "okta_app_signon_policy_rule",
+          terraformType:: "resource",
+          terraformPrefix:: "",
+          terraformName:: name,
+          terraformAttributes:: ["os_expression", "os_type", "type"],
+        },
       }
     ),
     "#withOsExpression":: "Only available with OTHER OS type",

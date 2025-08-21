@@ -1,10 +1,16 @@
 {
   local block = self,
-  new():: (
+  new(name):: (
     {
-      terraformObject:: "okta_group_rule",
-      terraformType:: "data",
+      jsonnetTfMetadata:: {
+        terraformObject:: "okta_group_rule",
+        terraformType:: "data",
+        terraformPrefix:: "data",
+        terraformName:: name,
+        terraformAttributes:: ["name", "expression_type", "expression_value", "group_assignments", "id", "status", "users_excluded"],
+      },
     }
+    + block.withName(name)
   ),
   "#withId":: "The ID of the Group Rule.",
   withId(value):: (
