@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "clock_drift_interval", "hmac_algorithm", "id", "otp_length", "shared_secret_encoding", "time_step"],
+        terraformAttributes:: ["clock_drift_interval", "hmac_algorithm", "id", "name", "otp_length", "shared_secret_encoding", "time_step"],
       },
     }
     + block.withName(name)

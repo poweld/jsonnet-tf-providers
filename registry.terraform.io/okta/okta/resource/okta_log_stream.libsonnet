@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "id", "status", "type"],
+        terraformAttributes:: ["id", "name", "status", "type"],
       },
     }
     + block.withName(name)
@@ -40,15 +40,7 @@
   settings:: {
     local block = self,
     new(name):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_log_stream",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["account_id", "edition", "event_source_name", "host", "region", "token"],
-        },
-      }
+      {}
     ),
     "#withAccountId":: "AWS account ID. Required only for 'aws_eventbridge' type",
     withAccountId(value):: (

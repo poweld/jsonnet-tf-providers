@@ -7,7 +7,7 @@
         terraformType:: "data",
         terraformPrefix:: "data",
         terraformName:: name,
-        terraformAttributes:: ["name", "delay_read_seconds", "description", "id", "include_users", "type", "users"],
+        terraformAttributes:: ["delay_read_seconds", "description", "id", "include_users", "name", "type", "users"],
       },
     }
     + block.withName(name)

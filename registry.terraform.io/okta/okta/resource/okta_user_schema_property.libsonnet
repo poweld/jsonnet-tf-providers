@@ -184,15 +184,7 @@
   array_one_of:: {
     local block = self,
     new(name, const, title):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_user_schema_property",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["const", "title"],
-        },
-      }
+      {}
       + block.withConst(const)
       + block.withTitle(title)
     ),
@@ -216,15 +208,7 @@
   master_override_priority:: {
     local block = self,
     new(name, value):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_user_schema_property",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["type", "value"],
-        },
-      }
+      {}
       + block.withValue(value)
     ),
     withType(value):: (
@@ -245,15 +229,7 @@
   one_of:: {
     local block = self,
     new(name, const, title):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_user_schema_property",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["const", "title"],
-        },
-      }
+      {}
       + block.withConst(const)
       + block.withTitle(title)
     ),

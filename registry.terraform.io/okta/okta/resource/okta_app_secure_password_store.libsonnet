@@ -7,10 +7,9 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "auto_submit_toolbar", "credentials_scheme", "enduser_note", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "optional_field1", "optional_field1_value", "optional_field2", "optional_field2_value", "optional_field3", "optional_field3_value", "password_field", "reveal_password", "shared_password", "shared_username", "sign_on_mode", "status", "url", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type", "username_field"],
+        terraformAttributes:: ["accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "auto_submit_toolbar", "credentials_scheme", "enduser_note", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "name", "optional_field1", "optional_field1_value", "optional_field2", "optional_field2_value", "optional_field3", "optional_field3_value", "password_field", "reveal_password", "shared_password", "shared_username", "sign_on_mode", "status", "url", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type", "username_field"],
       },
     }
-    + block.withName(name)
     + block.withLabel(label)
     + block.withPasswordField(password_field)
     + block.withUrl(url)
@@ -117,14 +116,6 @@
     assert std.isString(converted) : '"logo" expected to be of type "string"';
     {
       logo: converted,
-    }
-  ),
-  "#withName":: "Name of the app.",
-  withName(value):: (
-    local converted = value;
-    assert std.isString(converted) : '"name" expected to be of type "string"';
-    {
-      name: converted,
     }
   ),
   "#withOptionalField1":: "Name of optional param in the login form",
@@ -266,15 +257,7 @@
   timeouts:: {
     local block = self,
     new(name):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_app_secure_password_store",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["create", "read", "update"],
-        },
-      }
+      {}
     ),
     withCreate(value):: (
       local converted = value;

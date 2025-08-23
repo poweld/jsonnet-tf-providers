@@ -361,15 +361,7 @@
   password_hash:: {
     local block = self,
     new(name, algorithm, value):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_user",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["algorithm", "salt", "salt_order", "value", "work_factor"],
-        },
-      }
+      {}
       + block.withAlgorithm(algorithm)
       + block.withValue(value)
     ),

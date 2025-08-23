@@ -7,7 +7,7 @@
         terraformType:: "data",
         terraformPrefix:: "data",
         terraformName:: name,
-        terraformAttributes:: ["name", "disk_encryption_type", "id", "jailbreak", "os_version", "os_version_constraint", "platform", "screenlock_type", "secure_hardware_present", "third_party_signal_provider"],
+        terraformAttributes:: ["disk_encryption_type", "id", "jailbreak", "name", "os_version", "os_version_constraint", "platform", "screenlock_type", "secure_hardware_present", "third_party_signal_provider"],
       },
     }
     + block.withName(name)

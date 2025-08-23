@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "condition_expression", "id", "is_default", "priority", "profile_source_id", "realm_id", "status"],
+        terraformAttributes:: ["condition_expression", "id", "is_default", "name", "priority", "profile_source_id", "realm_id", "status"],
       },
     }
     + block.withName(name)

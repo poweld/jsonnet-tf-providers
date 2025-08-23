@@ -55,15 +55,7 @@
   mappings:: {
     local block = self,
     new(name, expression, id):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_profile_mapping",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["expression", "id", "push_status"],
-        },
-      }
+      {}
       + block.withExpression(expression)
       + block.withId(id)
     ),

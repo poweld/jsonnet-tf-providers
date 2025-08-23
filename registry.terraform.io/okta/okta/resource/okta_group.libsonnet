@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "custom_profile_attributes", "description", "id", "skip_users"],
+        terraformAttributes:: ["custom_profile_attributes", "description", "id", "name", "skip_users"],
       },
     }
     + block.withName(name)

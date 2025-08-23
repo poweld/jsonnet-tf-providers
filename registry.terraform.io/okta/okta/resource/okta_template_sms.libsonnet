@@ -39,15 +39,7 @@
   translations:: {
     local block = self,
     new(name, language, template):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_template_sms",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["language", "template"],
-        },
-      }
+      {}
       + block.withLanguage(language)
       + block.withTemplate(template)
     ),

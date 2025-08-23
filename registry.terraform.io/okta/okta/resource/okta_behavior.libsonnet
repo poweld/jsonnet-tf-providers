@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "id", "location_granularity_type", "number_of_authentications", "radius_from_location", "status", "type", "velocity"],
+        terraformAttributes:: ["id", "location_granularity_type", "name", "number_of_authentications", "radius_from_location", "status", "type", "velocity"],
       },
     }
     + block.withName(name)

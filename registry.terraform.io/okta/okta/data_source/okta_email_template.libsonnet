@@ -1,17 +1,17 @@
 {
   local block = self,
-  new(name, brand_id):: (
+  new(brand_id, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_email_template",
         terraformType:: "data",
         terraformPrefix:: "data",
         terraformName:: name,
-        terraformAttributes:: ["name", "brand_id", "id", "links"],
+        terraformAttributes:: ["brand_id", "id", "links", "name"],
       },
     }
-    + block.withName(name)
     + block.withBrandId(brand_id)
+    + block.withName(name)
   ),
   "#withBrandId":: "Brand ID",
   withBrandId(value):: (

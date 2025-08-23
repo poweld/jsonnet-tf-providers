@@ -63,15 +63,7 @@
   timeouts:: {
     local block = self,
     new(name):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_app_group_assignment",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["create", "read", "update"],
-        },
-      }
+      {}
     ),
     withCreate(value):: (
       local converted = value;

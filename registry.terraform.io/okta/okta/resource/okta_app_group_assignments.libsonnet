@@ -30,15 +30,7 @@
   group:: {
     local block = self,
     new(name, id):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_app_group_assignments",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["id", "priority", "profile"],
-        },
-      }
+      {}
       + block.withId(id)
     ),
     "#withId":: "A group to associate with the application",
@@ -69,15 +61,7 @@
   timeouts:: {
     local block = self,
     new(name):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_app_group_assignments",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["create", "read", "update"],
-        },
-      }
+      {}
     ),
     withCreate(value):: (
       local converted = value;

@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "created_by", "created_date", "id", "jailbreak", "last_update", "last_updated_by", "os_version", "platform", "screenlock_type"],
+        terraformAttributes:: ["created_by", "created_date", "id", "jailbreak", "last_update", "last_updated_by", "name", "os_version", "platform", "screenlock_type"],
       },
     }
     + block.withName(name)

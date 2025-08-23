@@ -193,15 +193,7 @@
   array_one_of:: {
     local block = self,
     new(name, const, title):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_app_user_schema_property",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["const", "title"],
-        },
-      }
+      {}
       + block.withConst(const)
       + block.withTitle(title)
     ),
@@ -225,15 +217,7 @@
   one_of:: {
     local block = self,
     new(name, const, title):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_app_user_schema_property",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["const", "title"],
-        },
-      }
+      {}
       + block.withConst(const)
       + block.withTitle(title)
     ),

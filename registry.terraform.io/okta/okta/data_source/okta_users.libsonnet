@@ -61,15 +61,7 @@
   search:: {
     local block = self,
     new(name):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_users",
-          terraformType:: "data",
-          terraformPrefix:: "data",
-          terraformName:: name,
-          terraformAttributes:: ["name", "comparison", "expression", "value"],
-        },
-      }
+      {}
       + block.withName(name)
     ),
     withComparison(value):: (

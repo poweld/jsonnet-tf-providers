@@ -41,15 +41,7 @@
   content_security_policy_setting:: {
     local block = self,
     new(name):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_preview_signin_page",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["mode", "report_uri", "src_list"],
-        },
-      }
+      {}
     ),
     "#withMode":: "enforced or report_only",
     withMode(value):: (
@@ -84,15 +76,7 @@
   widget_customizations:: {
     local block = self,
     new(name, widget_generation):: (
-      {
-        jsonnetTfMetadata:: {
-          terraformObject:: "okta_preview_signin_page",
-          terraformType:: "resource",
-          terraformPrefix:: "",
-          terraformName:: name,
-          terraformAttributes:: ["authenticator_page_custom_link_label", "authenticator_page_custom_link_url", "classic_recovery_flow_email_or_username_label", "custom_link_1_label", "custom_link_1_url", "custom_link_2_label", "custom_link_2_url", "forgot_password_label", "forgot_password_url", "help_label", "help_url", "password_info_tip", "password_label", "show_password_visibility_toggle", "show_user_identifier", "sign_in_label", "unlock_account_label", "unlock_account_url", "username_info_tip", "username_label", "widget_generation"],
-        },
-      }
+      {}
       + block.withWidgetGeneration(widget_generation)
     ),
     withAuthenticatorPageCustomLinkLabel(value):: (

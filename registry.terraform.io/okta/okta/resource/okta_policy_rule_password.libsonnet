@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "id", "network_connection", "network_excludes", "network_includes", "password_change", "password_reset", "password_unlock", "policy_id", "priority", "status", "users_excluded"],
+        terraformAttributes:: ["id", "name", "network_connection", "network_excludes", "network_includes", "password_change", "password_reset", "password_unlock", "policy_id", "priority", "status", "users_excluded"],
       },
     }
     + block.withName(name)

@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "brand_id", "certificate_source_type", "dns_records", "id", "validation_status"],
+        terraformAttributes:: ["brand_id", "certificate_source_type", "dns_records", "id", "name", "validation_status"],
       },
     }
     + block.withName(name)

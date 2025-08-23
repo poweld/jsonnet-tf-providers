@@ -7,7 +7,7 @@
         terraformType:: "data",
         terraformPrefix:: "data",
         terraformName:: name,
-        terraformAttributes:: ["name", "id", "status", "type"],
+        terraformAttributes:: ["id", "name", "status", "type"],
       },
     }
     + block.withName(name)

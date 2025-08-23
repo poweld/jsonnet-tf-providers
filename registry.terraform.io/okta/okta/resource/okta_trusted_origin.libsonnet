@@ -7,7 +7,7 @@
         terraformType:: "resource",
         terraformPrefix:: "",
         terraformName:: name,
-        terraformAttributes:: ["name", "active", "id", "origin", "scopes"],
+        terraformAttributes:: ["active", "id", "name", "origin", "scopes"],
       },
     }
     + block.withName(name)
