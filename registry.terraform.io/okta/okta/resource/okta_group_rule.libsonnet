@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(expression_value, group_assignments, name):: (
+  new(name, expression_value, group_assignments):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_group_rule",

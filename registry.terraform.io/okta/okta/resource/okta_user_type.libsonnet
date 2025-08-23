@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(description, display_name, name):: (
+  new(name, description, display_name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_user_type",

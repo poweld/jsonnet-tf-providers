@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(auth_server_id, grant_type_whitelist, name, policy_id, priority):: (
+  new(name, auth_server_id, grant_type_whitelist, policy_id, priority):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_auth_server_policy_rule",

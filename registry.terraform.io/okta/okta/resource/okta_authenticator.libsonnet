@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(key, name):: (
+  new(name, key):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_authenticator",

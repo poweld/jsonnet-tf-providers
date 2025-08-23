@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(description, name):: (
+  new(name, description):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_app_signon_policy",

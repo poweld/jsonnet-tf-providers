@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(issuer, kid, name, sso_url):: (
+  new(name, issuer, kid, sso_url):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_idp_saml",

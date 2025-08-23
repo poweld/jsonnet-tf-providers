@@ -103,7 +103,7 @@
   ),
   profile_attributes:: {
     local block = self,
-    new(label, name):: (
+    new(name, label):: (
       {}
       + block.withLabel(label)
       + block.withName(name)

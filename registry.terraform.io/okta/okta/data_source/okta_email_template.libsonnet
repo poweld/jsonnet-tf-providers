@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(brand_id, name):: (
+  new(name, brand_id):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_email_template",

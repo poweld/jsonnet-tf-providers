@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(authorization_binding, authorization_url, client_id, client_secret, issuer_url, jwks_binding, jwks_url, name, scopes, token_binding, token_url):: (
+  new(name, authorization_binding, authorization_url, client_id, client_secret, issuer_url, jwks_binding, jwks_url, scopes, token_binding, token_url):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_idp_oidc",

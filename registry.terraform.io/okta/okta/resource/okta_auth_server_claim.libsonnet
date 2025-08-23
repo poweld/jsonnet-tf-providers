@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(auth_server_id, claim_type, name, value):: (
+  new(name, auth_server_id, claim_type, value):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_auth_server_claim",

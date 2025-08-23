@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(auth_server_id, name):: (
+  new(name, auth_server_id):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_auth_server_scope",

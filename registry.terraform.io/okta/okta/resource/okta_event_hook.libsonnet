@@ -1,6 +1,6 @@
 {
   local block = self,
-  new(channel, events, name):: (
+  new(name, channel, events):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_event_hook",
