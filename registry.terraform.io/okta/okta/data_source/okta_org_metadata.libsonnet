@@ -11,6 +11,11 @@
       },
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   domains:: {
     local block = self,
     new():: (

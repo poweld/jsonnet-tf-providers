@@ -59,4 +59,9 @@
       use_optimization: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
 }

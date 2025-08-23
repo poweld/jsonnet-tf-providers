@@ -141,6 +141,11 @@
       url: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   timeouts:: {
     local block = self,
     new():: (

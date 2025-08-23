@@ -132,4 +132,9 @@
       tpsp_site_isolation_enabled: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
 }

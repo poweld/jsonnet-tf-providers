@@ -12,4 +12,9 @@
     }
     + block.withName(name)
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
 }

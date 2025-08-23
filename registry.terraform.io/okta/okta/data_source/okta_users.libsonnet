@@ -58,6 +58,11 @@
       include_roles: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   search:: {
     local block = self,
     new():: (

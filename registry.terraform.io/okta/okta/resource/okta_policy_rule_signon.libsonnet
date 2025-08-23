@@ -243,6 +243,11 @@
       users_excluded+: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   factor_sequence:: {
     local block = self,
     new(primary_criteria_factor_type, primary_criteria_provider):: (

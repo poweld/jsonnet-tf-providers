@@ -37,6 +37,11 @@
       type: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   settings:: {
     local block = self,
     new():: (

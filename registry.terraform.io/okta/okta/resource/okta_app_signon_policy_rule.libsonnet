@@ -308,6 +308,11 @@
       users_included+: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   platform_include:: {
     local block = self,
     new():: (

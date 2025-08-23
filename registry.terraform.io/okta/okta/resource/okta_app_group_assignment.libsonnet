@@ -60,6 +60,11 @@
       retain_assignment: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   timeouts:: {
     local block = self,
     new():: (

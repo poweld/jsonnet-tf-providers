@@ -388,6 +388,11 @@
       user_name_template_type: converted,
     }
   ),
+  withTerraformName(value):: {
+    jsonnetTfMetadata+:: {
+      terraformName:: value,
+    },
+  },
   acs_endpoints_indices:: {
     local block = self,
     new(index, url):: (
