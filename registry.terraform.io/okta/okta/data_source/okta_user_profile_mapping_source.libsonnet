@@ -10,5 +10,6 @@
         terraformAttributes:: ["id", "name", "type"],
       },
     }
+    + block.withName(name)
   ),
 }

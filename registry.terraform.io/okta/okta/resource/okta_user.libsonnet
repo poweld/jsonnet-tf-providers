@@ -360,7 +360,7 @@
   ),
   password_hash:: {
     local block = self,
-    new(name, algorithm, value):: (
+    new(algorithm, value):: (
       {}
       + block.withAlgorithm(algorithm)
       + block.withValue(value)

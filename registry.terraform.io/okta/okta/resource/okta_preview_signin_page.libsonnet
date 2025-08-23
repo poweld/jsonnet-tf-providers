@@ -40,7 +40,7 @@
   ),
   content_security_policy_setting:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     "#withMode":: "enforced or report_only",
@@ -75,7 +75,7 @@
   },
   widget_customizations:: {
     local block = self,
-    new(name, widget_generation):: (
+    new(widget_generation):: (
       {}
       + block.withWidgetGeneration(widget_generation)
     ),

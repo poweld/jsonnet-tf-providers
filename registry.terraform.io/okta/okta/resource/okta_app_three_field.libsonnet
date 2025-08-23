@@ -10,6 +10,7 @@
         terraformAttributes:: ["accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "auto_submit_toolbar", "button_selector", "credentials_scheme", "enduser_note", "extra_field_selector", "extra_field_value", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "name", "password_selector", "reveal_password", "shared_password", "shared_username", "sign_on_mode", "status", "url", "url_regex", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type", "username_selector"],
       },
     }
+    + block.withName(name)
     + block.withButtonSelector(button_selector)
     + block.withExtraFieldSelector(extra_field_selector)
     + block.withExtraFieldValue(extra_field_value)
@@ -243,7 +244,7 @@
   ),
   timeouts:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     withCreate(value):: (

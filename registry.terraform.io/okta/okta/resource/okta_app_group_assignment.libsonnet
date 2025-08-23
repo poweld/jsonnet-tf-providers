@@ -62,7 +62,7 @@
   ),
   timeouts:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     withCreate(value):: (

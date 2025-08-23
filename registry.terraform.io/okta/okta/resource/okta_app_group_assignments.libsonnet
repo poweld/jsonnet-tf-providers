@@ -29,7 +29,7 @@
   ),
   group:: {
     local block = self,
-    new(name, id):: (
+    new(id):: (
       {}
       + block.withId(id)
     ),
@@ -60,7 +60,7 @@
   },
   timeouts:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     withCreate(value):: (

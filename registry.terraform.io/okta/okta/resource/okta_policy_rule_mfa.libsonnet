@@ -117,7 +117,7 @@
   ),
   app_exclude:: {
     local block = self,
-    new(name, type):: (
+    new(type):: (
       {}
       + block.withName(name)
       + block.withType(type)
@@ -146,7 +146,7 @@
   },
   app_include:: {
     local block = self,
-    new(name, type):: (
+    new(type):: (
       {}
       + block.withName(name)
       + block.withType(type)

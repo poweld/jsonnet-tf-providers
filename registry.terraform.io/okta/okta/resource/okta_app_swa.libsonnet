@@ -10,6 +10,7 @@
         terraformAttributes:: ["accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "auto_submit_toolbar", "button_field", "checkbox", "enduser_note", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "name", "password_field", "preconfigured_app", "redirect_url", "sign_on_mode", "status", "url", "url_regex", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type", "username_field"],
       },
     }
+    + block.withName(name)
     + block.withLabel(label)
   ),
   "#withAccessibilityErrorRedirectUrl":: "Custom error page URL",
@@ -213,7 +214,7 @@
   ),
   timeouts:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     withCreate(value):: (

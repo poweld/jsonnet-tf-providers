@@ -54,7 +54,7 @@
   ),
   mappings:: {
     local block = self,
-    new(name, expression, id):: (
+    new(expression, id):: (
       {}
       + block.withExpression(expression)
       + block.withId(id)

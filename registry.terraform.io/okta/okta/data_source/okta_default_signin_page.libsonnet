@@ -22,13 +22,13 @@
   ),
   content_security_policy_setting:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
   },
   widget_customizations:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
   },

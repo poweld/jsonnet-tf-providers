@@ -10,6 +10,7 @@
         terraformAttributes:: ["active_only", "groups", "id", "label", "label_prefix", "links", "name", "skip_groups", "skip_users", "status", "users"],
       },
     }
+    + block.withName(name)
   ),
   "#withActiveOnly":: "Search only ACTIVE applications.",
   withActiveOnly(value):: (

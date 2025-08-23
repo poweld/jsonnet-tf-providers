@@ -77,7 +77,7 @@
   ),
   headers:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     withKey(value):: (

@@ -13,13 +13,13 @@
   ),
   domains:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
   },
   settings:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
   },

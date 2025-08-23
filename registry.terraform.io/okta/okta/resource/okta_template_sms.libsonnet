@@ -38,7 +38,7 @@
   ),
   translations:: {
     local block = self,
-    new(name, language, template):: (
+    new(language, template):: (
       {}
       + block.withLanguage(language)
       + block.withTemplate(template)

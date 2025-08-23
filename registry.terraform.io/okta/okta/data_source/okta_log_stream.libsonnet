@@ -30,7 +30,7 @@
   ),
   settings:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
   },

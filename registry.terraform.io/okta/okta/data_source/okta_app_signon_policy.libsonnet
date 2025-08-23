@@ -10,6 +10,7 @@
         terraformAttributes:: ["app_id", "id", "name"],
       },
     }
+    + block.withName(name)
     + block.withAppId(app_id)
   ),
   "#withAppId":: "App ID",

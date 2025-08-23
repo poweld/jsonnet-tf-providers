@@ -310,7 +310,7 @@
   ),
   platform_include:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     "#withOsExpression":: "Only available with OTHER OS type",

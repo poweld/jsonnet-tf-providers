@@ -245,7 +245,7 @@
   ),
   factor_sequence:: {
     local block = self,
-    new(name, primary_criteria_factor_type, primary_criteria_provider):: (
+    new(primary_criteria_factor_type, primary_criteria_provider):: (
       {}
       + block.withPrimaryCriteriaFactorType(primary_criteria_factor_type)
       + block.withPrimaryCriteriaProvider(primary_criteria_provider)
@@ -268,7 +268,7 @@
     ),
     secondary_criteria:: {
       local block = self,
-      new(name, factor_type, provider):: (
+      new(factor_type, provider):: (
         {}
         + block.withFactorType(factor_type)
         + block.withProvider(provider)

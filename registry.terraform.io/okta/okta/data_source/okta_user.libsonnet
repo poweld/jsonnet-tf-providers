@@ -60,7 +60,7 @@
   ),
   search:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
       + block.withName(name)
     ),

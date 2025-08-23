@@ -39,7 +39,7 @@
   ),
   settings:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     "#withAccountId":: "AWS account ID. Required only for 'aws_eventbridge' type",

@@ -166,7 +166,7 @@
   ),
   array_one_of:: {
     local block = self,
-    new(name, const, title):: (
+    new(const, title):: (
       {}
       + block.withConst(const)
       + block.withTitle(title)
@@ -190,7 +190,7 @@
   },
   master_override_priority:: {
     local block = self,
-    new(name, value):: (
+    new(value):: (
       {}
       + block.withValue(value)
     ),
@@ -211,7 +211,7 @@
   },
   one_of:: {
     local block = self,
-    new(name, const, title):: (
+    new(const, title):: (
       {}
       + block.withConst(const)
       + block.withTitle(title)

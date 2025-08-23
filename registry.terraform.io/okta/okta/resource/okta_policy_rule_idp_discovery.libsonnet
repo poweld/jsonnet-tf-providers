@@ -109,7 +109,7 @@
   ),
   app_exclude:: {
     local block = self,
-    new(name, type):: (
+    new(type):: (
       {}
       + block.withName(name)
       + block.withType(type)
@@ -138,7 +138,7 @@
   },
   app_include:: {
     local block = self,
-    new(name, type):: (
+    new(type):: (
       {}
       + block.withName(name)
       + block.withType(type)
@@ -167,7 +167,7 @@
   },
   idp_providers:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     "#withId":: "The identifier for the Idp the rule should route to if all conditions are met.",
@@ -189,7 +189,7 @@
   },
   platform_include:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     "#withOsExpression":: "Only available with OTHER OS type",
@@ -217,7 +217,7 @@
   },
   user_identifier_patterns:: {
     local block = self,
-    new(name):: (
+    new():: (
       {}
     ),
     withMatchType(value):: (

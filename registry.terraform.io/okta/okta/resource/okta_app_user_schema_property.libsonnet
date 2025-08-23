@@ -192,7 +192,7 @@
   ),
   array_one_of:: {
     local block = self,
-    new(name, const, title):: (
+    new(const, title):: (
       {}
       + block.withConst(const)
       + block.withTitle(title)
@@ -216,7 +216,7 @@
   },
   one_of:: {
     local block = self,
-    new(name, const, title):: (
+    new(const, title):: (
       {}
       + block.withConst(const)
       + block.withTitle(title)
