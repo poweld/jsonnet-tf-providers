@@ -1,16 +1,16 @@
 {
   local block = self,
-  new(name, brand_id):: (
+  new(terraformName, brandId):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_default_signin_page",
         terraformType:: "data",
         terraformPrefix:: "data",
-        terraformName:: name,
         terraformAttributes:: ["brand_id", "id", "page_content", "widget_version"],
       },
     }
-    + block.withBrandId(brand_id)
+    + block.withTerraformName(terraformName)
+    + block.withBrandId(brandId)
   ),
   "#withBrandId":: "brand id of the preview signin page",
   withBrandId(value):: (

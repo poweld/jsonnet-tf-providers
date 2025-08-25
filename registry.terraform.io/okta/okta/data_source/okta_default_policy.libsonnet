@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name, type):: (
+  new(terraformName, type):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_default_policy",
         terraformType:: "data",
         terraformPrefix:: "data",
-        terraformName:: name,
         terraformAttributes:: ["id", "type"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withType(type)
   ),
   withId(value):: (

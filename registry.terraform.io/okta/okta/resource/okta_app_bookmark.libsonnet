@@ -1,16 +1,16 @@
 {
   local block = self,
-  new(name, label, url):: (
+  new(terraformName, label, url):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_app_bookmark",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "authentication_policy", "auto_submit_toolbar", "enduser_note", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "name", "request_integration", "sign_on_mode", "status", "url"],
       },
     }
     + block.withName(name)
+    + block.withTerraformName(terraformName)
     + block.withLabel(label)
     + block.withUrl(url)
   ),

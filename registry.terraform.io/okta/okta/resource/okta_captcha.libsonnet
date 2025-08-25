@@ -1,18 +1,18 @@
 {
   local block = self,
-  new(name, secret_key, site_key, type):: (
+  new(terraformName, name, secretKey, siteKey, type):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_captcha",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["id", "name", "secret_key", "site_key", "type"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withName(name)
-    + block.withSecretKey(secret_key)
-    + block.withSiteKey(site_key)
+    + block.withSecretKey(secretKey)
+    + block.withSiteKey(siteKey)
     + block.withType(type)
   ),
   withId(value):: (

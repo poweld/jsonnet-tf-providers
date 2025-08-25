@@ -1,18 +1,18 @@
 {
   local block = self,
-  new(name, brand_id, page_content, widget_version):: (
+  new(terraformName, brandId, pageContent, widgetVersion):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_customized_signin_page",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["brand_id", "id", "page_content", "widget_version"],
       },
     }
-    + block.withBrandId(brand_id)
-    + block.withPageContent(page_content)
-    + block.withWidgetVersion(widget_version)
+    + block.withTerraformName(terraformName)
+    + block.withBrandId(brandId)
+    + block.withPageContent(pageContent)
+    + block.withWidgetVersion(widgetVersion)
   ),
   "#withBrandId":: "brand id of the preview signin page",
   withBrandId(value):: (
@@ -80,9 +80,9 @@
   },
   widget_customizations:: {
     local block = self,
-    new(widget_generation):: (
+    new(widgetGeneration):: (
       {}
-      + block.withWidgetGeneration(widget_generation)
+      + block.withWidgetGeneration(widgetGeneration)
     ),
     withAuthenticatorPageCustomLinkLabel(value):: (
       local converted = value;

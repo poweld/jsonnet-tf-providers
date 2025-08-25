@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name):: (
+  new(terraformName, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_policy_rule_signon",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["access", "authtype", "behaviors", "id", "identity_provider", "identity_provider_ids", "mfa_lifetime", "mfa_prompt", "mfa_remember_device", "mfa_required", "name", "network_connection", "network_excludes", "network_includes", "policy_id", "primary_factor", "priority", "risc_level", "risk_level", "session_idle", "session_lifetime", "session_persistent", "status", "users_excluded"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withName(name)
   ),
   "#withAccess":: "Allow or deny access based on the rule conditions: `ALLOW`, `DENY` or `CHALLENGE`. Default: `ALLOW`",
@@ -250,10 +250,10 @@
   },
   factor_sequence:: {
     local block = self,
-    new(primary_criteria_factor_type, primary_criteria_provider):: (
+    new(primaryCriteriaFactorType, primaryCriteriaProvider):: (
       {}
-      + block.withPrimaryCriteriaFactorType(primary_criteria_factor_type)
-      + block.withPrimaryCriteriaProvider(primary_criteria_provider)
+      + block.withPrimaryCriteriaFactorType(primaryCriteriaFactorType)
+      + block.withPrimaryCriteriaProvider(primaryCriteriaProvider)
     ),
     "#withPrimaryCriteriaFactorType":: "Type of a Factor",
     withPrimaryCriteriaFactorType(value):: (
@@ -273,9 +273,9 @@
     ),
     secondary_criteria:: {
       local block = self,
-      new(factor_type, provider):: (
+      new(factorType, provider):: (
         {}
-        + block.withFactorType(factor_type)
+        + block.withFactorType(factorType)
         + block.withProvider(provider)
       ),
       "#withFactorType":: "Type of a Factor",

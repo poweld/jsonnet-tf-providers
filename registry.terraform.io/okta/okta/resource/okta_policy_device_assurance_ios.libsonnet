@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name):: (
+  new(terraformName, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_policy_device_assurance_ios",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["created_by", "created_date", "id", "jailbreak", "last_update", "last_updated_by", "name", "os_version", "platform", "screenlock_type"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withName(name)
   ),
   "#withJailbreak":: "Is the device jailbroken in the device assurance policy.",

@@ -1,16 +1,16 @@
 {
   local block = self,
-  new(name, domain_id):: (
+  new(terraformName, domainId):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_domain_verification",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["domain_id", "id"],
       },
     }
-    + block.withDomainId(domain_id)
+    + block.withTerraformName(terraformName)
+    + block.withDomainId(domainId)
   ),
   "#withDomainId":: "Domain's ID",
   withDomainId(value):: (

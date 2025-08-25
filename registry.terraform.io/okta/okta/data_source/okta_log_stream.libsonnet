@@ -1,16 +1,16 @@
 {
   local block = self,
-  new(name):: (
+  new(terraformName):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_log_stream",
         terraformType:: "data",
         terraformPrefix:: "data",
-        terraformName:: name,
         terraformAttributes:: ["id", "name", "status", "type"],
       },
     }
     + block.withName(name)
+    + block.withTerraformName(terraformName)
   ),
   "#withId":: "ID of the log stream to retrieve, conflicts with `name`.",
   withId(value):: (

@@ -1,16 +1,16 @@
 {
   local block = self,
-  new(name, auth_server_id):: (
+  new(terraformName, authServerId, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_auth_server_claim_default",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["always_include_in_token", "auth_server_id", "claim_type", "id", "name", "scopes", "status", "value", "value_type"],
       },
     }
-    + block.withAuthServerId(auth_server_id)
+    + block.withTerraformName(terraformName)
+    + block.withAuthServerId(authServerId)
     + block.withName(name)
   ),
   "#withAlwaysIncludeInToken":: "Specifies whether to include claims in token.",

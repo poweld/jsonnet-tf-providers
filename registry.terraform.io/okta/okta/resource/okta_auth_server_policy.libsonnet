@@ -1,17 +1,17 @@
 {
   local block = self,
-  new(name, auth_server_id, client_whitelist, description, priority):: (
+  new(terraformName, authServerId, clientWhitelist, description, name, priority):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_auth_server_policy",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["auth_server_id", "client_whitelist", "description", "id", "name", "priority", "status"],
       },
     }
-    + block.withAuthServerId(auth_server_id)
-    + block.withClientWhitelist(client_whitelist)
+    + block.withTerraformName(terraformName)
+    + block.withAuthServerId(authServerId)
+    + block.withClientWhitelist(clientWhitelist)
     + block.withDescription(description)
     + block.withName(name)
     + block.withPriority(priority)

@@ -1,23 +1,23 @@
 {
   local block = self,
-  new(name, button_selector, extra_field_selector, extra_field_value, label, password_selector, url, username_selector):: (
+  new(terraformName, buttonSelector, extraFieldSelector, extraFieldValue, label, passwordSelector, url, usernameSelector):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_app_three_field",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "auto_submit_toolbar", "button_selector", "credentials_scheme", "enduser_note", "extra_field_selector", "extra_field_value", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "name", "password_selector", "reveal_password", "shared_password", "shared_username", "sign_on_mode", "status", "url", "url_regex", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type", "username_selector"],
       },
     }
     + block.withName(name)
-    + block.withButtonSelector(button_selector)
-    + block.withExtraFieldSelector(extra_field_selector)
-    + block.withExtraFieldValue(extra_field_value)
+    + block.withTerraformName(terraformName)
+    + block.withButtonSelector(buttonSelector)
+    + block.withExtraFieldSelector(extraFieldSelector)
+    + block.withExtraFieldValue(extraFieldValue)
     + block.withLabel(label)
-    + block.withPasswordSelector(password_selector)
+    + block.withPasswordSelector(passwordSelector)
     + block.withUrl(url)
-    + block.withUsernameSelector(username_selector)
+    + block.withUsernameSelector(usernameSelector)
   ),
   "#withAccessibilityErrorRedirectUrl":: "Custom error page URL",
   withAccessibilityErrorRedirectUrl(value):: (

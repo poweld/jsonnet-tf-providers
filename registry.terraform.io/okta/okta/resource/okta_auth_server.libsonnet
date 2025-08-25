@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name, audiences):: (
+  new(terraformName, audiences, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_auth_server",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["audiences", "credentials_last_rotated", "credentials_next_rotation", "credentials_rotation_mode", "description", "id", "issuer", "issuer_mode", "kid", "name", "status"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withAudiences(audiences)
     + block.withName(name)
   ),

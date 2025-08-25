@@ -1,17 +1,17 @@
 {
   local block = self,
-  new(name, description, display_name):: (
+  new(terraformName, description, displayName, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_user_type",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["description", "display_name", "id", "name"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withDescription(description)
-    + block.withDisplayName(display_name)
+    + block.withDisplayName(displayName)
     + block.withName(name)
   ),
   "#withDescription":: "Description of the User Type.",

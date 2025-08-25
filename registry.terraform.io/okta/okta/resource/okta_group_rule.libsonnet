@@ -1,17 +1,17 @@
 {
   local block = self,
-  new(name, expression_value, group_assignments):: (
+  new(terraformName, expressionValue, groupAssignments, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_group_rule",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["expression_type", "expression_value", "group_assignments", "id", "name", "remove_assigned_users", "status", "users_excluded"],
       },
     }
-    + block.withExpressionValue(expression_value)
-    + block.withGroupAssignments(group_assignments)
+    + block.withTerraformName(terraformName)
+    + block.withExpressionValue(expressionValue)
+    + block.withGroupAssignments(groupAssignments)
     + block.withName(name)
   ),
   "#withExpressionType":: "The expression type to use to invoke the rule. The default is `urn:okta:expression:1.0`.",

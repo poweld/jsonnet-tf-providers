@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name):: (
+  new(terraformName):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_users",
         terraformType:: "data",
         terraformPrefix:: "data",
-        terraformName:: name,
         terraformAttributes:: ["compound_search_operator", "delay_read_seconds", "group_id", "id", "include_groups", "include_roles", "users"],
       },
     }
+    + block.withTerraformName(terraformName)
   ),
   "#withCompoundSearchOperator":: "Search operator used when joining multiple search clauses",
   withCompoundSearchOperator(value):: (

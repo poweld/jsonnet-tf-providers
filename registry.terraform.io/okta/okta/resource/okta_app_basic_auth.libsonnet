@@ -1,17 +1,17 @@
 {
   local block = self,
-  new(name, auth_url, label, url):: (
+  new(terraformName, authUrl, label, url):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_app_basic_auth",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["accessibility_error_redirect_url", "accessibility_login_redirect_url", "accessibility_self_service", "admin_note", "app_links_json", "auth_url", "auto_submit_toolbar", "credentials_scheme", "enduser_note", "hide_ios", "hide_web", "id", "label", "logo", "logo_url", "name", "reveal_password", "shared_password", "shared_username", "sign_on_mode", "status", "url", "user_name_template", "user_name_template_push_status", "user_name_template_suffix", "user_name_template_type"],
       },
     }
     + block.withName(name)
-    + block.withAuthUrl(auth_url)
+    + block.withTerraformName(terraformName)
+    + block.withAuthUrl(authUrl)
     + block.withLabel(label)
     + block.withUrl(url)
   ),

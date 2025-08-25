@@ -1,16 +1,16 @@
 {
   local block = self,
-  new(name, app_id):: (
+  new(terraformName, appId):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_app_group_assignments",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["app_id", "id"],
       },
     }
-    + block.withAppId(app_id)
+    + block.withTerraformName(terraformName)
+    + block.withAppId(appId)
   ),
   "#withAppId":: "The ID of the application to assign a group to.",
   withAppId(value):: (

@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name):: (
+  new(terraformName, name):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_group",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["custom_profile_attributes", "description", "id", "name", "skip_users"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withName(name)
   ),
   "#withCustomProfileAttributes":: "JSON formatted custom attributes for a group. It must be JSON due to various types Okta allows.",

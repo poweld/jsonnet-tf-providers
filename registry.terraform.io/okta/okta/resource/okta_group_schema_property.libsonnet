@@ -1,15 +1,15 @@
 {
   local block = self,
-  new(name, index, title, type):: (
+  new(terraformName, index, title, type):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_group_schema_property",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["array_enum", "array_type", "description", "enum", "external_name", "external_namespace", "id", "index", "master", "max_length", "min_length", "permissions", "required", "scope", "title", "type", "unique"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withIndex(index)
     + block.withTitle(title)
     + block.withType(type)

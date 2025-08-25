@@ -1,17 +1,17 @@
 {
   local block = self,
-  new(name, realm_type):: (
+  new(terraformName, name, realmType):: (
     {
       jsonnetTfMetadata:: {
         terraformObject:: "okta_realm",
         terraformType:: "resource",
         terraformPrefix:: "",
-        terraformName:: name,
         terraformAttributes:: ["id", "is_default", "name", "realm_type"],
       },
     }
+    + block.withTerraformName(terraformName)
     + block.withName(name)
-    + block.withRealmType(realm_type)
+    + block.withRealmType(realmType)
   ),
   "#withName":: "The name of the Okta Realm.",
   withName(value):: (
