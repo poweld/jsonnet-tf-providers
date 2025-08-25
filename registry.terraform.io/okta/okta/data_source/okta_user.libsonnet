@@ -67,7 +67,6 @@
     local block = self,
     new():: (
       {}
-      + block.withName(name)
     ),
     withComparison(value):: (
       local converted = value;

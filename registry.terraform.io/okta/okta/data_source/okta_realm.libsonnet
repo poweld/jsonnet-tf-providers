@@ -9,7 +9,6 @@
         terraformAttributes:: ["id", "is_default", "name", "realm_type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withId":: "The id of the Okta Realm.",

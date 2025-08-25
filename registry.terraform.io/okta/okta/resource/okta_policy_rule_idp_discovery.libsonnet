@@ -116,7 +116,6 @@
     local block = self,
     new(type):: (
       {}
-      + block.withName(name)
       + block.withType(type)
     ),
     withId(value):: (
@@ -145,7 +144,6 @@
     local block = self,
     new(type):: (
       {}
-      + block.withName(name)
       + block.withType(type)
     ),
     withId(value):: (

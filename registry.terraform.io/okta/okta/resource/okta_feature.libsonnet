@@ -9,7 +9,6 @@
         terraformAttributes:: ["description", "feature_id", "id", "life_cycle", "mode", "name", "stage", "status", "type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
     + block.withFeatureId(featureId)
   ),

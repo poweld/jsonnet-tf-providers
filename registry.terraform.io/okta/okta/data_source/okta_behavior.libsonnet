@@ -9,7 +9,6 @@
         terraformAttributes:: ["id", "name", "settings", "status", "type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withId":: "Behavior ID.",

@@ -9,7 +9,6 @@
         terraformAttributes:: ["asns", "dynamic_locations", "dynamic_locations_exclude", "dynamic_proxy_type", "gateways", "id", "ip_service_categories_exclude", "ip_service_categories_include", "name", "proxies", "status", "type", "usage"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withDynamicLocationsExclude":: "Array of locations ISO-3166-1(2) excluded. Format code: countryCode OR countryCode-regionCode. Use with type `DYNAMIC_V2`",

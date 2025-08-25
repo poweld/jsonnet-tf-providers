@@ -9,7 +9,6 @@
         terraformAttributes:: ["condition_expression", "id", "is_default", "name", "priority", "profile_source_id", "realm_id", "status"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withName":: "The name of the Okta Realm Assignment.",

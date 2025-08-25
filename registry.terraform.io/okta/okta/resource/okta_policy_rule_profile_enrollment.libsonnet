@@ -9,7 +9,6 @@
         terraformAttributes:: ["access", "email_verification", "enroll_authenticator_types", "id", "inline_hook_id", "name", "policy_id", "progressive_profiling_action", "status", "target_group_id", "ui_schema_id", "unknown_user_action"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
     + block.withPolicyId(policyId)
     + block.withUnknownUserAction(unknownUserAction)

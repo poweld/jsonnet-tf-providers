@@ -9,7 +9,6 @@
         terraformAttributes:: ["description", "display_name", "id", "name"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withId":: "ID of the user type to retrieve, conflicts with `name`.",

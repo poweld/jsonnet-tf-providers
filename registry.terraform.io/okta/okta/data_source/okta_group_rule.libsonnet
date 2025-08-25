@@ -9,7 +9,6 @@
         terraformAttributes:: ["expression_type", "expression_value", "group_assignments", "id", "name", "status", "users_excluded"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withId":: "The ID of the Group Rule.",

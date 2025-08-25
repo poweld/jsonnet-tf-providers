@@ -9,7 +9,6 @@
         terraformAttributes:: ["id", "name", "type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   withTerraformName(value):: {

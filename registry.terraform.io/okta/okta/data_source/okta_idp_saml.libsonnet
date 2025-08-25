@@ -9,7 +9,6 @@
         terraformAttributes:: ["acs_binding", "acs_type", "audience", "id", "issuer", "issuer_mode", "kid", "name", "sso_binding", "sso_destination", "sso_url", "subject_filter", "subject_format", "type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withId":: "Id of idp.",

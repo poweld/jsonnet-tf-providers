@@ -9,7 +9,6 @@
         terraformAttributes:: ["id", "key", "name", "provider_auth_port", "provider_hostname", "provider_instance_id", "provider_json", "provider_type", "provider_user_name_template", "settings", "status", "type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
   ),
   "#withId":: "ID of the authenticator.",

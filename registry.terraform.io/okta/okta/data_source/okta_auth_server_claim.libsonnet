@@ -9,7 +9,6 @@
         terraformAttributes:: ["always_include_in_token", "auth_server_id", "claim_type", "id", "name", "scopes", "status", "value", "value_type"],
       },
     }
-    + block.withName(name)
     + block.withTerraformName(terraformName)
     + block.withAuthServerId(authServerId)
   ),
